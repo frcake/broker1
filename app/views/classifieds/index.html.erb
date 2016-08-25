@@ -1,0 +1,28 @@
+
+<% @classified.each do |f| %>
+ 
+<div class="center-div" id="index">
+	<%= link_to classified_path(f) do %>
+	<ul>
+		<li>
+			 <% f.photos.each do |p| %>
+
+			 	<%= image_tag p.image %>
+
+			 <%end%>
+			<h4><p><%= f.title %></p></h4>
+			<p><%= f.make %>
+				<%= f.model %>	
+				<%= f.year %></p>	
+				<p><%= f.make_country %>
+					<%= f.price %></p>
+					<p></p>
+				</li>
+			</ul>
+			<%end%>
+		</div>
+	</div>			
+	<%end%>
+
+</div>
+

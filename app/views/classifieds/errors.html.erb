@@ -1,0 +1,13 @@
+<h1> error </h1>
+<%= form_for :classified , url: classifieds_path do |f| %>
+
+	
+
+	
+		<% f.errors.full_messages.each do |msg| %>
+		<%= msg %>
+		
+	
+
+<%end%>
+<%end%>

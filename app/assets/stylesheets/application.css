@@ -1,0 +1,426 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+
+/* body */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
+
+
+
+body {
+    font-family: 'Roboto' !important;
+    /*background: url("brokerback.png"); 
+    background-position: 50% 50%;
+    background-repeat: no-repeat;*/
+
+
+}
+
+
+
+
+/* header */
+
+.header {
+    font-weight: 100;   
+    margin-bottom:-20px;
+    padding:0;
+    height: auto;
+	  width : 100%;
+    font-size: 17px;
+
+	
+}
+
+.header .navbar {
+    padding-top:20px;
+    padding-bottom:25px;
+    
+    background-color : #ffffff !important;
+
+}
+
+.header .navbar-right {
+
+    color : #000 !important;
+}
+
+
+.header .navbar-brand {
+    padding-left:30px;
+    font-size : 30px !important;
+    color : #FF1400 !important;
+}
+
+
+
+.header .navbar-default li{
+    padding:0 15px 0 15px;   
+
+}
+
+
+
+.header .form-control {
+
+    border: 1px  solid;
+    height:auto;
+    font-size: 17px;
+
+}
+
+
+.header .navbar-form .btn-default {
+    font-weight: 300 ;
+    border :none !important;
+    
+}
+
+
+.header .navbar-form .btn-default:hover {
+    background-color: transparent;
+    color :red;
+}
+
+.header .navbar-form .btn-default:click {
+    background-color: transparent;
+}
+
+
+
+.signupbtn {
+    color : #000 !important;
+    font-weight: 300;
+    border : 1px solid #646464;
+    border-radius: 5px;
+
+}
+
+.highlight {
+
+    color : #000 !important;
+    font-weight: 300;
+}
+
+/* supporting - categories */
+
+.supporting {
+   /* border-bottom : 1px solid #E7E7E7;*/
+    font-weight: 300;
+    background-color: #F8F8F8;
+    width:100%;
+    /*border: 1px solid red;*/
+}
+
+
+
+
+
+.supporting .navbar-default {
+    
+    max-height: 40px;
+    width:auto;
+    background-color: #F8F8F8 !important;
+    text-align: center;
+    color : #000000 !important;
+
+
+    white-space: nowrap;
+    /*overflow-x: auto;*/
+    
+}
+
+
+
+.supporting .navbar-default > li {
+    color : #000 !important;  
+    display : inline-block ;
+    margin:0 -20px 0 0;
+    padding:0;
+    float:none ;
+    font-size: 14px;
+
+}
+
+
+
+.supporting .navbar-default a {
+   color : #000000; 
+}
+
+
+.supporting .navbar-default a:hover {
+   background-color:transparent;
+   text-decoration: underline;
+
+}
+
+.supporting .navbar-default a:click {
+   background-color:transparent;
+}
+
+.supporting .navbar-default a:visited {
+   background-color:transparent;
+}
+
+
+.supporting .navbar-default a:link {
+   background-color:transparent;
+}
+
+
+
+
+/* supporting - categories */
+        /* supporting - drop down menus */
+
+.supporting .dropdown-menu a{
+    font-weight: 300 !important;
+}
+
+
+
+
+
+
+
+
+/* footer */
+
+.footer .container {
+    margin-top:500px;
+    width:100%;
+    height 100px;
+    background-color: #222222; 
+    text-align: center;
+    color:#ffffff;
+}
+
+
+.footer p {
+     font-size: 50px;
+    font-weight:100;
+
+}
+
+textarea { resize:vertical ; }
+
+
+
+
+
+
+/* INDEX STYLE */
+
+/* {margin: 0; padding: 0;}*/
+
+
+
+
+
+.center-div
+{
+     margin: 0 auto;
+     max-width: 900px;
+     
+     
+}
+
+.center-div ul{
+  list-style: none;
+}
+
+#index ul {
+ /* border:1px solid #000;*/
+
+  margin : 30px;
+  list-style-type: none;
+
+
+
+  width: auto;
+}
+
+#image img {
+  width:100%;
+  height:100%;
+}
+
+#index h4 {
+  font-weight: 300;
+}
+
+#index li img {
+  float: left;
+  /*margin: 0 15px 0 0;*/
+}
+
+#index li p {
+  color:#333333;
+}
+
+#index li {
+  padding: 15px 0 15px 0;
+   height : 150px;
+  width :auto;
+  overflow: auto;
+}
+
+
+#index li:hover {
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  border : 1px solid #333333;
+
+}
+
+#index a:hover {
+  text-decoration: none;
+}
+
+
+#index a:visited {
+  text-decoration: none;
+}
+#index a:click {
+  text-decoration: none;
+}
+#index a:active {
+  text-decoration: none;
+}
+
+#index img {
+
+  margin: 0 45px 0 15px;
+  height :100px;
+  width :200px;
+}
+
+#index {
+  
+}
+
+#index .col-md-6  {
+  height :auto;
+  width :auto;
+
+  /*border : 1px solid red;*/
+}
+
+#index p {
+}
+
+.price {
+ 
+
+  padding:20px;
+  border: 1px solid red;
+}
+
+
+
+
+/* PROFILE NAV TAB */
+
+
+.nav-tabs {
+ 
+  margin-top:100px;
+  padding:0;
+}
+
+
+.tab-content {
+  
+ /*margin-top:50px; */
+  padding:50px 0 50px 0;
+}
+
+
+
+
+/* classified */
+.classified{
+  margin-top: 50px;
+  width: 100%;
+
+}
+
+.row  {
+
+  width: auto;
+}
+
+#gearview {
+  margin-top:50px;
+}
+
+
+.col-lg-12
+{
+  /* border: 1px solid red;*/
+  width: 100%;
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+}
+
+
+.image {
+  height: 450px;
+  display: inline-block; 
+  vertical-align: middle; 
+ 
+}
+
+.image img {
+  
+  /*padding:0;*/
+  height: auto;
+
+  max-width:100%;
+}
+
+
+
+.description {
+  width: auto;
+  padding: 30px;
+  
+  height: auto;
+
+}
+
+
+
+.details {
+  width: auto;
+  padding: 30px;
+  
+  height: auto;
+
+}
+
+
+
+/* CLASSIFIED CREATION */
+
+.col-md-6 .section2 {
+  padding-top:50px !important;
+}
