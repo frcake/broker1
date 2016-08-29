@@ -518,6 +518,16 @@ textarea { resize:vertical ; }
 
 }
 
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
  .header .navbar-form {

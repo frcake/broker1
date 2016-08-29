@@ -34,7 +34,7 @@ proaudio = Category.create(name: 'ProAudio')
 =en
 
 
-
+#ACCESSORIES CHILDREN
 
 accessorychild3= Category.create(:name => "Κάλυμα ενισχυτή")
 accessorychild3.move_to_child_of(206)
@@ -82,13 +82,39 @@ accessorychild26= Category.create(:name => "Κουρδιστήρια")
 accessorychild26.move_to_child_of(206)
 
 
+
+
+ #ACCESSORIES > Θήκες και GigBags GRANDCHILDREN id:222
+accessorychild1= Category.create(:name => "Σκληρές Θήκες Κιθάρας")
+accessorychild1.move_to_child_of(222)
+
+accessorychild2= Category.create(:name => "Θήκες Κιθάρας")
+accessorychild2.move_to_child_of(222)
+
+accessorychild3= Category.create(:name => "Σκληρές Θήκες Μπάσου")
+accessorychild3.move_to_child_of(222)
+
+accessorychild4= Category.create(:name => "Θήκες Μπάσου")
+accessorychild4.move_to_child_of(222)
+
+#ACCESSORIES > χορδές GRANDCHILDREN id:231
+
+accessorychild5= Category.create(:name => "Χορδές Ηλεκτρικής Κιθάρας")
+accessorychild5.move_to_child_of(231)
+
+accessorychild6= Category.create(:name => "Χορδές Κλασσικής Κιθάρας")
+accessorychild6.move_to_child_of(231)
+
+accessorychild7= Category.create(:name => "Χορδές Ακουστικής Κιθάρας")
+accessorychild7.move_to_child_of(231)
+
+accessorychild8= Category.create(:name => "Χορδές Μπάσου")
+accessorychild8.move_to_child_of(231)
+
+accessorychild9= Category.create(:name => "Άλλες Χορδές")
+accessorychild9.move_to_child_of(231)
+
 =end
-
-
-
-
-
-
 
 
 
