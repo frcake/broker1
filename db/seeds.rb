@@ -11,7 +11,9 @@
 #freida = User.create(first_name: 'Frieda', email: 'freida@email.com', password: 'Freida1', password_confirmation: 'Freida1')
 #julian = User.create(first_name: 'Julian', email: 'julian@email.com', password: 'Julian1', password_confirmation: 'Julian1')
 ##michael = User.create(first_name: 'Michael', email: 'mail@mail.com', password: '123', password_confirmation: '123')
+
 =begin
+
 guitars = Category.create(name: 'Ηλεκτρικές κιθάρες')
 accessories = Category.create(name: 'Αξεσουάρ')
 amplifiers = Category.create(name: 'Ενισχυτές')
@@ -27,63 +29,73 @@ syntheseizers = Category.create(name: 'Synths')
 parts = Category.create(name: 'Parts')
 proaudio = Category.create(name: 'ProAudio')
 
+
+
+=en
+
+
+
+
+accessorychild3= Category.create(:name => "Κάλυμα ενισχυτή")
+accessorychild3.move_to_child_of(206)
+
+accessorychild4= Category.create(:name => "Καλώδια")
+accessorychild4.move_to_child_of(206)
+
+accessorychild5= Category.create(:name => "Κάπο and Slides")
+accessorychild5.move_to_child_of(206)
+
+accessorychild7= Category.create(:name => "Θήκες and Gig Bags")
+accessorychild7.move_to_child_of(206)
+
+accessorychild11= Category.create(:name => "Ακουστικά")
+accessorychild11.move_to_child_of(206)
+
+accessorychild12= Category.create(:name => "Αφυγραντήρες")
+accessorychild12.move_to_child_of(206)
+
+accessorychild13= Category.create(:name => "Merchandise")
+accessorychild13.move_to_child_of(206)
+
+accessorychild14= Category.create(:name => "Μετρονόμοι")
+accessorychild14.move_to_child_of(206)
+
+accessorychild15= Category.create(:name => "Πένες")
+accessorychild15.move_to_child_of(206)
+
+accessorychild16= Category.create(:name => "Τροφοδοτικά")
+accessorychild16.move_to_child_of(206)
+
+accessorychild17= Category.create(:name => "Stands")
+accessorychild17.move_to_child_of(206)
+
+accessorychild18= Category.create(:name => "Ζώνες")
+accessorychild18.move_to_child_of(206)
+
+accessorychild19= Category.create(:name => "Χορδές")
+accessorychild19.move_to_child_of(206)
+
+accessorychild25= Category.create(:name => "Εργαλεία")
+accessorychild25.move_to_child_of(206)
+
+accessorychild26= Category.create(:name => "Κουρδιστήρια")
+accessorychild26.move_to_child_of(206)
+
+
 =end
 
 
 
-accessorychild2=Category.create!(:name => "Amp Covers")
-accessorychild2.move_to_child_of(128)
-
-=begin
-accessorychild3	= Category.create!(:name => "Books and DVDs")
-accessorychild4	= Category.create!(:name => "Cables")
-accessorychild5	= Category.create!(:name => "Capos and Slides")
-accessorychild7	= Category.create!(:name => "Cases and Gig Bags")
-accessorychild8	= Category.create!(:name => "Cases and Gig Bags")
-accessorychild9	= Category.create!(:name => "Cases and Gig Bags")
-accessorychild10	= Category.create!(:name => "Cases and Gig Bags	")
-accessorychild11	= Category.create!(:name => "Headphones")
-accessorychild12	= Category.create!(:name => "Humidifiers")
-accessorychild13	= Category.create!(:name => "Merchandise")
-accessorychild14	= Category.create!(:name => "Metronome")
-accessorychild15	= Category.create!(:name => "Picks")
-accessorychild16	= Category.create!(:name => "Power Supplies")
-accessorychild17	= Category.create!(:name => "Stands")
-accessorychild18	= Category.create!(:name => "Straps")
-accessorychild19	= Category.create!(:name => "Strings")
-accessorychild20	= Category.create!(:name => "Strings")
-accessorychild21	= Category.create!(:name => "Strings")
-accessorychild22	= Category.create!(:name => "Strings")
-accessorychild23	= Category.create!(:name => "Strings")
-accessorychild24	= Category.create!(:name => "Strings")
-accessorychild25	= Category.create!(:name => "Tools")
-accessorychild26	= Category.create!(:name => "Tuners")
 
 
-accessorychild2.move_to_child_of(42)
-accessorychild3.move_to_child_of(42)
-accessorychild4.move_to_child_of(42)
-accessorychild5.move_to_child_of(42)
 
-accessorychild7.move_to_child_of(42)
-accessorychild8.move_to_child_of(42)
-accessorychild9.move_to_child_of(42)
-accessorychild10.move_to_child_of(42)
-accessorychild11.move_to_child_of(42)
-accessorychild12.move_to_child_of(42)
-accessorychild13.move_to_child_of(42)
-accessorychild14.move_to_child_of(42)
-accessorychild15.move_to_child_of(42)
-accessorychild16.move_to_child_of(42)
-accessorychild17.move_to_child_of(42)
-accessorychild18.move_to_child_of(42)
-accessorychild19.move_to_child_of(42)
-accessorychild20.move_to_child_of(42)
-accessorychild21.move_to_child_of(42)
-accessorychild22.move_to_child_of(42)
-accessorychild23.move_to_child_of(42)
-accessorychild24.move_to_child_of(42)
-accessorychild25.move_to_child_of(42)
-accessorychild26.move_to_child_of(42)
 
-=end
+
+
+
+
+
+
+
+
+
