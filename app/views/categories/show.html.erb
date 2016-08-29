@@ -1,5 +1,47 @@
-<%  @category.each do |f| %>
-	<%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" } %>
+<div class="indexbox">
 
-	<%= select_tag 'parent_id', options_for_select(nested_set_options(Category) {|i| "#{'-' * i.level} #{i.name}" } ) %>
-<%end%>
+	<ul>
+
+		<%= link_to @category.root.name , category_path(@category.root) , class: "dropdown-toggle" %>
+		<ul>
+			<% @category.children.each do |cat|%>
+				
+				<%=link_to cat.name , category_path(cat) %>
+
+			<% end  %>
+		</ul>
+	</ul>
+
+	<% @category.classifieds.each do |f| %>
+
+
+
+	<div class="center-div" id="index">
+		<%= link_to classified_path(f) , :class => "link" do %>
+		<div class="media">
+			<div class="mediabox">
+
+				<div class="media-left" href="#">
+					<% f.photos.each do |p| %>
+
+					<!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
+					<%= image_tag p.image , :class => "media-object" %>
+
+					<%end%>
+				</div>
+				<div class="media-body">
+					<h5 class="media-heading"> <%= f.title %></h5>
+					<div class="price">										
+						<h3><%= f.price %></h3>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<%end%>
+
+		<%end%> 
+	</div>
+</div>

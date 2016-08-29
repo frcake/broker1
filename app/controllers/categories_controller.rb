@@ -9,8 +9,10 @@ class CategoriesController < ApplicationController
 
 
 	def show
-		@categories = Category.find_by_id(params[:id]).self_and_descendants
-		
+		#@categories = Category.find_by_id(params[:id]).self_and_descendants
+		#@category = Category.find_by_id(params[:id]).self_and_descendants
+
+		@category = Category.find_by_id(params[:id])
 	end
 
 end

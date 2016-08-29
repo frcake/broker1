@@ -17,180 +17,203 @@
 
 
 
-/* body */
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
+ /* body */
+ @import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
 
 
 
-body {
-    font-family: 'Roboto' !important;
+ body {
+  font-family: 'Roboto' !important;
     /*background: url("brokerback.png"); 
     background-position: 50% 50%;
     background-repeat: no-repeat;*/
 
 
-}
+
+  }
 
 
 
 
-/* header */
+  /* header */
 
-.header {
+  .header {
     font-weight: 100;   
     margin-bottom:-20px;
     padding:0;
     height: auto;
-	  width : 100%;
+    width : 100%;
     font-size: 17px;
 
-	
-}
+  }
 
-.header .navbar {
+
+
+  .header .navbar {
     padding-top:20px;
     padding-bottom:25px;
     
-    background-color : #ffffff !important;
+    background-image: url('pedals.jpg') !important;
+    background-size:cover;
+    background-position: center;
+    
+    border-color: transparent;
 
-}
 
-.header .navbar-right {
+  }
+
+
+
+
+  .header .container-fluid{
+    padding-top: 12px;
+    background: rgba(250,250,250,0.95 );
+    border:1px solid #ffffff;
+    border-radius : 5px;
+    width: 90%;
+  }
+
+
+  .header .navbar .navbar-default .navbar-collapse {
+
+    border : none !important;
+
+
+  }
+
+
+  .header .navbar-right {
 
     color : #000 !important;
-}
+  }
 
 
-.header .navbar-brand {
+  .header .navbar-brand {
     padding-left:30px;
     font-size : 30px !important;
     color : #FF1400 !important;
-}
+  }
 
 
 
-.header .navbar-default li{
+  .header .navbar-default li{
     padding:0 15px 0 15px;   
 
-}
+  }
 
 
 
-.header .form-control {
+  .header .form-control {
 
-    border: 1px  solid;
+    /*border: 1px  solid;*/
     height:auto;
     font-size: 17px;
 
-}
+  }
 
 
-.header .navbar-form .btn-default {
+  .header .navbar-form .btn-default {
     font-weight: 300 ;
     border :none !important;
     
-}
+  }
 
 
-.header .navbar-form .btn-default:hover {
+  .header .navbar-form .btn-default:hover {
     background-color: transparent;
     color :red;
-}
+  }
 
-.header .navbar-form .btn-default:click {
+  .header .navbar-form .btn-default:click {
     background-color: transparent;
-}
+  }
 
 
 
-.signupbtn {
+  .signupbtn {
     color : #000 !important;
     font-weight: 300;
-    border : 1px solid #646464;
+    border : 1px solid #646464 !important;
     border-radius: 5px;
 
-}
+  }
 
-.highlight {
+  .highlight {
 
     color : #000 !important;
     font-weight: 300;
-}
+  }
 
-/* supporting - categories */
+  /* supporting - categories */
 
-.supporting {
+  .supporting {
    /* border-bottom : 1px solid #E7E7E7;*/
-    font-weight: 300;
-    background-color: #F8F8F8;
-    width:100%;
-    /*border: 1px solid red;*/
-}
+   font-weight: 300;
+   background-color: #F8F8F8;
+   width:100%;
+   /*border: 1px solid red;*/
+ }
 
 
 
 
 
-.supporting .navbar-default {
-    
-    max-height: 40px;
-    width:auto;
-    background-color: #F8F8F8 !important;
-    text-align: center;
-    color : #000000 !important;
+ .supporting .navbar-default {
 
+  max-height: 40px;
+  width:auto;
+  background-color: #F8F8F8 !important;
+  text-align: center;
+  color : #000000 !important;
 
-    white-space: nowrap;
-    /*overflow-x: auto;*/
-    
 }
 
 
 
 .supporting .navbar-default > li {
-    color : #000 !important;  
-    display : inline-block ;
-    margin:0 -20px 0 0;
-    padding:0;
-    float:none ;
-    font-size: 14px;
+  color : #000 !important;  
+  display : inline-block ;
+  margin:0 -20px 0 0;
+  padding:0;
+  float:none ;
+  font-size: 14px;
 
 }
 
 
 
 .supporting .navbar-default a {
-   color : #000000; 
+ color : #000000; 
 }
 
 
 .supporting .navbar-default a:hover {
-   background-color:transparent;
-   text-decoration: underline;
+ background-color:transparent;
+ text-decoration: underline;
 
 }
 
 .supporting .navbar-default a:click {
-   background-color:transparent;
+ background-color:transparent;
 }
 
 .supporting .navbar-default a:visited {
-   background-color:transparent;
+ background-color:transparent;
 }
 
 
 .supporting .navbar-default a:link {
-   background-color:transparent;
+ background-color:transparent;
 }
 
 
 
 
 /* supporting - categories */
-        /* supporting - drop down menus */
+/* supporting - drop down menus */
 
 .supporting .dropdown-menu a{
-    font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
 
@@ -203,18 +226,18 @@ body {
 /* footer */
 
 .footer .container {
-    margin-top:500px;
-    width:100%;
-    height 100px;
-    background-color: #222222; 
-    text-align: center;
-    color:#ffffff;
+  margin-top:500px;
+  width:100%;
+  height :100px;
+  background-color: #222222; 
+  text-align: center;
+  color:#ffffff;
 }
 
 
 .footer p {
-     font-size: 50px;
-    font-weight:100;
+ font-size: 50px;
+ font-weight:100;
 
 }
 
@@ -235,25 +258,51 @@ textarea { resize:vertical ; }
 
 .center-div
 {
-     margin: 0 auto;
-     max-width: 900px;
-     
-     
+ margin: 0 auto;
+ max-width: 700px;     
 }
+
+
+.indexbox {
+  margin-top : 80px;
+
+}
+
+
+
+.indexbox .mediabox {
+  border:1px solid #f9f9f9;
+  padding:10px 0 5px 0;
+  margin-top:5px;
+
+}
+
 
 .center-div ul{
   list-style: none;
+  /*border: 1px solid #e0e0e0;*/
 }
+
+.media{
+  margin-top:20px;
+
+  /*border: 1px solid #e0e0e0;*/
+
+}
+
+
+.mediabox {
+  color :#313131;
+  padding:15px;
+  border: 1px solid #e0e0e0;
+}
+
 
 #index ul {
  /* border:1px solid #000;*/
-
-  margin : 30px;
-  list-style-type: none;
-
-
-
-  width: auto;
+ margin : 30px;
+ list-style-type: none;
+ width: auto;
 }
 
 #image img {
@@ -261,8 +310,13 @@ textarea { resize:vertical ; }
   height:100%;
 }
 
-#index h4 {
+
+.mediabox h5 {
   font-weight: 300;
+}
+
+.media-body {
+  font-size: 12px;
 }
 
 #index li img {
@@ -276,22 +330,24 @@ textarea { resize:vertical ; }
 
 #index li {
   padding: 15px 0 15px 0;
-   height : 150px;
+  height : 150px;
   width :auto;
   overflow: auto;
 }
 
 
-#index li:hover {
-  background: none;
+#index .mediabox:hover {
+  background: #f9f9f9;
   cursor: pointer;
   text-decoration: none;
-  border : 1px solid #333333;
+  /*border : 1px solid #333333;*/
 
 }
 
-#index a:hover {
-  text-decoration: none;
+#index .link:hover {
+  text-decoration: none !important;
+
+
 }
 
 
@@ -307,30 +363,37 @@ textarea { resize:vertical ; }
 
 #index img {
 
-  margin: 0 45px 0 15px;
-  height :100px;
-  width :200px;
+  margin: 0 15px 0 15px;
+  height :80px;
+  width :100px;
 }
 
-#index {
-  
+#index .media {
+
+  /*border:1px solid red;*/
+
 }
 
 #index .col-md-6  {
   height :auto;
   width :auto;
 
-  /*border : 1px solid red;*/
+  /*border : 1px solid blue;*/
 }
 
 #index p {
+
+
 }
 
 .price {
- 
+  padding:10px;
+  float:right;
+}
 
-  padding:20px;
-  border: 1px solid red;
+.price h3 {
+  color :red;
+  font-weight: 100;
 }
 
 
@@ -340,16 +403,16 @@ textarea { resize:vertical ; }
 
 
 .nav-tabs {
- 
+
   margin-top:100px;
   padding:0;
 }
 
 
 .tab-content {
-  
+
  /*margin-top:50px; */
-  padding:50px 0 50px 0;
+ padding:50px 0 50px 0;
 }
 
 
@@ -386,11 +449,11 @@ textarea { resize:vertical ; }
   height: 450px;
   display: inline-block; 
   vertical-align: middle; 
- 
+
 }
 
 .image img {
-  
+
   /*padding:0;*/
   height: auto;
 
@@ -423,4 +486,75 @@ textarea { resize:vertical ; }
 
 .col-md-6 .section2 {
   padding-top:50px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .supporting .navbar-default {    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y:hidden;    
+  }
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+ .header .navbar-form {
+  padding : 5px 30px 20px 30px !important;
+  border:transparent !important;
+  box-shadow: none !important;
+}
+
+.header .navbar-collapse{
+  border: transparent !important;
+}
+
+.header .navbar-nav ul{
+  border:transparent !important;
+}
+
+.supporting .navbar-default {    
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y:hidden;    
+}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+ .header .navbar-form {
+  padding : 5px 30px 20px 30px !important;
+  border:transparent !important;
+}
+
+.header .collapse{
+  border: transparent !important;
+}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
 }

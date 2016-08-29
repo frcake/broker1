@@ -68,14 +68,17 @@
                <h3 class="dark-grey">Περιγραφή</h3>
                <%= f.text_area :description, rows: "15", :placeholder => "" , :class => "form-control"%>
              </div>
-          </div>
+          </div> 
 
 
           <div class="section2">
               <div class="form-group col-lg-12">
                 <hr>
                 <label>Κατηγορία</label>
-                <%= f.collection_select :category_id , Category.all , :id , :name , :prompt => true , :class => "form-control"%>
+
+                    
+                <%= f.select :category_id, nested_set_options(Category, @category) {|i| "#{i.root.name unless !i.parent_id} #{'>' unless !i.parent_id}  #{i.name}" } %>
+
                 
               </div>              
           </div>
