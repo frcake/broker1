@@ -95,38 +95,30 @@
       <% Category.roots.each do |f| %>
 
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-labelledby="dLabel"><%= f.name %></a> 
-        <!--<%= link_to f.name , category_path(f) , class: "dropdown-toggle" %>-->
-
-
+       <%= link_to f.name , category_path(f), { :class => 'dropdown-toggle'} %></a> 
         <ul class="dropdown-menu">
           <% f.children.each do |kid|%>
-          <li><a href="#"><%=kid.name %></a></li>
-          
-          
+          <li class="dropdown"> 
+            <%= link_to  category_path(kid) , { :class => 'dropdown-toggle'} do  %>
+            <%= kid.name %>
+            <% unless kid.children.blank? %>
 
-
-          <!--<li role="separator" class="divider"></li>-->
-
-          <%end %>
-          <li class="dropdown-submenu">
-            <a class="test" tabindex="-1" href="#">New dropdown <span> > </span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+              <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+              <%end%>
+              <%end %>
+            <% unless kid.children.blank? %>
+            <ul class="dropdown-menu sub-menu">
+              <% kid.children.each do |grandkid| %>
+              <li><%= link_to grandkid.name , category_path(grandkid)%></li>            
+              <%end%>
             </ul>
+            <%end%>
           </li>
-        </ul>     
-
+          <%end%>
+        </ul>  
       </li>
-
       <% end %>
-
-
-
-
     </ul>
-
-
   </div><!-- /.container-fluid -->
 </div>
 

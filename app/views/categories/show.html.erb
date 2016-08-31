@@ -1,47 +1,68 @@
-<div class="indexbox">
+<!--<div class="indexbox">
 
 	<ul>
 
-		<%= link_to @category.root.name , category_path(@category.root) , class: "dropdown-toggle" %>
+		 <%= link_to @category.root.name , category_path(@category.root)%>
+		 <%= link_to @category.name %>
 		<ul>
 			<% @category.children.each do |cat|%>
 				
-				<%=link_to cat.name , category_path(cat) %>
+				<li><%=link_to cat.name , category_path(cat) %></li>
+				<% unless cat.children.blank? %>
+				<ul>
+					<% cat.children.each do |grandcat| %>
+					<li> <%= link_to grandcat.name , category_path(grandcat)%> </li>
+					<%end%>
 
-			<% end  %>
+				</ul>
+				<%end%>
+
+			<%end%>
 		</ul>
 	</ul>
 
-	<% @category.classifieds.each do |f| %>
+-->
 
 
 
-	<div class="center-div" id="index">
-		<%= link_to classified_path(f) , :class => "link" do %>
-		<div class="media">
-			<div class="mediabox">
-
-				<div class="media-left" href="#">
-					<% f.photos.each do |p| %>
-
-					<!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
-					<%= image_tag p.image , :class => "media-object" %>
-
-					<%end%>
-				</div>
-				<div class="media-body">
-					<h5 class="media-heading"> <%= f.title %></h5>
-					<div class="price">										
-						<h3><%= f.price %></h3>
-					</div>
-				</div>
 
 
+
+<div class="center-div" id="index">
+
+
+	<h3><%= @category.root.name %></h3>
+	<% unless @category.name == @category.root.name %>
+	<h4><%= @category.name %></h4>
+	<%end%>
+
+	<% @category.descendants.each do |desc| %>
+	<% desc.classifieds.each do |f|%>
+	<%= link_to classified_path(f) , :class => "link" do %>
+	<div class="media">
+		<div class="mediabox">
+
+			<div class="media-left" href="#">
+				<% f.photos.each do |p| %>
+
+
+				<%= image_tag p.image , :class => "media-object" %>
+
+				<%end%>
 			</div>
+			<div class="media-body">
+				<h5 class="media-heading"> <%= f.title %></h5>
+				<div class="price">										
+					<h3><%= f.price %></h3>
+				</div>
+			</div>
+
+
 		</div>
-
-		<%end%>
-
-		<%end%> 
 	</div>
+
+	<%end%>
+	<%end%>
+	<%end%> 
+</div>
 </div>
