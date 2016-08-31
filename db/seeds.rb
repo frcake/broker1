@@ -117,8 +117,25 @@ accessorychild9.move_to_child_of(231)
 =end
 
 
+=begin
+#GUITARS CHILDREN
 
+guitarschild1 = Category.create(:name => "Ηλεκτρικές")
+guitarschild1.move_to_child_of(205)
 
+guitarschild2 = Category.create(:name => "Ακουστικές")
+guitarschild2.move_to_child_of(205)
+
+guitarschild3 = Category.create(:name => "Κλασσικές")
+guitarschild3.move_to_child_of(205)
+
+guitarschild4 = Category.create(:name => "Αριστερόχειρες")
+guitarschild4.move_to_child_of(205)
+
+guitarschild5 = Category.create(:name => "7-χορδες +")
+guitarschild5.move_to_child_of(205)
+
+=end
 
 
 

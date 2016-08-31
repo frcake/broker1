@@ -24,19 +24,23 @@
 -->
 
 
-
+<div class="indexbox">
 
 
 
 <div class="center-div" id="index">
 
+	<div class="categorytitle">
+		<h4>
+		<%= @category.root.name %>
+		<% unless @category.name == @category.root.name %>
+		<span> >> </span><%= @category.name %>
 
-	<h3><%= @category.root.name %></h3>
-	<% unless @category.name == @category.root.name %>
-	<h4><%= @category.name %></h4>
-	<%end%>
+		</h4>
+		<%end%>
+	</div>
 
-	<% @category.descendants.each do |desc| %>
+	<% @category.self_and_descendants.each do |desc| %>
 	<% desc.classifieds.each do |f|%>
 	<%= link_to classified_path(f) , :class => "link" do %>
 	<div class="media">
@@ -64,5 +68,6 @@
 	<%end%>
 	<%end%>
 	<%end%> 
+</div>
 </div>
 </div>
