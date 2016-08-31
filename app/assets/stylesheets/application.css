@@ -313,7 +313,10 @@ textarea { resize:vertical ; }
   padding:10px 0 5px 0;
   margin-top:5px;
 
+
 }
+
+
 
 
 .center-div ul{
@@ -378,7 +381,7 @@ textarea { resize:vertical ; }
   background: #f9f9f9;
   cursor: pointer;
   text-decoration: none;
-  /*border : 1px solid #333333;*/
+
 
 }
 
@@ -425,7 +428,7 @@ textarea { resize:vertical ; }
 }
 
 .price {
-  padding:10px;
+  padding:10px 10px 0 10px;
   float:right;
 }
 

@@ -137,8 +137,57 @@ guitarschild5.move_to_child_of(205)
 
 =end
 
+=begin
+#BASS CHILDREN BASS ID :209
+
+basschild1 = Category.create(:name => "4-χορδο")
+basschild1.move_to_child_of(209)
+
+basschild1 = Category.create(:name => "5-χορδο+")
+basschild1.move_to_child_of(209)
+
+basschild1 = Category.create(:name => "Ακουστικό")
+basschild1.move_to_child_of(209)
+
+basschild1 = Category.create(:name => "Αριστερόχειρες")
+basschild1.move_to_child_of(209)
+
+basschild1 = Category.create(:name => "Κόντρα Μπάσο")
+basschild1.move_to_child_of(209)
+=end
 
 
 
+=begin
+#AMPS CHILDREN  AMP ID : 207
 
+ampchild1=Category.create(:name => "Ακουστικών οργάνων")		
+ampchild1.move_to_child_of(207)
 
+ampchild2=Category.create(:name => "Attenuators")		
+ampchild2.move_to_child_of(207)
+
+ampchild3=Category.create(:name => "Μπάσου")		
+ampchild3.move_to_child_of(207)
+
+ampchild4=Category.create(:name => "Κεφαλές Μπάσου ")		
+ampchild4.move_to_child_of(207)
+
+ampchild5=Category.create(:name => "Καμπίνες Μπάσου")		
+ampchild5.move_to_child_of(207)
+
+ampchild6=Category.create(:name => "Κιθάρας")		
+ampchild6.move_to_child_of(207)
+
+ampchild7=Category.create(:name => "Κεφαλές Κιθάρας ")		
+ampchild7.move_to_child_of(207)
+
+ampchild8=Category.create(:name => "Καμπίνες Κιθάρας")		
+ampchild8.move_to_child_of(207)
+
+ampchild9=Category.create(:name => "Πλήκτρων")		
+ampchild9.move_to_child_of(207)
+
+ampchild10=Category.create(:name => "Modeling Amps")		
+ampchild10.move_to_child_of(207)
+=end
