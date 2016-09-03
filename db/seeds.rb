@@ -191,3 +191,129 @@ ampchild9.move_to_child_of(207)
 ampchild10=Category.create(:name => "Modeling Amps")		
 ampchild10.move_to_child_of(207)
 =end
+
+
+=begin
+
+#HIFI ID=215
+homeaudiochild1=Category.create(:name => "Ενισχυτές")	
+homeaudiochild1.move_to_child_of(215)
+
+homeaudiochild2=Category.create(:name => "Καλώδια")	
+homeaudiochild2.move_to_child_of(215)
+
+homeaudiochild4=Category.create(:name => "Digital Players")	
+homeaudiochild4.move_to_child_of(215)
+
+homeaudiochild9=Category.create(:name => "Equalizers")	
+homeaudiochild9.move_to_child_of(215)
+
+homeaudiochild10=Category.create(:name => "Ακουστικά")	
+homeaudiochild10.move_to_child_of(215)
+
+homeaudiochild12=Category.create(:name => "Προενισχυτές")	
+homeaudiochild12.move_to_child_of(215)
+
+homeaudiochild13=Category.create(:name => "Δέκτες")	
+homeaudiochild13.move_to_child_of(215)
+
+homeaudiochild14=Category.create(:name => "Ηχεία")	
+homeaudiochild14.move_to_child_of(215)
+
+homeaudiochild15=Category.create(:name => "Subwoofers")	
+homeaudiochild15.move_to_child_of(215)
+
+homeaudiochild16=Category.create(:name => "Μπομπινόφωνα")	
+homeaudiochild16.move_to_child_of(215)
+
+homeaudiochild20=Category.create(:name => "Κασετόφωνα")	
+homeaudiochild20.move_to_child_of(215)
+
+homeaudiochild17=Category.create(:name => "Ραδιόφωνα")	
+homeaudiochild17.move_to_child_of(215)
+
+homeaudiochild18=Category.create(:name => "Πικάπ")	
+homeaudiochild18.move_to_child_of(215)
+
+homeaudiochild19=Category.create(:name => "Εξαρτήματα και Αξεσουάρ")	
+homeaudiochild19.move_to_child_of(215)
+
+=end
+
+
+=begin
+#PARTS id=217
+
+partschild3=Category.create(:name => "Parts Ενισχυτών")	
+partschild3.move_to_child_of(217)
+
+partschild4=Category.create(:name => "Parts Μπάσου")	
+partschild4.move_to_child_of(217)
+
+partschild5=Category.create(:name => "Μαγνήτες Μπάσου")
+partschild5.move_to_child_of(217)
+
+partschild6=Category.create(:name => "Σώματα Κιθάρας")	
+partschild6.move_to_child_of(217)
+
+partschild7=Category.create(:name => "Parts Κιθάρας")	
+partschild7.move_to_child_of(217)
+
+partschild10=Category.create(:name => "Μαγνήτες Κιθάρας")	
+partschild10.move_to_child_of(217)
+
+partschild11=Category.create(:name => "Knobs")	
+partschild11.move_to_child_of(217)
+
+partschild12=Category.create(:name => "Εξαρτήματα Πεταλιών")	
+partschild12.move_to_child_of(217)
+
+partschild13=Category.create(:name => "Pickguards")	
+partschild13.move_to_child_of(217)
+
+partschild14=Category.create(:name => "Ηχεία")	
+partschild14.move_to_child_of(217)
+
+partschild15=Category.create(:name => "Λάμπες")	
+partschild15.move_to_child_of(217)
+
+partschild16=Category.create(:name => "Κλειδιά")	
+partschild16.move_to_child_of(217)
+
+partschild16=Category.create(:name => "Διάφορα")	
+partschild16.move_to_child_of(217)
+
+
+=end
+
+=begin
+#DRUMS ID = 212
+
+
+drumschild2=Category.create(:name => "Διάφορα Κρουστά")	
+drumschild2.move_to_child_of(212)
+
+drumschild3=Category.create(:name => "Κύμβαλα")	
+drumschild3.move_to_child_of(212)
+
+drumschild8=Category.create(:name => "Drum Machines και Samplers")
+drumschild8.move_to_child_of(212)
+
+drumschild9=Category.create(:name => "Κομμάτια Set")	
+drumschild9.move_to_child_of(212)
+
+drumschild13=Category.create(:name => "Ηλεκτρονικά Τύμπανα")	
+drumschild13.move_to_child_of(212)
+
+drumschild15=Category.create(:name => "Τύμπανα χειρός")	
+drumschild15.move_to_child_of(212)
+
+drumschild19=Category.create(:name => "Pad Controllers")	
+drumschild19.move_to_child_of(212)
+
+drumschild20=Category.create(:name => "Parts and Accessories")	
+drumschild20.move_to_child_of(212)
+
+=end
+
+#
