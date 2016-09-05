@@ -62,3 +62,8 @@ gem 'awesome_nested_set'
 
 
 #gem 'activerecord-reset-pk-sequence' reset db id to 0 after delete/destroy
+
+gem 'localtunnel'
+
+
+gem 'yaml_db'

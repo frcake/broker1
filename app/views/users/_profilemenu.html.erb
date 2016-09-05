@@ -1,35 +1,37 @@
 
+<div class="profilemenu">
+<!--<div class="center-div" id="index">-->
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Προφίλ</a></li>
+            <!--<li>Αγγελίες</a></li>-->
+            <li><a data-toggle="tab" href="#menu1">Οι Αγγελίες μου</a></li>
+            <li><a data-toggle="tab" href="#menu2">Μηνύματα</a></li>
+            <li><a data-toggle="tab" href="#menu3">Watchlist</a></li>
+        </ul>
 
-<div class="container">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Προφίλ</a></li>
-        <!--<li>Αγγελίες</a></li>-->
-        <li> <a data-toggle="tab" href="#menu1">Οι Αγγελίες μου</a></li>
-        <li><a data-toggle="tab" href="#menu2">Μηνύματα</a></li>
-        <li><a data-toggle="tab" href="#menu3">Watchlist</a></li>
-    </ul>
+        <div class="tab-content">
 
-    <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <%= render 'profile' %>
+            </div>
 
-        <div id="home" class="tab-pane fade in active">
-            <%= render 'profile' %>
+
+            <div id="menu1" class="tab-pane fade">
+                <%= render 'listing' %>
+            </div>
+
+
+            <div id="menu2" class="tab-pane fade">
+
+            </div>
+
+
+            <div id="menu3" class="tab-pane fade">
+
+            </div>
+
+
         </div>
-
-
-        <div id="menu1" class="tab-pane fade">
-            <%= render 'listing' %>
-        </div>
-
-
-        <div id="menu2" class="tab-pane fade">
-
-        </div>
-
-
-        <div id="menu3" class="tab-pane fade">
-
-        </div>
-
-
-    </div>
+ 
+  <!--  </div> -->  
 </div>

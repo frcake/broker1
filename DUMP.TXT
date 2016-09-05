@@ -1,0 +1,81 @@
+<div class="supporting">
+
+  <div class="container">
+
+    <ul class="nav navbar-default">  
+      <% Category.roots.each do |f| %>
+
+      <li class="dropdown">        
+        <%= link_to f.name , category_path(f) , { :class => "dropdown-toggle" , "data-toggle" => "dropdown" , "role" => "button" , "tabindex" => "-1"} %>
+        <ul class="dropdown-menu">
+          <% f.children.each do |kid|%>
+          <li class="dropdown">
+          <%= link_to category_path(kid) , { :class => "dropdown-toggle" , "data-toggle" => "dropdown" , "role" => "button" , "tabindex" => "-1"} do %>
+          <%= kid.name %>
+          <% unless kid.children.blank? %>
+              <span class="glyphicon glyphicon-option-vertical"  ></span>
+              <%end%>
+            <%end%>
+            
+            <% unless kid.children.blank? %>
+            <ul class="dropdown-menu sub-menu">
+              <% kid.children.each do |grandkid| %>
+              <li>
+              
+              <%= link_to grandkid.name , category_path(grandkid), { :class => "dropdown-toggle" , "data-toggle" => "dropdown" , "role" => "button" , "tabindex" => "-1"} %>
+              </li> 
+
+              <%end%>
+            </ul>
+            <%end%>
+          </li>
+          <%end%>
+        </ul>  
+      </li>
+      <% end %>
+    </ul>
+  </div><!-- /.container-fluid -->
+</div>
+
+/////////////////////////
+
+
+ <div class="container-fluid">
+        <section class="container">
+            <div class="container-page" id="index">
+                <% @user.classifieds.each do |f| %>
+                <%= link_to classified_path(f) do %>
+
+
+                <ul>
+                    <li>
+                       <% f.photos.each do |p| %>
+
+                       <%= image_tag p.image %>
+
+                       <%end%>
+                       <h4><p><%= f.title %></p></h4>
+                       <p>
+                        <%= f.make %>
+                        <%= f.model %>
+                        <%= f.year %>
+                        <%= f.created_at.to_formatted_s(:short) %>
+                    </p>
+                    <p>
+                        <%= f.make_country %>
+                        <%= f.price %>
+                        <%= link_to "Edit", editlisting_path(f) %>
+                        <%= link_to 'Destroy',f, :confirm => "Are you sure?" ,:method => :delete %>
+                    </p>
+                    <p></p>
+                </li>
+            </ul>
+
+
+
+
+            <%end%>
+            <% end %>
+        </div>
+    </section>
+</div>

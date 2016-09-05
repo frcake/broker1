@@ -28,7 +28,7 @@ body {
 
 
 span {
-	color : #FF1A65;
+	color : #FF0000;
 }
 
 
@@ -43,7 +43,7 @@ span {
 	margin:30px 0 30px 0;
 	font-size: 100px;
 	font-weight: 300;
-	color :#FF1A65;
+	color :#FF0000;
 }
 
 
@@ -66,30 +66,30 @@ span {
 .content .btn-primary {
 	background: none;
 	font-weight: 500;
-	border : 3px solid #FF1A65;
+	border : 3px solid #FF0000;
 	margin-top : 23px;
-	color :#FF1A65;
+	color :#FF0000;
 
 }
 
 .content .btn-primary:hover {
 	background: none !important;
-	color :#FF1A65 !important;
-	border : 3px solid #FF1A65;
+	color :#FF0000 !important;
+	border : 3px solid #FF0000;
 	
 }
 
 
 .content .btn-primary:click {
 	background: none !important;
-	color :#FF1A65 !important;
-	border : 3px solid #FF1A65;
+	color :#FF0000 !important;
+	border : 3px solid #FF0000;
 	
 }
 
 .content .btn-primary:visited {
 	background: none !important;
-	color :#FF1A65 !important;
+	color :#FF0000 !important;
 	
 }
 
@@ -100,11 +100,11 @@ span {
 
 .linkbtn .btn-submit {
 	
-	border : 2px solid #FF1A65;
+	border : 2px solid #FF0000;
 	border-radius: 3px;
 	padding:5px 15px 5px 15px;
 	text-decoration: none;
-	color :  #FF1A65;
+	color :  #FF0000;
 	font-weight: 300;
 	font-size: 17px;
 	background: none;
@@ -114,17 +114,17 @@ span {
 .linkbtn .btn-submit:hover  {
 	text-decoration: none;
 	font-style: none;
-	color :  #FF1A65;
+	color :  #FF0000;
 }
 .linkbtn .btn-submit:visited  {
 	text-decoration: none;
 	font-style: none;
-	color :  #FF1A65;
+	color :  #FF0000;
 }
 .linkbtn .btn-submit:click {
 	text-decoration: none;
 	font-style: none;
-	color :  #FF1A65;
+	color :  #FF0000;
 }
 
 
