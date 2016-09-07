@@ -71,6 +71,25 @@ class ClassifiedsController < ApplicationController
 
 
 
+	def favorite
+	    type = params[:type]
+	    @classified = Classified.find(params[:id])
+	    if type == "favorite"
+	      current_user.favorites << @classified
+	      redirect_to :back, notice: 'You favorited #{@classified.title}'
+
+	    elsif type == "unfavorite"
+	      current_user.favorites.delete(@classified)
+	      redirect_to :back, notice: 'Unfavorited #{@classified.title}'
+
+	    else
+	      # Type missing, nothing happens
+	      redirect_to :back, notice: 'Nothing happened.'
+	    end
+	  end
+
+
+
 
 private
 

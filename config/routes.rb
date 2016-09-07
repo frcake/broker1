@@ -32,7 +32,9 @@
 
     get '/newlisting' => 'classifieds#new' , as: :newlisting
 
-    resources :classifieds
+    resources :classifieds do
+      put :favorite, on: :member
+    end
 
     post '/newlisting' => 'classifieds#create'
 
