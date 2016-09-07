@@ -58,10 +58,11 @@
                             <label><%= @user.stars%></label>
                         </div>
 
-
-                        <div class="form-group col-md-12">
-                            <%= link_to "Αλλαγή" , edit_path(@user) , class: "btn-submit" %>
-                        </div>
+                        <% if @user == current_user %>
+                            <div class="form-group col-md-12">
+                                <%= link_to "Αλλαγή" , edit_path(@user) , class: "btn-submit" %>
+                            </div>
+                        <% end %>
                     </div>
 
 
@@ -71,17 +72,34 @@
 
 
 
-                    <div class="col-md-5">
-                        <h3 class="dark-grey">Στοιχεία χρήστη</h3>
-                        <div class="content">
-                            <p>Μπορείτε να προσθέσετε το τηλέφωνο ώστε να γίνεται πιο εύκολα η</p>
-                            <p>επικοινωνία με τα μέλη που ενδιαφέροντε για τις αγγελίες σας</p>
-                            <p>Το <span>broker</span> δεν χρησημοποιεί τα στοιχεία σας</p>
-                            <p>για διαφημιστικούς λόγους.</p>
-                        </div>
-                        <div class="linkbtn">
+                    <div class="col-lg-6">
+                        <% if @user == current_user %>
+                            <h3 class="dark-grey">Στοιχεία χρήστη</h3>
+                            <div class="content">
+                                <p>Μπορείτε να προσθέσετε το τηλέφωνο ώστε να γίνεται πιο εύκολα η</p>
+                                <p>επικοινωνία με τα μέλη που ενδιαφέροντε για τις αγγελίες σας</p>
+                                <p>Το <span>broker</span> δεν χρησημοποιεί τα στοιχεία σας</p>
+                                <p>για διαφημιστικούς λόγους.</p>
+                            </div>
+                        <%else %>
+                           <!-- <div class="container-fluid">
+                                <div class="container-page">
 
-                        </div>
+                                        <div class="form-group col-md-6">    
+                                          <label>Τίτλος Μηνύματος</label>
+                                          <%= text_field "", :placeholder => "" , :class => "form-control" %>
+                                        </div>
+
+
+                                        <div class="form-group col-md-6">
+                                         <h3 class="dark-grey">Μήνυμα</h3>
+                                         <%= text_area "", rows: "15", :placeholder => "" , :class => "form-control" %>
+                                       </div>
+
+                                </div>
+                            </div>-->
+                           
+                        <% end %>
 
 
                     </div>

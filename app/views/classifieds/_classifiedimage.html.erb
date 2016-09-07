@@ -1,0 +1,20 @@
+ <div class="section3">
+   <div class="form-group col-lg-12">
+    <hr>
+    <h3 class="dark-grey">Φωτογραφίες</h3>
+
+    <% if @classified.photos.exists? %>
+      <% @classified.photos.each do |z| %>
+        <div class="classifiedimage">
+          <%= image_tag z.image %>
+        </div>
+        <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+      <%end%>
+    <%end%>
+
+    <%= f.fields_for :photos do |p| %>
+      <%= p.file_field :image %>
+    <% end %>
+
+  </div>
+</div>

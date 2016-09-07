@@ -6,9 +6,10 @@ class Photo < ApplicationRecord
 
 	has_attached_file 	:image, 
 						:styles => { :large => "600x170", :medium => "250x250!",:thumb => "100x100>" },
-						:default_url => ActionController::Base.helpers.image_path("/missing.png")
-						#,
+						:default_url => ActionController::Base.helpers.asset_path("/images/missing.png")
 						#:default_url => lambda { |photo| photo.instance.set_default_url}
+
+
 
 	
 	validates_attachment_content_type 	:image, 

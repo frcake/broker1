@@ -3,17 +3,18 @@
     <% @user.classifieds.each do |f| %>
 
     <div class="center-div" id="index">
-
+        <% if @user == current_user %>
         
-        <div class="pull-right">
-
-            <div class="listingoptions">
-                <div class="col-md-3">
-                    <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"   %></p>
-                    <p><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" %></p>
+            <div class="pull-right">
+                <div class="listingoptions">
+                    <div class="col-md-3">
+                        <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"   %></p>
+                        <p><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" %></p>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        <% end %>
         <%= link_to classified_path(f) , :class => "link" do %>
         <div class="media">
 

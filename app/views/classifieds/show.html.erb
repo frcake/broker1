@@ -17,7 +17,8 @@
 		<li><%= @classified.model %></li>
 		<h3 class="dark-grey">Description</h3>
 		<li><%= @classified.description %></li>
-		<li><%= link_to "Back", '/' %></li>
+		<li><%= link_to "Back", '/' , :class => "link" %></li>
+		<li><%= link_to @classified.user.first_name, profile_path(@classified.user_id) %></li>
 
 
 	</ul>

@@ -2,22 +2,39 @@
 <div class="profilemenu">
 <!--<div class="center-div" id="index">-->
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Προφίλ</a></li>
+
+
+            <% if @user == current_user %>
+
+                <li class="active"><a data-toggle="tab" href="#home">Οι Αγγελίες μου</a></li>                
+                <li><a data-toggle="tab" href="#menu1">Προφίλ</a></li>
+
+            <% else  %>
+
+                <li class="active"><a data-toggle="tab" href="#home">Οι Αγγελίες του χρήστη <%= @user.first_name %></a></li>
+                <li><a data-toggle="tab" href="#menu1">Προφίλ-Επικοινωνία</a></li>
+
+            <% end %>
+
             <!--<li>Αγγελίες</a></li>-->
-            <li><a data-toggle="tab" href="#menu1">Οι Αγγελίες μου</a></li>
-            <li><a data-toggle="tab" href="#menu2">Μηνύματα</a></li>
-            <li><a data-toggle="tab" href="#menu3">Watchlist</a></li>
+            
+
+            <% if @user == current_user %>
+                <li><a data-toggle="tab" href="#menu2">Μηνύματα</a></li>
+                <li><a data-toggle="tab" href="#menu3">Watchlist</a></li>
+            <% end %>
+
         </ul>
 
         <div class="tab-content">
 
             <div id="home" class="tab-pane fade in active">
-                <%= render 'profile' %>
+                <%= render 'listing' %>
             </div>
 
 
             <div id="menu1" class="tab-pane fade">
-                <%= render 'listing' %>
+                <%= render 'profile' %>
             </div>
 
 

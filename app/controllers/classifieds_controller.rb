@@ -44,10 +44,13 @@ class ClassifiedsController < ApplicationController
 
 	def destroy
 		flash[:success] = "deleted"
+		user = Classified.find(params[:id]).user_id
+
+
 		if Classified.find(params[:id]).destroy
-			redirect_to '/'
+			redirect_to :back
 		else
-			redirect_to '/'
+			redirect_to profile_path
 		end
 	end
 

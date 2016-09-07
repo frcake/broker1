@@ -22,14 +22,19 @@
  /* body */
  @import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
 
+* {
+  margin:0;
+}
 
-
- body {
+ html,body {
   font-family: 'Roboto' !important;
     /*background: url("brokerback.png"); 
     background-position: 50% 50%;
     background-repeat: no-repeat;*/
-
+    height:100%;
+     display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
 
   }
@@ -265,18 +270,39 @@
 
 /* footer */
 
-.footer .container {
-  margin-top:500px;
+.site-footer {
+
+  margin-top: auto;
+}
+
+.pre-footer {
+  height: 80px;
+}
+
+/*.page-wrap {
+  min-height: 100%;
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}*/
+
+.site-footer, .page-wrap:after {
+  height: 80px; 
+}
+
+.site-footer {
   width:100%;
-  height :100px;
-  background-color: #222222; 
+  background-color: rgba(0,0,0,0.6); 
   text-align: center;
   color:#ffffff;
 }
 
 
-.footer p {
- font-size: 50px;
+.site-footer p {
+  padding-top: 10px;
+ font-size: 40px;
  font-weight:100;
 
 }
@@ -488,14 +514,20 @@ textarea { resize:vertical ; }
 }
 
 
-/* PRFILE LISTING */
+/* PRFILE LISTING options*/
+
+.pull-right {
+  margin-top:5px;
+ }
+
 
 .listingoptions .col-md-3{
   /*border: 1px solid #FF0000;*/
   margin: 0;
   padding:auto;
   margin-left:-10px;
-  margin-top:8px;
+  padding-bottom:1px;
+  
   width:auto;
 }
 
@@ -557,6 +589,15 @@ text-decoration: none !important;
 
   max-width:100%;
 }
+
+.classifiedimage img{
+
+  /*padding:0;*/
+  height: auto;
+
+  max-width:100px;
+}
+
 
 
 
