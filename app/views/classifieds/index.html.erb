@@ -1,21 +1,27 @@
 
 <div class="indexbox">
+ 
 	<% @classified.each do |f| %>
 
 	<div class="center-div" id="index">
 
-		
 		
         
             <div class="pull-right">
                 <div class="listingoptions">
                     <div class="col-md-3">
                         <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+	 						
+	 						<%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
 
-                        <% if current_user != f.favorited_by %>
+	                        	<p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+	                        
+	                        <%else%>
+	                        	
+	                        <p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %></p>
+
+	                        <%end%>
                         
-                        <p><%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
-                        <% end %>
                         <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
                        
                     </div>
@@ -36,8 +42,9 @@
 				</div>
 				<div class="media-body">
 					<h5 class="media-heading"> <%= f.title %></h5>
-					<div class="price">										
-						<h3><%= f.price %></h3>
+					<div class="price ">										
+						<h3><%= f.price %> </h3>
+						
 					</div>
 				</div>
 			</div>

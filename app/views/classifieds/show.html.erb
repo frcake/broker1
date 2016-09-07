@@ -5,17 +5,27 @@
 
 
 				<h3 class="dark-grey"><%= @classified.title %></h3>
-				<h5 class="dark-grey"><%= @classified.favorited_by.count %> </h5>
+				<h5 class="dark-grey">Loved by: <%= @classified.favorited_by.count %> </h5>
 
 		<%= image_tag p.image %>
 
 		<%end%>
 
 	</div>
-	<p><%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+
+
+	<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
                         
-     <p><%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
-     <p><%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
+     <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+	    <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+	                        
+	 <%else%>
+	                        	
+	    <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %>
+	<%end%>
+
+
+     <%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
 	<ul> 
 
 		
