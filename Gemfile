@@ -67,3 +67,5 @@ gem 'localtunnel'
 
 
 gem 'yaml_db'
+
+gem 'devise'
