@@ -548,7 +548,7 @@ text-decoration: none !important;
 
 
 
-/* classified */
+/* classified SHOW*/
 .classified{
   margin-top: 50px;
   width: 100%;
@@ -603,10 +603,13 @@ text-decoration: none !important;
 
 .description {
   width: auto;
-  padding: 30px;
-  
   height: auto;
 
+}
+
+.description ul {
+  margin-left:-25px;
+  margin-right:15px;
 }
 
 
@@ -618,6 +621,23 @@ text-decoration: none !important;
   height: auto;
 
 }
+
+
+.center-div .showoptions {
+
+  
+  
+
+}
+
+.center-div .showoptions  a{
+
+margin:10px 0 0 15px;
+
+}
+
+
+
 
 
 
@@ -636,6 +656,11 @@ text-decoration: none !important;
 .categorytitle {
   padding : 30px;
 }
+
+
+
+
+
 
 
 

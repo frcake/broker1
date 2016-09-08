@@ -13,29 +13,32 @@
 
 	</div>
 
-
-	<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
-                        
-     <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
-	    <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+	<div class="showoptions">
+		<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
 	                        
-	 <%else%>
-	                        	
-	    <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %>
-	<%end%>
+	     <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+		    <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+		                        
+		 <%else%>
+		                        	
+		    <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %>
+		<%end%>
 
 
-     <%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
-	<ul> 
+	     <%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
+     </div>
+     <div class="description">
+		<ul> 
 
-		
-		<h3 class="dark-grey">Model</h3>
-		<li><%= @classified.model %></li>
-		<h3 class="dark-grey">Description</h3>
-		<li><%= @classified.description %></li>
-		<li><%= link_to "Back", '/' , :class => "link" %></li>
-		<li><%= link_to @classified.user.first_name, profile_path(@classified.user_id) %></li>
+			
+			<h3 class="dark-grey">Model</h3>
+			<li><%= @classified.model %></li>
+			<h3 class="dark-grey">Description</h3>
+			<li><%= @classified.description %></li>
+			<li><%= link_to "Back", '/' , :class => "link" %></li>
+			<li><%= link_to @classified.user.first_name, profile_path(@classified.user_id) %></li>
 
 
-	</ul>
+		</ul>
+	</div>
 </div>
