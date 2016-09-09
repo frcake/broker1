@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+=begin
 	def new
 		#render :layout => '../sessions/new'
 
@@ -24,5 +24,7 @@ class SessionsController < ApplicationController
 		redirect_to '/'
 	end
 
+
+=end
 
 end

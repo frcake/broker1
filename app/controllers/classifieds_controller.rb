@@ -1,7 +1,7 @@
 class ClassifiedsController < ApplicationController
 
 	
-	before_action :require_user, only: [:index, :show]
+	#before_action :require_user, only: [:index, :show]
 
 
 	def new 
@@ -76,15 +76,15 @@ class ClassifiedsController < ApplicationController
 	    @classified = Classified.find(params[:id])
 	    if type == "favorite"
 	      current_user.favorites << @classified
-	      redirect_to :back, notice: 'You favorited #{@classified.title}'
+	      redirect_to :back#, notice: 'You favorited #{@classified.title}'
 
 	    elsif type == "unfavorite"
 	      current_user.favorites.delete(@classified)
-	      redirect_to :back, notice: 'Unfavorited #{@classified.title}'
+	      redirect_to :back#, notice: 'Unfavorited #{@classified.title}'
 
 	    else
 	      # Type missing, nothing happens
-	      redirect_to :back, notice: 'Nothing happened.'
+	      redirect_to :back#, notice: 'Nothing happened.'
 	    end
 	  end
 

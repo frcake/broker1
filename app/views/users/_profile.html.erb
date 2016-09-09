@@ -60,7 +60,9 @@
 
                         <% if @user == current_user %>
                             <div class="form-group col-md-12">
-                                <%= link_to "Αλλαγή" , edit_path(@user) , class: "btn-submit" %>
+                                <%= link_to "Αλλαγή" ,edit_user_registration_path , class: "btn-submit" %>
+                                 <!--<%= link_to('Edit registration', edit_user_registration_path) %>-->
+                                
                             </div>
                         <% end %>
                     </div>
