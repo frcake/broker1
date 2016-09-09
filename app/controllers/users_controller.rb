@@ -19,6 +19,20 @@ def update_password_with_password(params, *options)
     clean_up_passwords
     result
   end
+
+  
+
+def name 
+	first_name
+end
+
+
+
+def mailboxer_email(object)
+  email
+end
+
+  
 end
 	
 

@@ -6,6 +6,8 @@
     #map.resources :users, :has_many => :classifieds
     get '/' => 'classifieds#index'
 
+    root :to => 'classifieds#index'
+
     #get 'show/:id' => 'classifieds#show' , as: :classified
 
 
@@ -38,6 +40,22 @@
 
 
     resources :passwords 
+    resources :messages
+
+    resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+  end
+   member do
+    post :restore
+  end
+  collection do
+    delete :empty_trash
+  end
+  member do
+    post :mark_as_read
+  end
+end
     
 resources :classifieds do
       put :favorite, on: :member

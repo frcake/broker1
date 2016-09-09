@@ -758,3 +758,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
   border-right-color: #A1A1A1;
 }*/
 
+
+
+
+.messages {
+  max-height: 400px;
+  overflow:hidden;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

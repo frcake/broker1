@@ -52,6 +52,8 @@ gem "paperclip", "~> 5.0.0"
 
 gem 'rmagick', '2.15.4'
 
+gem 'mailboxer'
+
 
 gem 'sunspot_rails'
 
@@ -69,3 +71,5 @@ gem 'localtunnel'
 gem 'yaml_db'
 
 gem 'devise'
+
+gem 'will_paginate'
