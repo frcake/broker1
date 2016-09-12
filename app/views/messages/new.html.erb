@@ -1,23 +1,33 @@
 
 <div class="center-div">
-<% page_header "Start Conversation" %>
+  <div class="messages-box">
+    <% page_header "Αποστολή μηνύματος" %>
 
-<%= form_tag messages_path, method: :post do %>
-  <div class="form-group">
-    <%= label_tag 'message[subject]', 'Subject' %>
-    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
+    <%= form_tag messages_path, method: :post do %>
+      <div class="form-group">
+        <%= label_tag 'message[subject]', 'Αποστολή μηνύματος για την αγγελία : ' %>
+        <%= label_tag(:classified_id, "#{@classified.title}") %>    <!-- integrate this -->
+
+        <%= text_field_tag 'message[subject]', @classified.title, class: 'form-control', required: true %> <!-- integrate here -->
+      </div>
+
+     
+      <div class="form-group">
+        <%= label_tag 'message[body]', 'Μήνυμα στον χρήστη : ' %>
+        <%= label_tag(:recipient_id, "#{@user.first_name}") %>
+
+
+        <%= text_area_tag 'message[body]',"Ενδιαφέρομαι για την αγγελία : #{@classified.title}",rows: 15, cols: 3, class: 'form-control', required: true %> <!-- integrate here -->
+      </div>
+
+      <div class="form-group">
+      <%= hidden_field_tag(:recipient_id, "#{@user.id}") %>
+      </div>
+
+      <%= submit_tag 'Send', class: 'btn btn-primary' %>
+    <% end %>
   </div>
-
-  <div class="form-group">
-    <%= label_tag 'message[body]', 'Message' %>
-    <%= text_area_tag 'message[body]', nil, cols: 3, class: 'form-control', required: true %>
-  </div>
-
-  <div class="form-group">
-    <%= label_tag 'recipients', 'Choose recipients' %>
-    <%= select_tag 'recipients', recipients_options, multiple: true, class: 'form-control' %>
-  </div>
-
-  <%= submit_tag 'Send', class: 'btn btn-primary' %>
-<% end %>
 </div>
+
+
+

@@ -1,29 +1,39 @@
 <div class="center-div">
 
+  <div class="messages-box">
+
+    <% page_header "Conversation" %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><%= @conversation.subject %></div>
+
+      <div class="panel-body">
+        <div class="messages">
+          <% @conversation.receipts_for(current_user).each do |receipt| %>
+          <div class="msg">
+
+            <p class="received-message"><% message = receipt.message %></p>
 
 
-  <% page_header "Conversation" %>
-
-  <div class="panel panel-default">
-    <div class="panel-heading"><%= @conversation.subject %></div>
-
-    <div class="panel-body">
-      <div class="messages">
-        <% @conversation.receipts_for(current_user).each do |receipt| %>
-        <% message = receipt.message %>
-
-        <%= message.sender.first_name %>
-        says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
-        <%= message.body %>
-        <% end %>
+            <p class="sender-message"><span><%= message.sender.first_name %></span>
+              <small class="pull-right"><span class="text-muted"><%= message.created_at.strftime("%-d %b %Y, %H:%M") %></span></small>
+            </p>
+            <p class="body-message"><%= simple_format(word_wrap(message.body , line_width: 80)) %></p>
+          </div>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <%= form_tag reply_conversation_path(@conversation), method: :post do %>
-  <div class="form-group">
-    <%= text_area_tag 'body', nil, cols: 3, class: 'form-control', placeholder: 'Type something...', required: true %>
-  </div>
-  <%= submit_tag "Send Message", class: 'btn btn-primary' %>
-  <% end %>
+    <%= form_tag reply_conversation_path(@conversation), method: :post do %>
 
+    <div class="form-group" word-wrap="break-word">    
+      <%= text_area_tag 'body', nil, rows: 8,cols: 3, class: 'form-control', placeholder: 'Απάντηση....',  required: true %>
+    </div>
+
+  
+  <div class="linkbtn">
+    <%= submit_tag "Αποστολή", class: 'btn-submit' %>
+  </div>
+  <% end %>
+  </div>
 </div>

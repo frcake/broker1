@@ -59,6 +59,8 @@ end
     
 resources :classifieds do
       put :favorite, on: :member
+      resources :messages do
+      end
     end
 
     get '/newlisting' => 'classifieds#new' , as: :newlisting

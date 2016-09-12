@@ -1,24 +1,31 @@
 
-
+<div class="conversation">
 	<li class="list-group-item clearfix">
-		<%= link_to conversation.subject, conversation_path(conversation) %>
+		<p class="conv-heading" id="conv-index"><%= link_to conversation.subject, conversation_path(conversation) %></p>
 
 		<div class="btn-group-vertical pull-right">
 			<% if conversation.is_trashed?(current_user) %>
-			<%= link_to 'Restore', restore_conversation_path(conversation), class: 'btn btn-xs btn-info', method: :post %>
+
+				<%= link_to 'Restore', restore_conversation_path(conversation), class: 'btn btn-xs btn-info', method: :post %>
+
 			<% else %>
-			<%= link_to 'Move to trash', conversation_path(conversation), class: 'btn btn-xs btn-danger', method: :delete,
-			data: {confirm: 'Are you sure?'} %>
-			<% if conversation.is_unread?(current_user) %>
-			<%= link_to 'Mark as read', mark_as_read_conversation_path(conversation),
-			class: 'btn btn-xs btn-info', method: :post %>
-			<% end %>
+
+				<p><%= link_to '', conversation_path(conversation), class: 'glyphicon glyphicon-trash', method: :delete, data: {confirm: 'Are you sure?'} %></p>
+
+				<% if conversation.is_unread?(current_user) %>
+
+					<p><%= link_to '', mark_as_read_conversation_path(conversation),class: 'glyphicon glyphicon-eye-open', method: :post %></p>
+
+				<% end %>
 			<% end %>
 		</div>
 
 
-		<p><%= conversation.last_message.body %>
-			<small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small>
+		<p class="message-body"><%= truncate(conversation.last_message.body , :length => 50) %></p>
+
+
+		<p>
+			<small><span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %b %Y, %H:%M") %></span></small>
 		</p>
 	</li>
-
+</div>
