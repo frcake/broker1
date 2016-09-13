@@ -1,40 +1,71 @@
   Rails.application.routes.draw do
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     #map.resources :users, :has_many => :classifieds
     get '/' => 'classifieds#index'
 
+    root :to => 'classifieds#index'
+
     #get 'show/:id' => 'classifieds#show' , as: :classified
 
 
-    get 'signup' => 'users#new' , as: :signup
-    resources :users
+    #get 'signup' => 'users#new' , as: :signup #DEVISE
+    #resources :users #DEVISE
 
-    post 'signup' => 'users#create'
+    #post 'signup' => 'users#create' #DEVISE
     
 
-    get '/edit/:id' => 'users#edit' , as: :edit
-
-    post 'update' => 'users#update' , as: :update
-
-
-
-
-    get '/login' => 'sessions#new' , as: :login
-    
-    post '/login' => 'sessions#create'
-    
-    delete '/logout' => 'sessions#destroy'
-
+   #resource :user, only: [:edit] do
+   # collection do
+    #    patch 'update_password'
+    #  end
+    #end
 
     
-    get '/profile/:id' => 'users#show' , as: :profile
 
+    get '/profile/:id' => 'users#show' , as: :profile 
+
+    #get '/edit/:id' => 'users#edit' , as: :edit
+
+    #post 'update' => 'users#update' , as: :update 
+
+
+    #get '/login' => 'sessions#new' , as: :login #DEVISE
+    
+    #post '/login' => 'sessions#create' #DEVISE
+    
+    #delete '/logout' => 'sessions#destroy' #DEVISE
+
+
+    resources :passwords 
+    resources :messages
+
+    resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+  end
+   member do
+    post :restore
+  end
+  collection do
+    delete :empty_trash
+  end
+  member do
+    post :mark_as_read
+  end
+end
+    
+resources :classifieds do
+      put :favorite, on: :member
+      resources :messages do
+      end
+    end
 
     get '/newlisting' => 'classifieds#new' , as: :newlisting
 
-    resources :classifieds do
-      put :favorite, on: :member
-    end
+    
 
     post '/newlisting' => 'classifieds#create'
 

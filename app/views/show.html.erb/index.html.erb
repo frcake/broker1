@@ -1,0 +1,25 @@
+
+
+<div class="center-div">
+
+<h1>Conversations</h1>
+<h2>Inbox</h2>
+<ul>
+	<li>
+		<%=render collection: mailbox.inbox, partial: 'conversation' %>		
+	</li>
+	<h2>Sentbox</h2>
+	<li>
+		<%=render collection: mailbox.sentbox, partial: 'conversation' %>		
+	</li>
+	<h2>Trash</h2>
+	<li>
+		<%=render collection: mailbox.trash, partial: 'conversation' %>		
+	</li>
+</ul>
+
+<%= link_to 'Start Conversation', :new_conversation%>
+
+</div>
+
+

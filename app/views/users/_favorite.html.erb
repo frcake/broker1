@@ -8,9 +8,9 @@
             <div class="pull-right">
                 <div class="listingoptions">
                     <div class="col-md-3">
-                        <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+                        <p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
                         
-                        <p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+                        <p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart-empty " , :style => "color:#FF0000", method: :put %></p>
                        
                         
                     </div>

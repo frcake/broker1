@@ -1,34 +1,34 @@
 
 <div class="indexbox">
- 
+
 	<% @classified.each do |f| %>
 
 	<div class="center-div" id="index">
 
 		
-        
-            <div class="pull-right">
-                <div class="listingoptions">
-                    <div class="col-md-3">
-                        <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
-	 						
-	 						<%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
 
-	                        	<p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
-	                        
-	                        <%else%>
-	                        	
-	                        <p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %></p>
+		<div class="pull-right">
+			<div class="listingoptions">
+				<div class="col-md-3">
+					<p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
 
-	                        <%end%>
-                        
-                        <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
-                       
-                    </div>
-                </div>
-            </div>
+					<%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
 
-        <%= link_to classified_path(f) , :class => "link" do %>
+						<p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+
+					<%else%>
+
+						<p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
+
+					<%end%>
+
+					<p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
+
+				</div>
+			</div>
+		</div>
+
+		<%= link_to classified_path(f) , :class => "link" do %>
 		<div class="media">
 			<div class="mediabox">
 				
@@ -49,7 +49,9 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
+
 
 	<%end%>
 	<%end%>
