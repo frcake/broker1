@@ -1,37 +1,24 @@
 
 <div class="center-div">
 	<div class="col-lg-12" id="image">
-		<%  @classified.photos.each do |p| %>
+		
 
 
 		<h3 class="dark-grey"><%= @classified.title %></h3>
 		<h5 class="dark-grey">Loved by: <%= @classified.favorited_by.count %> </h5>
 
-		<%= image_tag p.image %>
+		
+			
+			<%= carousel_for @image_urls %>
+		
 
-		<%end%>
 
 	</div>
 
 
+	
+
 	<div class="showoptions">
-		<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
-	                        
-	     <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
-		    <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
-		                        
-		 <%else%>
-		                        	
-		    <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#000000", method: :put %>
-		<%end%>
-
-
-	     <%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
-     </div>
-     <div class="description">
-		<ul> 
-
-
 	<%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
 
 	<%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
@@ -44,6 +31,7 @@
 
 
 	<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
+	</div>
 	<ul> 
 
 

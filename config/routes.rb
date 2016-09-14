@@ -5,7 +5,11 @@
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     #map.resources :users, :has_many => :classifieds
     get '/' => 'classifieds#index'
-
+    resources :classifieds do
+      put :favorite, on: :member
+      resources :messages do
+      end
+    end
     root :to => 'classifieds#index'
 
     #get 'show/:id' => 'classifieds#show' , as: :classified

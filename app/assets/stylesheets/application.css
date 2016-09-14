@@ -627,13 +627,13 @@ text-decoration: none !important;
 .center-div .showoptions {
 
   
-  
+  margin-left : 10px;
 
 }
 
 .center-div .showoptions  a{
 
-margin:10px 0 0 15px;
+margin:10px 0 0 5px;
 
 }
 

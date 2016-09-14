@@ -47,12 +47,10 @@
 		<div class="mediabox">
 
 			<div class="media-left" href="#">
-				<% f.photos.each do |p| %>
+				<% if f.photos.first %>
+                    <%= image_tag f.photos.first.image.url , :class => "media-object"%>
 
-
-				<%= image_tag p.image , :class => "media-object" %>
-
-				<%end%>
+                <%end%>
 			</div>
 			<div class="media-body">
 				<h5 class="media-heading"> <%= f.title %></h5>

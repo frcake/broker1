@@ -1,4 +1,3 @@
-
 <div class="center-div">
   <div class="messages-box">
     <% page_header "Αποστολή μηνύματος" %>
@@ -8,16 +7,16 @@
         <%= label_tag 'message[subject]', 'Αποστολή μηνύματος για την αγγελία : ' %>
         <%= label_tag(:classified_id, "#{@classified.title}") %>    <!-- integrate this -->
 
-        <%= text_field_tag 'message[subject]', @classified.title, spellcheck: 'false' ,class: 'form-control', required: true %> <!-- integrate here -->
+        <%= text_field_tag 'message[subject]', "#{@classified.title}", class: 'form-control', required: true %> <!-- integrate here -->
       </div>
 
-     
+
       <div class="form-group">
         <%= label_tag 'message[body]', 'Μήνυμα στον χρήστη : ' %>
         <%= label_tag(:recipient_id, "#{@user.first_name}") %>
 
 
-        <%= text_area_tag 'message[body]',"Ενδιαφέρομαι για την αγγελία : #{@classified.title}",rows: 15, cols: 3,spellcheck: 'false' , class: 'form-control', required: true %> <!-- integrate here -->
+        <%= text_area_tag 'message[body]', "Χαίρεται #{@user.first_name} , \nΕνδιαφέρομαι για την αγγελία : #{@classified.title}",rows: 15, cols: 3, class: 'form-control', required: true %> <!-- integrate here -->
       </div>
 
       <div class="form-group">
@@ -28,6 +27,3 @@
     <% end %>
   </div>
 </div>
-
-
-
