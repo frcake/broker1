@@ -30,6 +30,8 @@ class ClassifiedsController < ApplicationController
 		end
 		@classified = @search.results
 
+		#@classified = Classified.all
+
 		respond_to do |format|
 	      format.html # index.html.erb
 	      format.json { render json: @classifieds }
