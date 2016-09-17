@@ -22,24 +22,41 @@ class ClassifiedsController < ApplicationController
 		end
 	end
 
+
+
+
+
 	def index
+
 		@search = Classified.search do 
-
 			fulltext params[:search]
-
+			with(:created_at)
+			facet :model
+			with(:model , params[:model]) if params[:model].present?
+			facet :make
+			with(:make , params[:make]) if params[:make].present?
+			facet :created_month
+			with(:created_month , params[:month]) if params[:month].present?
 		end
 		@classified = @search.results
 
+
+
+
+
+
 		#@classified = Classified.all
 
-		respond_to do |format|
-	      format.html # index.html.erb
-	      format.json { render json: @classifieds }
-	  end
+		#See rails casts for more options /278/
+		#@classified = Classified.all
+	end
 
-			#See rails casts for more options /278/
-			#@classified = Classified.all
-		end
+
+
+
+
+
+
 
 		def show 
 			@classified = Classified.find(params[:id])
@@ -149,7 +166,7 @@ class ClassifiedsController < ApplicationController
 
 
 	def classified_params
-		params.require(:classified).permit(:make ,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos)
+		params.require(:classified).permit(:make ,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos , :created_at)
 	end
 end
 

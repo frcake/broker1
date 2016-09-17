@@ -9,6 +9,8 @@
       put :favorite, on: :member
       resources :messages do
       end
+      resources :categories do
+      end
     end
     root :to => 'classifieds#index'
 

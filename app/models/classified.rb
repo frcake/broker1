@@ -1,5 +1,6 @@
 class Classified < ApplicationRecord
 	
+	
 	belongs_to :user
 	belongs_to :category
 	has_many :photos, dependent: :destroy, inverse_of: :classified
@@ -11,8 +12,19 @@ class Classified < ApplicationRecord
 
 
 	searchable do 
-		text :title , :model
+		text :title, :boost => 5
+		text :model , :created_month , :make
+		
+		time :created_at
+		string :created_month	
+		string :make	
+		string :model
 	end
+
+	def created_month 
+		created_at.strftime("%B %Y")
+	end
+
 	
 
 end

@@ -846,3 +846,33 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
   font-size: 18px;
   font-weight: 400 !important; 
 }
+
+
+
+/*FACETS */
+.col-md-9{
+  float: left;
+  width: auto;
+  max-width:350px !important;
+  margin-left:220px;
+  margin-top : 5px;
+  
+}
+
+.facets ul li {
+  list-style: none;
+}
+
+
+.facets h6{
+  /*border-top: 1px solid #e9e9e9;*/
+  border-bottom: 1px solid #e9e9e9;
+  padding : 5px;
+  font-weight: 300;
+}
+
+
+.center-div {
+  
+}
+
