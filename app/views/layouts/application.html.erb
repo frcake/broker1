@@ -101,7 +101,7 @@
   <div class="container">
 
     <ul class="nav navbar-default">  
-      <% Category.roots.each do |f| %>
+      <% Category.roots.includes(:children , children: :children).each do |f| %>
 
       <li class="dropdown">
        <%= link_to f.name , category_path(f), { :class => 'dropdown-toggle' } %></a> 
