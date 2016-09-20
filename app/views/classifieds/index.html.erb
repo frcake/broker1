@@ -2,34 +2,60 @@
 
 <div class="indexbox">
 	<div class="col-md-9 visible-lg">
-		<div class="facets">
-			
+		<div class="facets">			
 
 			<h6>Μοντέλο</h6>
-			<ul>
+			<ul class="facetlist">
 				<% for row in @search.facet(:model).rows %>
-				<li>
+					<li>
 					<% if params[:model].blank? %>
-					<%= link_to row.value, :model => row.value %> (<%= row.count %>)
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :model => nil %>)
+						<%= link_to(row.value, params.merge(:model => row.value).permit!) %> (<%= row.count %>)
+						<% else %>
+						<strong><%= row.value %></strong> (<%= link_to "remove", :model => nil %>)
 					<% end %>
-				</li>
+					</li>
 				<% end %>
 			</ul>
 
 			<h6>Μάρκα</h6>
-			<ul>
+			<ul class="facetlist">
 				<% for row in @search.facet(:make).rows %>
-				<li>
+					<li>
 					<% if params[:make].blank? %>
-					<%= link_to row.value, :make => row.value %> (<%= row.count %>)
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :make => nil %>)
+						<%= link_to(row.value, params.merge(:make => row.value).permit!) %> (<%= row.count %>)
+						<% else %>
+						<strong><%= row.value %></strong> (<%= link_to "remove", :make => nil %>)
 					<% end %>
-				</li>
+					</li>
 				<% end %>
 			</ul>
+
+			<h6>Χώρα Κατασκευής</h6>
+			<ul class="facetlist">
+				<% for row in @search.facet(:make_country).rows %>
+					<li>
+					<% if params[:make_country].blank? %>
+						<%= link_to(row.value, params.merge(:make_country => row.value).permit!) %> (<%= row.count %>)
+						<% else %>
+						<strong><%= row.value %></strong> (<%= link_to "remove", :make_country => nil %>)
+					<% end %>
+					</li>
+				<% end %>
+			</ul>
+
+			<h6>Κατάσταση</h6>
+			<ul class="facetlist">
+				<% for row in @search.facet(:condition).rows %>
+					<li>
+					<% if params[:condition].blank? %>
+						<%= link_to(row.value, params.merge(:condition => row.value).permit!) %> (<%= row.count %>)
+						<% else %>
+						<strong><%= row.value %></strong> (<%= link_to "remove", :condition => nil %>)
+					<% end %>
+					</li>
+				<% end %>
+			</ul>
+
 		</div>
 	</div>
 
@@ -77,7 +103,11 @@
           </div>
           <div class="media-body">
             <h5 class="media-heading"> <%= f.title %></h5>
-            <small><%=f.created_month%></small>
+            <small><%= f.created_month %></small>
+            <% if f.category.parent_id? %>
+            <small><%= f.category.root.name %></small>
+            <%end%>
+            <small><%= f.category.name %></small>
             <div class="price ">                    
               <h3><%= f.price %> </h3>
 

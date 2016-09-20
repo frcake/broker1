@@ -31,14 +31,39 @@ class ClassifiedsController < ApplicationController
 		@search = Classified.search do 
 			fulltext params[:search]
 			with(:created_at)
-			facet :model
-			with(:model , params[:model]) if params[:model].present?
-			facet :make
-			with(:make , params[:make]) if params[:make].present?
+			
+			active_model = with(:model ,params[:model]) if params[:model].present?
+			active_make = with(:make , params[:make]) if params[:make].present?
+			active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?
+			active_condition = with(:condition,params[:condition]) if params[:condition].present?
+
+
+			
+			facet(:model , exclude: active_make)
+			facet(:model , exclude: active_condition)
+			facet(:model , exclude: active_make_country)
+			#with(:model , params[:model]) if params[:model].present?
+			
+			#facet(:make , exclude: active_make )
+			facet(:make , exclude: active_model)			
+			facet(:make , exclude: active_condition)
+			facet(:make , exclude: active_make_country)
+
+			facet(:make_country)
+			facet(:condition)
+			#facet :make
+			#with(:make , params[:make]) if params[:make].present?
 			facet :created_month
 			with(:created_month , params[:month]) if params[:month].present?
+			
 		end
 		@classified = @search.results
+
+		#@searchcat = Category.search do 
+	 	#	facet :name
+		#	with(:name , params[:name]) if params[:name].present?
+		#end
+		#@classified = @searchcat.results
 
 
 

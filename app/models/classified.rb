@@ -13,16 +13,20 @@ class Classified < ApplicationRecord
 
 	searchable do 
 		text :title, :boost => 5
-		text :model , :created_month , :make
+		text :model , :created_month , :make , :make_country , :condition , :price #TO BE CHANGED TO CURRENCY FORMAT
 		
 		time :created_at
+		
+		string :price #TO BE CHANGED TO CURRENCY FORMAT
 		string :created_month	
+		string :make_country
+		string :condition
 		string :make	
 		string :model
 	end
 
 	def created_month 
-		created_at.strftime("%B %Y")
+		created_at.strftime("%B")
 	end
 
 	
