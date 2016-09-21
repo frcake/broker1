@@ -33,24 +33,34 @@ class ClassifiedsController < ApplicationController
 			with(:created_at)
 			
 			active_model = with(:model ,params[:model]) if params[:model].present?
+			
 			active_make = with(:make , params[:make]) if params[:make].present?
+			
 			active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?
+			
 			active_condition = with(:condition,params[:condition]) if params[:condition].present?
 
 
-			
-			facet(:model , exclude: active_make)
-			facet(:model , exclude: active_condition)
-			facet(:model , exclude: active_make_country)
+			facet(:model)	
+			#facet(:model , exclude: active_condition)
+			#facet(:model , exclude: active_make_country)
 			#with(:model , params[:model]) if params[:model].present?
 			
 			#facet(:make , exclude: active_make )
-			facet(:make , exclude: active_model)			
-			facet(:make , exclude: active_condition)
-			facet(:make , exclude: active_make_country)
+			facet(:make)			
+			#facet(:make , exclude: active_condition)
+			#facet(:make , exclude: active_make_country)
 
 			facet(:make_country)
+			#facet(:make_country  , exclude: active_model)
+			#facet(:make_country  , exclude: active_condition)
+			#facet(:make_country  , exclude: active_make)
+
 			facet(:condition)
+			#facet(:condition , exclude: active_make)
+			#facet(:condition , exclude: active_make_country)
+			#facet(:condition , exclude: active_model)
+
 			#facet :make
 			#with(:make , params[:make]) if params[:make].present?
 			facet :created_month

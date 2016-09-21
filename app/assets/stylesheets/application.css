@@ -880,7 +880,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 .facetlist {
   height :80px;
   overflow: hidden;
-  overflow-y: auto;
+  
+}
+
+.facetlist:hover {
+
+  overflow:auto;
 }
 
 
