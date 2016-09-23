@@ -7,9 +7,9 @@
     get '/' => 'classifieds#index'
     resources :classifieds do
       put :favorite, on: :member
+      put :sold , on: :member
+      #put :hold , on: :member
       resources :messages do
-      end
-      resources :categories do
       end
     end
     root :to => 'classifieds#index'
@@ -46,7 +46,7 @@
 
 
     resources :passwords 
-    resources :messages
+    resources :messages , only: [:new,:create]
 
     resources :conversations, only: [:index, :show, :destroy] do
   member do
@@ -63,11 +63,7 @@
   end
 end
     
-resources :classifieds do
-      put :favorite, on: :member
-      resources :messages do
-      end
-    end
+
 
     get '/newlisting' => 'classifieds#new' , as: :newlisting
 

@@ -3,6 +3,8 @@ class Classified < ApplicationRecord
 	
 	belongs_to :user
 	belongs_to :category
+
+
 	has_many :photos, dependent: :destroy, inverse_of: :classified
 
 	has_many :favorite_classifieds, dependent: :destroy
@@ -13,22 +15,29 @@ class Classified < ApplicationRecord
 
 	searchable do 
 		text :title, :boost => 5
-		text :model , :created_month , :make , :make_country , :condition , :price #TO BE CHANGED TO CURRENCY FORMAT
+		text :model , :created_month , :make , :make_country , :condition ,:cat,:price #TO BE CHANGED TO CURRENCY FORMAT
 		
 		time :created_at
 		
 		string :price #TO BE CHANGED TO CURRENCY FORMAT
 		string :created_month	
+		string :cat
 		string :make_country
 		string :condition
 		string :make	
 		string :model
 	end
 
+	def cat 
+		category.root.name
+	end
+
+
 	def created_month 
 		created_at.strftime("%B")
 	end
 
 	
+		
 
 end

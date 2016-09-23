@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
     recipients = User.find_by(id: params[:recipient_id])
     conversation = current_user.send_message(recipients, params[:message][:body], params[:message][:subject]).conversation
     flash[:success] = "Message has been sent!"
+    #NotifierMailer.welcome_email(@user).deliver_later
     redirect_to conversation_path(conversation)
   end
 

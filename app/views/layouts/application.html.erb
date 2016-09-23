@@ -49,8 +49,8 @@
 
              <%= form_tag classifieds_path, :method => :get do %>
              <p>
-              <%= text_field_tag :search, params[:search] , :class => "form-control" %>
-              <%= submit_tag "Search", :name => nil , :class => "btn btn-default"   %>
+              <%= text_field_tag :search, params[:search] , :class => "form-control" , :id => "searchfield" %>
+              <%= submit_tag "Search", :name => nil , :class => "btn btn-default" , :id => "search" %>
             </p>
             <% end %>
           </div>

@@ -78,4 +78,6 @@ gem 'nested_form'
 
 gem 'twitter-bootstrap-rails','2.2.8'
 
+gem 'kaminari'
+
 gem 'less-rails'

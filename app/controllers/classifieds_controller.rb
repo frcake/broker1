@@ -29,6 +29,8 @@ class ClassifiedsController < ApplicationController
 	def index
 
 		@search = Classified.search do 
+			paginate(:page => params[:page] || 1, :per_page => 10)
+			order_by(:created_at , :desc)
 			fulltext params[:search]
 			with(:created_at)
 			
@@ -40,6 +42,7 @@ class ClassifiedsController < ApplicationController
 			
 			active_condition = with(:condition,params[:condition]) if params[:condition].present?
 
+			active_category = with(:cat,params[:cat]) if params[:cat].present?
 
 			facet(:model)	
 			#facet(:model , exclude: active_condition)
@@ -60,14 +63,18 @@ class ClassifiedsController < ApplicationController
 			#facet(:condition , exclude: active_make)
 			#facet(:condition , exclude: active_make_country)
 			#facet(:condition , exclude: active_model)
-
+			facet(:cat)
 			#facet :make
 			#with(:make , params[:make]) if params[:make].present?
+			
 			facet :created_month
 			with(:created_month , params[:month]) if params[:month].present?
 			
 		end
-		@classified = @search.results
+		@classifieds = @search.results
+		#@classifieds = Kaminari.paginate_array(@search.results).page(params[:page]).per(5)
+
+
 
 		#@searchcat = Category.search do 
 	 	#	facet :name
@@ -86,6 +93,8 @@ class ClassifiedsController < ApplicationController
 		#@classified = Classified.all
 	end
 
+
+	
 
 
 
@@ -177,6 +186,37 @@ class ClassifiedsController < ApplicationController
 
 
 
+
+	def sold 
+		type = params[:type]
+		@classified = Classified.find(params[:id])
+		
+		if type == "sold"
+			@classified.update_attributes(:sold => true )	
+			redirect_to :back	
+		elsif type == "unsold"
+			@classified.update_attributes(:sold => false )
+			redirect_to :back
+		end
+	end
+
+
+	def hold 
+		type = params[:type]
+		@classified = Classified.find(params[:id])
+		
+		if type == "hold"
+			@classified.update_attributes(:hold => true )	
+			redirect_to :back	
+		elsif type == "unhold"
+			@classified.update_attributes(:hold => false )
+			redirect_to :back
+		end
+	end
+
+
+
+
 	def favorite
 		type = params[:type]
 		@classified = Classified.find(params[:id])
@@ -201,7 +241,7 @@ class ClassifiedsController < ApplicationController
 
 
 	def classified_params
-		params.require(:classified).permit(:make ,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos , :created_at)
+		params.require(:classified).permit(:make ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos , :created_at)
 	end
 end
 

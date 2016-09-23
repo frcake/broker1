@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913113922) do
+ActiveRecord::Schema.define(version: 20160921172816) do
 
   create_table "categories", force: :cascade do |t|
     t.string  "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160913113922) do
     t.integer "rgt",                        null: false
     t.integer "depth",          default: 0, null: false
     t.integer "children_count", default: 0, null: false
+    t.string  "title"
     t.index ["lft"], name: "index_categories_on_lft"
     t.index ["parent_id"], name: "index_categories_on_parent_id"
     t.index ["rgt"], name: "index_categories_on_rgt"
@@ -36,9 +37,11 @@ ActiveRecord::Schema.define(version: 20160913113922) do
     t.string   "make_country"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "category_id"
+    t.boolean  "sold",         default: false
+    t.boolean  "hold",         default: false
     t.index ["category_id"], name: "index_classifieds_on_category_id"
     t.index ["user_id"], name: "index_classifieds_on_user_id"
   end

@@ -1,5 +1,6 @@
 
 <div class="conversation">
+
 	<li class="list-group-item clearfix">
 		<p class="conv-heading" id="conv-index"><%= link_to conversation.subject, conversation_path(conversation) %></p>
 
@@ -28,4 +29,6 @@
 			<small><span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %b %Y, %H:%M") %></span></small>
 		</p>
 	</li>
+	
+
 </div>
