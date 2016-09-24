@@ -9,6 +9,8 @@
       put :favorite, on: :member
       put :sold , on: :member
       #put :hold , on: :member
+     
+
       resources :messages do
       end
     end
@@ -84,7 +86,11 @@ end
     get 'back' => 'application#back' , as: :back
 
 
-    resources :categories
+    resources :categories do
+      resources :classifieds do 
+      end
+    end
+
 
 
 

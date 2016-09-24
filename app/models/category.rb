@@ -1,16 +1,27 @@
 class Category < ApplicationRecord
+	 def nested_classifieds
+    	Classified.where(category_id: self_and_descendants.select(:id))
+	end
+
+	def nested_categories
+		self_and_descendants	
+	end
+
+
 
 	acts_as_nested_set
 	has_many :classifieds
 
-	searchable do 
-
+	searchable do
+		text :name
+		string :name
 		
 
-
-
-
+	
 	end
+
+	
+
 
 end
 

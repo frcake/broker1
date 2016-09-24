@@ -104,11 +104,11 @@
       <% Category.roots.includes(:children , children: :children).each do |f| %>
 
       <li class="dropdown">
-       <%= link_to f.name , category_path(f), { :class => 'dropdown-toggle' } %></a> 
+       <%= link_to f.name , category_classifieds_path(f), { :class => 'dropdown-toggle' } %></a> 
         <ul class="dropdown-menu">
           <% f.children.each do |kid|%>
           <li class="dropdown"> 
-            <%= link_to  category_path(kid) , { :class => 'dropdown-toggle' } do  %>
+            <%= link_to  category_classifieds_path(kid) , { :class => 'dropdown-toggle' } do  %>
             <%= kid.name %>
             <% unless kid.children.blank? %>
 
@@ -118,7 +118,7 @@
             <% unless kid.children.blank? %>
             <ul class="dropdown-menu sub-menu">
               <% kid.children.each do |grandkid| %>
-              <li><%= link_to grandkid.name , category_path(grandkid)%></li>            
+              <li><%= link_to grandkid.name , category_classifieds_path(grandkid)%></li>            
               <%end%>
             </ul>
             <%end%>
