@@ -1,8 +1,10 @@
+
 class ClassifiedsController < ApplicationController
 
 	
 	#before_action :require_user, only: [:index, :show]
 
+ 	before_action :set_category
 
 
 
@@ -22,24 +24,97 @@ class ClassifiedsController < ApplicationController
 		end
 	end
 
+
+	
+
+
+	def search
+		@search = Sunspot.search(Classified ) do 
+				paginate(:page => params[:page] || 1, :per_page => 10)
+				order_by(:created_at , :desc)
+				fulltext params[:search]
+				with(:created_at)
+				
+				active_model = with(:model ,params[:model]) if params[:model].present?			
+				active_make = with(:make , params[:make]) if params[:make].present?			
+				active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?			
+				active_condition = with(:condition,params[:condition]) if params[:condition].present?
+				active_category = with(:cat,params[:cat]) if params[:cat].present?
+				active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
+
+				facet(:model)	
+				#facet(:model , exclude: active_condition)			
+				facet(:make)			
+				facet(:make_country)		
+				facet(:condition)		
+				facet(:cat)		
+				facet(:treecat)			
+			end
+			@classifieds = @search.results
+	end
+
+
+
+
+
 	def index
-		@search = Classified.search do 
+		if @category.present? 
+			@classifieds = @category.nested_classifieds	
+			nested_categories = []
+			@category.nested_categories.each do |f|
+				nested_categories << f.id
+			end
 
-			fulltext params[:search]
+			#Works partially
+			#dd = params[:category_id]
 
+			@search = Sunspot.search(Classified ) do 
+				paginate(:page => params[:page] || 1, :per_page => 10)
+				order_by(:created_at , :desc)
+				fulltext params[:search]		
+				with(:categoryid,nested_categories)
+
+				#group do
+				# 	nested_categories.each do |dd|
+				#    query categoryid do
+				#      with(:categoryid, dd)
+				#    end
+				#  end
+				#end
+
+				active_model = with(:model ,params[:model]) if params[:model].present?			
+				active_make = with(:make , params[:make]) if params[:make].present?			
+				active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?			
+				active_condition = with(:condition,params[:condition]) if params[:condition].present?
+				active_category = with(:cat,params[:cat]) if params[:cat].present?
+				active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
+
+				facet(:model)	
+				#facet(:model , exclude: active_condition)			
+				facet(:make)			
+				facet(:make_country)		
+				facet(:condition)		
+				facet(:cat)		
+				facet(:treecat)			
+			end
+			@classifieds = @search.results	
+		    else
+		    	#redirect_to '/'
+		      #@classified=@search.results
+		      search
 		end
-		@classified = @search.results
+	end
 
-		#@classified = Classified.all
 
-		respond_to do |format|
-	      format.html # index.html.erb
-	      format.json { render json: @classifieds }
-	  end
 
-			#See rails casts for more options /278/
-			#@classified = Classified.all
-		end
+
+	
+
+
+
+
+
+
 
 		def show 
 			@classified = Classified.find(params[:id])
@@ -61,10 +136,14 @@ class ClassifiedsController < ApplicationController
 	end
 
 
+
+
 	def edit
 		@classified = Classified.find(params[:id])
 
 	end
+
+
 
 	def update
 		@classified = Classified.find(params[:id])
@@ -87,6 +166,9 @@ class ClassifiedsController < ApplicationController
 	 end
 	end
 
+
+
+
 	def destroy
 		@classified = Classified.find(params[:id])
 		if @classified.destroy
@@ -98,6 +180,9 @@ class ClassifiedsController < ApplicationController
 		#	format.json { head :no_content }
 		#end
 	end
+
+
+
 
 	def create
 
@@ -125,6 +210,44 @@ class ClassifiedsController < ApplicationController
 
 
 
+
+
+
+	def sold 
+		type = params[:type]
+		@classified = Classified.find(params[:id])
+		
+		if type == "sold"
+			@classified.update_attributes(:sold => true )	
+			redirect_to :back	
+		elsif type == "unsold"
+			@classified.update_attributes(:sold => false )
+			redirect_to :back
+		end
+	end
+
+
+
+
+
+	def hold 
+		type = params[:type]
+		@classified = Classified.find(params[:id])
+		
+		if type == "hold"
+			@classified.update_attributes(:hold => true )	
+			redirect_to :back	
+		elsif type == "unhold"
+			@classified.update_attributes(:hold => false )
+			redirect_to :back
+		end
+	end
+
+
+
+
+
+
 	def favorite
 		type = params[:type]
 		@classified = Classified.find(params[:id])
@@ -145,12 +268,24 @@ class ClassifiedsController < ApplicationController
 
 
 
+
+
+
 	private
+
+	 def set_category
+	    @category = Category.find(params[:category_id]) if params[:category_id]
+
+	 
+	end
+
 
 
 	def classified_params
-		params.require(:classified).permit(:make ,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos)
+		params.require(:classified).permit(:make ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country	,:category	,:description , :category_id,:photos , :created_at)
 	end
+
+
 end
 
 

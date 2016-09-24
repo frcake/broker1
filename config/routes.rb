@@ -7,6 +7,10 @@
     get '/' => 'classifieds#index'
     resources :classifieds do
       put :favorite, on: :member
+      put :sold , on: :member
+      #put :hold , on: :member
+     
+
       resources :messages do
       end
     end
@@ -44,7 +48,7 @@
 
 
     resources :passwords 
-    resources :messages
+    resources :messages , only: [:new,:create]
 
     resources :conversations, only: [:index, :show, :destroy] do
   member do
@@ -61,11 +65,7 @@
   end
 end
     
-resources :classifieds do
-      put :favorite, on: :member
-      resources :messages do
-      end
-    end
+
 
     get '/newlisting' => 'classifieds#new' , as: :newlisting
 
@@ -86,7 +86,11 @@ resources :classifieds do
     get 'back' => 'application#back' , as: :back
 
 
-    resources :categories
+    resources :categories do
+      resources :classifieds do 
+      end
+    end
+
 
 
 

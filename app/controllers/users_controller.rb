@@ -20,7 +20,18 @@ def update_password_with_password(params, *options)
     result
   end
 
-  
+  def sold 
+		type = params[:type]
+		@classified = Classifind.find(params[:id])
+		
+		if type == "sold"
+			@classified.sold = true
+			redirect_to :back	
+		else
+			@classified.solr = false
+			redirect_to :back
+		end
+	end
 
 def name 
 	first_name
