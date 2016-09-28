@@ -1,49 +1,111 @@
 
-<div class="center-div">
-	<div class="col-lg-12" id="image">
-		
+<div class="indexbox">
+	<div class="center-div" id="classifiedshow">
+		<div class="container-fluid">
 
+			<div class="row" id="showtitle">
 
-		<h3 class="dark-grey"><%= @classified.title %></h3>
-		<h5 class="dark-grey">Loved by: <%= @classified.favorited_by.count %> </h5>
+				<div class="col-sm-9 pull-left" id="titlecol">
+					<div class="h3title">
+						<h3 class="dark-grey" id="title"><%= @classified.title %></h3>									
+					</div>
+				</div>
 
-		
-			
-			<%= carousel_for @image_urls %>
-		
+				<div class="col-sm-3 pull-right">
 
+					<h3 class="dark-grey pull-right" id="prc"><%= @classified.price %><small><span class="glyphicon glyphicon-euro" id="prceuro"></span></small></h3>			
+									
+				</div>
 
-	</div>
+			</div>
 
+			<div class="row">
+				<div class="col-md-12" id="carousel">
+					<div id="image">
+						<%= carousel_for @image_urls  %>
+					</div>
+				</div>
+			</div>
+	<!--
+			<div class="row" id="communication">
+				<div class="col-md-4">
+					<%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
+					<%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+						<%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
 
-	
+					<%else%>
 
-	<div class="showoptions">
-	<%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
+						<%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+					<%end%>
 
-	<%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
-	<%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+				</div>
+				<div class="col-md-8" id="username">
+					<h5 class="pull-right">Αγγελία του χρήστη: <%= link_to @classified.user.first_name, profile_path(@classified.user_id)%></h5>
+				</div>
+			</div>
 
-	<%else%>
+	-->
 
-	<%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
-	<%end%>
+			<div class="row" id="stats">
+				<div class="col-md-6" id="left">
+					<h5 class="glyphicon glyphicon-heart"></h5>
+					<h5 class="">Loved by: <%= @classified.favorited_by.count %> </h5>
+				</div>
+				<div class="col-md-6" id="right">
+					<%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
+					<%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+						<%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
 
+					<%else%>
 
-	<%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
-	</div>
-	<ul> 
+						<%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+					<%end%>
+				</div>
+			</div>
 
+			<div class="row" id="cdescription">
+				<div class="col-md-12">				
+					<div class="text">
+						<%= @classified.description %>
+					</div>
+				</div>
+			</div>
 
-			
-			<h3 class="dark-grey">Model</h3>
-			<li><%= @classified.model %></li>
-			<h3 class="dark-grey">Description</h3>
-			<li><%= @classified.description %></li>
-			<li><%= link_to "Back", '/' , :class => "link" %></li>
-			<li><%= link_to @classified.user.first_name, profile_path(@classified.user_id) %></li>
+			<div class="row" id="fields">
+				<div class="col-md-12">
+					<div class="col-md-6">	
+						<div class="fields">
+							<small>
+								<ul>				
+									<li>Μάρκα: <strong><%= @classified.make%></strong></li>
+									<li>Μοντέλο: <strong><%= @classified.model %></strong></li>
+									<li>Κατάσταση: <strong><%= @classified.condition%></strong></li>
+									<li>Χώρα κατασκευής: <strong><%= @classified.make_country%></strong></li>
+									<li>Έτος: <strong><%= @classified.year%></strong></li>
+									
+								</ul>
+							</small>				
+						</div>
+					</div>
 
-
-		</ul>
-	</div>
+					<div class="col-md-6">
+						<div class="fields">
+							<small>
+								<ul>				
+									
+									<li>Άγγελία απο το μέλος: <strong><%= link_to @classified.user.first_name, profile_path(@classified.user_id)%></strong></li>
+									<% if @classified.user.telephone.present? %>
+										<li>Τηλέφωνο: <strong><%= link_to @classified.user.telephone, profile_path(@classified.user_id)%></strong></li>
+									<%end%>
+									<% if @classified.user.email.present? %>
+										<li>Email: <strong><%= link_to @classified.user.email, profile_path(@classified.user_id)%></strong></li>
+									<%end%>
+								</ul>
+							</small>				
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>	
 </div>

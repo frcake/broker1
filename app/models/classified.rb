@@ -12,6 +12,7 @@ class Classified < ApplicationRecord
 
 	accepts_nested_attributes_for :photos
 
+	monetize :price_cents
 
 	searchable do 
 		text :title, :boost => 5
@@ -28,18 +29,15 @@ class Classified < ApplicationRecord
 		string :condition
 		string :make	
 		string :model
+		integer :price
 	end
 
 	def cat 
 		category.root.name
 	end
 
-	def treecat
-		#THIS WORKS PARTIALLY!
+	def treecat		
 		category.name unless category.name == category.root.name
-		#THIS WORKS AS THE ABOVE DOES
-		#category.name if category.is_descendant_of?(category.root)	
-
 	end
 
 	def categoryid
@@ -48,7 +46,7 @@ class Classified < ApplicationRecord
 
 
 	def created_month 
-		created_at.strftime("%B")
+		created_at.strftime("%d/%m/%y")
 	end
 
 	

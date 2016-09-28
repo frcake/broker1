@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921172816) do
+ActiveRecord::Schema.define(version: 20160927134446) do
 
   create_table "categories", force: :cascade do |t|
     t.string  "name"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20160921172816) do
     t.string   "color"
     t.string   "title"
     t.string   "condition"
-    t.string   "price"
     t.string   "offer"
     t.string   "make_country"
     t.text     "description"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160921172816) do
     t.integer  "category_id"
     t.boolean  "sold",         default: false
     t.boolean  "hold",         default: false
+    t.integer  "price_cents"
     t.index ["category_id"], name: "index_classifieds_on_category_id"
     t.index ["user_id"], name: "index_classifieds_on_user_id"
   end

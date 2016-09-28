@@ -3,7 +3,7 @@
 <div class="indexbox">
 
  <% if @search %>
-	<div class="col-md-2 col-md-offset-1 visible-lg">
+	<div class="col-md-2 col-sm-offset-1 visible-lg">
 		<div class="facets">	
 
 			<h6>Μάρκα</h6>
@@ -58,7 +58,35 @@
 				<% end %>
 			</ul>
 
-			
+<!--
+			<h6>Τιμή</h6>
+		    <ul class="facetlist">
+		        <% for row in @search.facet(:price).rows %>
+		            <li>
+		                <% if params[:prc].blank? %>
+		                    <%= link_to(row.value,params.merge(:prc => row.value, :search => params[:prc]).permit!) %> (<%= row.count %>)
+		                <% else %>
+		                    <%= row.value %> (<%= link_to "remove", :prc => nil %>)
+		                <% end %>
+		            </li>
+		        <% end %>
+		    </ul>
+-->
+			  
+		         
+             <%= form_tag classifieds_path, :method => :get do %>
+             <p>
+              <%= text_field_tag :prcmin, params[:prcmin] , :class => "form-control" , :id => "searchfield" %>
+              
+            </p>
+            <p>
+              <%= text_field_tag :prcmax, params[:prcmax] , :class => "form-control" , :id => "searchfield" %>
+              
+            </p>
+
+            <%= submit_tag "Search", :name => nil , :class => "btn btn-default" , :id => "search" %>
+            <% end %>
+				
 
 		</div>
 	</div>
@@ -100,22 +128,23 @@
 						<div class="mediabox">
 
 							<div class="media-left" href="#">
-
-
-								<!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
-								<% if f.photos.first %>
-									<%= image_tag f.photos.first.image.url , :class => "media-object"%>
-
-								<%end%>
-
+								<!--<div class="imgholder">-->
+									<!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
+									<% if f.photos.first %>
+										<%= image_tag f.photos.first.image.url , :class => "media-object"%>
+									<%end%>
+								<!--</div>-->
 							</div>
 							<div class="media-body">
 								<h5 class="media-heading"> <%= f.title %></h5>
-								<small><%= f.created_month %></small>
-								<% if f.category.parent_id? %>
-									<small><%= f.category.root.name %></small>
-								<%end%>
-								<small><%= f.category.name %></small>
+								
+								<div class="details">
+									<p><small><%= f.created_month %></small></p>
+									<% if f.category.parent_id? %>
+										<small><%= f.category.root.name %></small> >
+									<%end%>
+									<small><%= f.category.name %></small>
+								</div>
 								<div class="price ">                    
 									<h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
 
@@ -132,6 +161,7 @@
 		<%end%>
 	<%end%>
 	<%end%>
+
 
 	<div class="center-div">
 		<div class="digg_pagination">

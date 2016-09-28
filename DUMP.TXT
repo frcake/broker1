@@ -316,3 +316,45 @@
 
 </div>
 
+
+
+
+
+=----------------------------------------------------------------------------------------
+CLASSIFIED SHOW
+
+<div class="center-div">
+  <div class="col-lg-12" id="image">
+    <h3 class="dark-grey"><%= @classified.title %></h3>
+    <h5 class="dark-grey">Loved by: <%= @classified.favorited_by.count %> </h5>
+      
+    <%= carousel_for @image_urls %>
+  </div>
+
+
+  
+
+  <div class="showoptions">
+    <%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
+
+    <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+      <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+
+    <%else%>
+
+      <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+    <%end%>
+    <%= link_to "", editlisting_path(@classified) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %>
+  </div>
+  <ul> 
+      
+    <h3 class="dark-grey">Model</h3>
+    <li><%= @classified.model %></li>
+    <h3 class="dark-grey">Description</h3>
+    <li><%= @classified.description %></li>
+    <li><%= link_to "Back", '/' , :class => "link" %></li>
+    <li><%= link_to @classified.user.first_name, profile_path(@classified.user_id) %></li>
+
+  </ul>
+  </div>
+</div>
