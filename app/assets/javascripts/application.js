@@ -13,4 +13,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require pictures
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .

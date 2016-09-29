@@ -5,17 +5,21 @@
 
     <% if @classified.photos.exists? %>
       <% @classified.photos.each do |z| %>
-        <div class="classifiedimage">
-          <%= image_tag z.image %>
-        </div>
-        <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+        
+          <div class="classifiedimage">
+            <%= image_tag z.image %>
+<%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+          </div>
+          
+          
+        
       <%end%>
     <%end%>
 
     <div class="control-group">
     <%= f.label :photos, :class => 'control-label' %>
     <div class="controls">
-      <!-- The magic is coming ...look at my eyes....shazammmm -->
+      
       <%= file_field_tag "images[]", type: :file, multiple: true %>
     </div>
   </div>

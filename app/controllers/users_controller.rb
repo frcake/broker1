@@ -1,51 +1,51 @@
 class UsersController < ApplicationController
 
-def show
-		@user = User.find(params[:id])
-end
+  def show
+    @user = User.find(params[:id])
+  end
 
-def update_password_with_password(params, *options)
+  def update_password_with_password(params, *options)
     current_password = params.delete(:current_password)
 
     result = if valid_password?(current_password)
-               update_attributes(params, *options)
-             else
-               self.assign_attributes(params, *options)
-               self.valid?
-               self.errors.add(:current_password, current_password.blank? ? :blank : :invalid)
-               false
-             end
+      update_attributes(params, *options)
+    else
+      self.assign_attributes(params, *options)
+      self.valid?
+      self.errors.add(:current_password, current_password.blank? ? :blank : :invalid)
+      false
+    end
 
     clean_up_passwords
     result
   end
 
-  def sold 
-		type = params[:type]
-		@classified = Classifind.find(params[:id])
-		
-		if type == "sold"
-			@classified.sold = true
-			redirect_to :back	
-		else
-			@classified.solr = false
-			redirect_to :back
-		end
-	end
+  def sold
+    type = params[:type]
+    @classified = Classifind.find(params[:id])
 
-def name 
-	first_name
+    if type == "sold"
+      @classified.sold = true
+      redirect_to :back
+    else
+      @classified.solr = false
+      redirect_to :back
+    end
+  end
+
+  def name
+    first_name
+  end
+
+
+
+  def mailboxer_email(object)
+    email
+  end
+
+
 end
 
-
-
-def mailboxer_email(object)
-  email
-end
-
-  
-end
-	
 
 =begin
 	def edit
@@ -152,6 +152,4 @@ end
 		params.require(:user).permit(:first_name ,:last_name,:email	,:password , :region , :telephone)
 	end
 =end
-	
-
 

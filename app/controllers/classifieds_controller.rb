@@ -1,7 +1,7 @@
 
 class ClassifiedsController < ApplicationController
 
-  
+
   #before_action :require_user, only: [:index, :show]
 
   before_action :set_category
@@ -15,53 +15,59 @@ class ClassifiedsController < ApplicationController
   end
 
 
-  def new 
+  def new
     @classified = Classified.new
-  #@photo = @classified.photos.build
+    #@photo = @classified.photos.build
     respond_to do |format|
-        format.html # new.html.erb
-        format.json { render json: @classified }
+      format.html # new.html.erb
+      format.json { render json: @classified }
     end
   end
 
 
-  
+
 
 
   def search
-    @search = Sunspot.search(Classified ) do 
-        paginate(:page => params[:page] || 1, :per_page => 10)
-        order_by(:created_at , :desc)
-        fulltext params[:search]
-        with(:created_at)
-        
-        active_model = with(:model ,params[:model]) if params[:model].present?      
-        active_make = with(:make , params[:make]) if params[:make].present?     
-        active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?     
-        active_condition = with(:condition,params[:condition]) if params[:condition].present?
-        active_category = with(:cat,params[:cat]) if params[:cat].present?
-        active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
-      
+    @search = Sunspot.search(Classified ) do
+      paginate(:page => params[:page] || 1, :per_page => 10)
+      order_by(:created_at , :desc)
+      fulltext params[:search]
+      with(:created_at)
 
-      
-        facet :price
-        with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
-        with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
-           
-        
- 
-        facet(:model) 
-        #facet(:model , exclude: active_condition)      
-        facet(:make)      
-        facet(:make_country)    
-        facet(:condition)   
-        facet(:cat)   
-        facet(:treecat)     
-       
-        #facet(:price), :range => 0..300 , :interval => 50
-        #with(:price, Range.new(*params[:price].first.split("..").map(&:to_i))) if params[:price].present? 
-      end
-      @classifieds = @search.results
+      active_model = with(:model ,params[:model]) if params[:model].present?
+      active_make = with(:make , params[:make]) if params[:make].present?
+      active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?
+      active_condition = with(:condition,params[:condition]) if params[:condition].present?
+      active_category = with(:cat,params[:cat]) if params[:cat].present?
+      active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
+      active_giveaway = with(:giveaway,params[:giveaway]) if params[:giveaway].present?
+      active_sell = with(:sell,params[:sell]) if params[:sell].present?
+      active_trade = with(:trade,params[:trade]) if params[:trade].present?
+
+
+
+      facet(:giveaway)
+      facet(:sell)
+      facet(:trade)
+
+
+      facet :price
+      with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
+      with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
+
+
+
+      facet(:model)
+      #facet(:model , exclude: active_condition)
+      facet(:make)
+      facet(:make_country)
+      facet(:condition)
+      facet(:cat)
+      facet(:treecat)
+
+    end
+    @classifieds = @search.results
   end
 
 
@@ -69,50 +75,56 @@ class ClassifiedsController < ApplicationController
 
 
   def index
-    if @category.present? 
-      @classifieds = @category.nested_classifieds 
+    if @category.present?
+      @classifieds = @category.nested_classifieds
       nested_categories = []
       @category.nested_categories.each do |f|
         nested_categories << f.id
       end
 
-      @search = Sunspot.search(Classified ) do 
+      @search = Sunspot.search(Classified) do
         paginate(:page => params[:page] || 1, :per_page => 10)
         order_by(:created_at , :desc)
-        fulltext params[:search]    
+        fulltext params[:search]
         with(:categoryid,nested_categories)
-        active_model = with(:model ,params[:model]) if params[:model].present?      
-        active_make = with(:make , params[:make]) if params[:make].present?     
-        active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?     
+        with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
+        with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
+        active_model = with(:model ,params[:model]) if params[:model].present?
+        active_make = with(:make , params[:make]) if params[:make].present?
+        active_make_country = with(:make_country , params[:make_country]) if params[:make_country].present?
         active_condition = with(:condition,params[:condition]) if params[:condition].present?
         active_category = with(:cat,params[:cat]) if params[:cat].present?
         active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
-        active_pricerange = with(:price, params[:price]) if params[:price].present?
+        active_giveaway = with(:giveaway,params[:giveaway]) if params[:giveaway].present?
+        active_sell = with(:sell,params[:sell]) if params[:sell].present?
+        active_trade = with(:trade,params[:trade]) if params[:trade].present?
 
-        fulltext params[:prc]
-        facet :price
-        with(:price).less_than(1000)
-        
-        facet(:model) 
-        #facet(:model , exclude: active_condition)      
-        facet(:make)      
-        facet(:make_country)    
-        facet(:condition)   
-        facet(:cat)   
-        facet(:treecat)     
+
+
+        facet(:giveaway)
+        facet(:sell)
+        facet(:trade)
+
+        facet(:price)
+        facet(:model)
+        #facet(:model , exclude: active_condition)
+        facet(:make)
+        facet(:make_country)
+        facet(:condition)
+        facet(:cat)
+        facet(:treecat)
       end
-      @classifieds = @search.results  
-        else
-          #redirect_to '/'
-          #@classified=@search.results
-          search
+      @classifieds = @search.results
+    else
+      #redirect_to '/'
+      #@classified=@search.results
+      search
     end
   end
 
 
 
 
-  
 
 
 
@@ -120,22 +132,23 @@ class ClassifiedsController < ApplicationController
 
 
 
-    def show 
-      @classified = Classified.find(params[:id])
-      @photos = @classified.photos #CW
 
-      @image_urls=[]
+  def show
+    @classified = Classified.find(params[:id])
+    @photos = @classified.photos #CW
 
-      @classified.photos.each do |photo|
+    @image_urls=[]
+
+    @classified.photos.each do |photo|
 
       @image_urls.push(photo.image.url)
 
-      end
+    end
 
 
-      respond_to do |format|
-        format.html # show.html.erb
-        format.json { render json: @classified }
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @classified }
     end
   end
 
@@ -152,22 +165,36 @@ class ClassifiedsController < ApplicationController
   def update
     @classified = Classified.find(params[:id])
 
+
+
     if @classified.update_attributes(classified_params)
 
+
+
       if params[:images]
-            # The magic is here ;)
-            params[:images].each { |image|
-              @classified.photos.create(image: image)
-            }
-            
-        end
-        redirect_to :back 
-       # format.html { redirect_to @classified, notice: 'Classified was successfully updated.' }
-       # format.json { head :no_content }
-   else
-    format.html { render action: "edit" }
-    format.json { render json: @classified.errors, status: :unprocessable_entity }
-   end
+        # The magic is here ;)
+        params[:images].each { |image|
+          @classified.photos.create(image: image)
+        }
+
+      end
+
+      respond_to do |format|
+        format.html { redirect_to @classified, notice: 'Classified was successfully updated.' }
+        format.json { head :no_content }
+      end
+
+    else
+
+      respond_to do |format|  ## Add this
+        format.html { render action: "edit" }
+        format.json { render json: @classified.errors, status: :unprocessable_entity }
+        format.html
+      end
+
+    end
+
+
   end
 
 
@@ -194,20 +221,22 @@ class ClassifiedsController < ApplicationController
     @classified.user_id = current_user.id
 
 
+
     if @classified.save
       if params[:images]
-            # The magic is here ;)
-            params[:images].each { |image|
-              @classified.photos.create(image: image)
-            }
-        end
-        redirect_to @classified
-          #format.html { redirect_to @classified, notice: 'Classified was successfully created.' }
-          #format.json { render json: @classified, status: :created, location: @classified }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @classified.errors, status: :unprocessable_entity }
-      end   
+        # The magic is here ;)
+        params[:images].each { |image|
+          @classified.photos.create(image: image)
+        }
+      end
+      redirect_to @classified
+      #format.html { redirect_to @classified, notice: 'Classified was successfully created.' }
+      #format.json { render json: @classified, status: :created, location: @classified }
+    else
+      #format.html { render action: "new" }
+      #format.json { render json: @classified.errors, status: :unprocessable_entity }
+      redirect_to '/'
+    end
 
 
   end
@@ -217,13 +246,13 @@ class ClassifiedsController < ApplicationController
 
 
 
-  def sold 
+  def sold
     type = params[:type]
     @classified = Classified.find(params[:id])
-    
+
     if type == "sold"
-      @classified.update_attributes(:sold => true ) 
-      redirect_to :back 
+      @classified.update_attributes(:sold => true )
+      redirect_to :back
     elsif type == "unsold"
       @classified.update_attributes(:sold => false )
       redirect_to :back
@@ -234,13 +263,13 @@ class ClassifiedsController < ApplicationController
 
 
 
-  def hold 
+  def hold
     type = params[:type]
     @classified = Classified.find(params[:id])
-    
+
     if type == "hold"
-      @classified.update_attributes(:hold => true ) 
-      redirect_to :back 
+      @classified.update_attributes(:hold => true )
+      redirect_to :back
     elsif type == "unhold"
       @classified.update_attributes(:hold => false )
       redirect_to :back
@@ -257,15 +286,15 @@ class ClassifiedsController < ApplicationController
     @classified = Classified.find(params[:id])
     if type == "favorite"
       current_user.favorites << @classified
-          redirect_to :back#, notice: 'You favorited #{@classified.title}'
+      redirect_to :back#, notice: 'You favorited #{@classified.title}'
 
     elsif type == "unfavorite"
       current_user.favorites.delete(@classified)
-        redirect_to :back#, notice: 'Unfavorited #{@classified.title}'
+      redirect_to :back#, notice: 'Unfavorited #{@classified.title}'
 
     else
-        # Type missing, nothing happens
-        redirect_to :back#, notice: 'Nothing happened.'
+      # Type missing, nothing happens
+      redirect_to :back#, notice: 'Nothing happened.'
     end
   end
 
@@ -277,19 +306,11 @@ class ClassifiedsController < ApplicationController
 
   private
 
-   def set_category
-      @category = Category.find(params[:category_id]) if params[:category_id]
-
-   
+  def set_category
+    @category = Category.find(params[:category_id]) if params[:category_id]
   end
-
-
 
   def classified_params
-    params.require(:classified).permit(:make ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country ,:category  ,:description , :category_id,:photos , :created_at)
+    params.require(:classified).permit(:make,:giveaway,:sell,:trade ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country ,:category  ,:description , :category_id,:photos , :created_at)
   end
-
-
 end
-
-

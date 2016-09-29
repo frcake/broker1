@@ -1,175 +1,186 @@
-
-
 <div class="indexbox">
-
- <% if @search %>
-	<div class="col-md-2 col-sm-offset-1 visible-lg">
-		<div class="facets">	
-
-			<h6>Μάρκα</h6>
-			<ul class="facetlist">
-				<% for row in @search.facet(:make).rows %>
-				<li>
-					<% if params[:make].blank? %>
-					<%= link_to(row.value, params.merge(:page  => 1,:make => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :make => nil %>)
+  <%if @category%>
+    Κατηγορία:<%= @category.name %>
+  <%end%>
+  <% if @search %>
+    <div class="col-md-2 col-sm-offset-1 visible-lg">
+      <div class="facets">
+        <h6>Μάρκα</h6>
+        <ul class="facetlist">
+          <% for row in @search.facet(:make).rows %>
+            <li>
+              <% if params[:make].blank? %>
+                <%= link_to(row.value, params.merge(:page  => 1,:make => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+              <% else %>
+                <strong><%= row.value %></strong> (<%= link_to "remove", :make => nil %>)
 					<% end %>
-				</li>
-				<% end %>
-			</ul>
-
-			<h6>Χώρα Κατασκευής</h6>
-			<ul class="facetlist">
-				<% for row in @search.facet(:make_country).rows %>
-				<li>
-					<% if params[:make_country].blank? %>
-					<%= link_to(row.value, params.merge(:page  => 1,:make_country => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :make_country => nil %>)
+            </li>
+          <% end %>
+        </ul>
+        <h6>Χώρα Κατασκευής</h6>
+        <ul class="facetlist">
+          <% for row in @search.facet(:make_country).rows %>
+            <li>
+              <% if params[:make_country].blank? %>
+                <%= link_to(row.value, params.merge(:page  => 1,:make_country => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+              <% else %>
+                <strong><%= row.value %></strong> (<%= link_to "remove", :make_country => nil %>)
 					<% end %>
-				</li>
-				<% end %>
-			</ul>
-
-			<h6>Κατάσταση</h6>
-			<ul class="facetlist">
-				<% for row in @search.facet(:condition).rows %>
-				<li>
-					<% if params[:condition].blank? %>
-					<%= link_to(row.value, params.merge(:page  => 1,:condition => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :condition => nil %>)
+            </li>
+          <% end %>
+        </ul>
+        <h6>Κατάσταση</h6>
+        <ul class="facetlist">
+          <% for row in @search.facet(:condition).rows %>
+            <li>
+              <% if params[:condition].blank? %>
+                <%= link_to(row.value, params.merge(:page  => 1,:condition => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+              <% else %>
+                <strong><%= row.value %></strong> (<%= link_to "remove", :condition => nil %>)
 					<% end %>
-				</li>
-				<% end %>
-			</ul>
-
-			<h6>Κατηγορία</h6>
-			<ul class="facetlist">
-				<% for row in @search.facet(:cat).rows %>
-				<li>
-					<% if params[:cat].blank? %>
-					<%= link_to(row.value, params.merge(:page  => 1,:cat => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
-					<% else %>
-					<strong><%= row.value %></strong> (<%= link_to "remove", :cat => nil %>)
+            </li>
+          <% end %>
+        </ul>
+        <h6>Κατηγορία</h6>
+        <ul class="facetlist">
+          <% for row in @search.facet(:cat).rows %>
+            <li>
+              <% if params[:cat].blank? %>
+                <%= link_to(row.value, params.merge(:page  => 1,:cat => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+              <% else %>
+                <strong><%= row.value %></strong> (<%= link_to "remove", :cat => nil %>)
 					<% end %>
-				</li>
-				<% end %>
-			</ul>
-
-<!--
-			<h6>Τιμή</h6>
-		    <ul class="facetlist">
-		        <% for row in @search.facet(:price).rows %>
-		            <li>
-		                <% if params[:prc].blank? %>
-		                    <%= link_to(row.value,params.merge(:prc => row.value, :search => params[:prc]).permit!) %> (<%= row.count %>)
-		                <% else %>
-		                    <%= row.value %> (<%= link_to "remove", :prc => nil %>)
-		                <% end %>
-		            </li>
-		        <% end %>
-		    </ul>
--->
-			  
-		         
-             <%= form_tag classifieds_path, :method => :get do %>
-             <p>
-              <%= text_field_tag :prcmin, params[:prcmin] , :class => "form-control" , :id => "searchfield" %>
-              
-            </p>
-            <p>
-              <%= text_field_tag :prcmax, params[:prcmax] , :class => "form-control" , :id => "searchfield" %>
-              
-            </p>
-
-            <%= submit_tag "Search", :name => nil , :class => "btn btn-default" , :id => "search" %>
+            </li>
+          <% end %>
+        </ul>
+        <h6>Τύπος</h6>
+        <ul class="facetlist">
+          <% for row in @search.facet(:sell).rows %>
+            <% if row.value%>
+              <li>
+                <% if params[:sell].blank? %>
+                  <%= link_to("Πώληση", params.merge(:page  => 1,:sell => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+                <% else %>
+                  <strong><%= "Πώληση" %></strong> (<%= link_to "remove", :sell => nil %>)
+			  <% end %>
+              </li>
             <% end %>
-				
-
-		</div>
-	</div>
-	<%end%>
-
-
-
-	<% @classifieds.each do |f| %>
-		<% if !f.sold %>
-
-
-			<div class="center-div" id="index">
-
-				<div class="col-lg-12">
-
-					<div class="pull-right">
-						<div class="listingoptions">
-							<div class="col-md-3">
-								<p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
-
-								<%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
-
-									<p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
-
-								<%else%>
-
-									<p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
-
-								<%end%>
-
-								<p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
-
-							</div>
-						</div>
-					</div>
-
-					<%= link_to classified_path(f) , :class => "link" do %>
-					<div class="media">
-						<div class="mediabox">
-
-							<div class="media-left" href="#">
-								<!--<div class="imgholder">-->
-									<!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
-									<% if f.photos.first %>
-										<%= image_tag f.photos.first.image.url , :class => "media-object"%>
+          <%end%>
+          <% for row in @search.facet(:giveaway).rows %>
+            <% if row.value %>
+              <li>
+                <% if params[:giveaway].blank?%>
+                  <%= link_to("Χαρίζεται", params.merge(:page  => 1,:giveaway => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+                <% else %>
+                  <strong><%= "Χαρίζεται" %></strong> (<%= link_to "remove", :giveaway => nil %>)
+			  <% end %>
+              </li>
+            <% end %>
+          <%end%>
+          <% for row in @search.facet(:trade).rows %>
+            <% if row.value %>
+              <li>
+                <% if params[:trade].blank?%>
+                  <%= link_to("Ανταλλαγή", params.merge(:page  => 1,:trade => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+                <% else %>
+                  <strong><%= "Ανταλλαγή" %></strong> (<%= link_to "remove", :trade => nil %>)
+			  <% end %>
+              </li>
+            <% end %>
+          <%end%>
+        </ul>
+        <h6>Τιμή</h6>
+        <ul class="facetlist" id="pricerange">
+          <%if @category %>
+            <%= form_tag category_classifieds_path(@category.id), :method => :get do %>
+              <%if params[:prcmin].blank? && params[:prcmax].blank? %>
+                <li> <%= text_field_tag :prcmin ,params[:prcmin], :class => "form-control" ,placeholder: "από..", :id => "pricemin"%></li>
+                <li> <%= text_field_tag :prcmax, params[:prcmax] , :class => "form-control" ,placeholder: "..μέχρι", :id => "pricemax"%></li>
+                <p><%= submit_tag "Εύρος τιμής",  :class => "btn btn-default" , :id => "pricerangebtn" %></p>
+              <%elsif params[:prcmax].blank? %>
+                από:<%= params[:prcmin] %><%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmin => nil %>
+              <%elsif params[:prcmin].blank? %>
+                μέχρι:<%= params[:prcmax] %><%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmax => nil %>
+              <%else%>
+                <li>από:<strong><%= params[:prcmin] %></strong></li>
+                <li> ... </li>
+                <li>μέχρι:<strong><%= params[:prcmax] %></strong></li>
+                <%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmax => nil  %>	<!-- any nil will do-->
+              <%end%>
+            <%end%>
+          <%else%>
+            <%= form_tag classifieds_path, :method => :get do %>
+              <%if params[:prcmin].blank? && params[:prcmax].blank? %>
+                <li> <%= text_field_tag :prcmin ,params[:prcmin], :class => "form-control" ,placeholder: "από..", :id => "pricemin"%></li>
+                <li> <%= text_field_tag :prcmax, params[:prcmax] , :class => "form-control" ,placeholder: "..μέχρι", :id => "pricemax"%></li>
+                <p><%= submit_tag "Εύρος τιμής",  :class => "btn btn-default" , :id => "pricerangebtn" %></p>
+              <%elsif params[:prcmax].blank? %>
+                από:<%= params[:prcmin] %><%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmin => nil %>
+              <%elsif params[:prcmin].blank? %>
+                μέχρι:<%= params[:prcmax] %><%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmax => nil %>
+              <%else%>
+                <li>από:<strong><%= params[:prcmin] %></strong></li>
+                <li> ... </li>
+                <li>μέχρι:<strong><%= params[:prcmax] %></strong></li>
+                <%= link_to "remove",class: "glyphicon glyphicon-remove" , :prcmax => nil  %>	<!-- any nil will do-->
+              <%end%>
+            <%end%>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  <%end%>
+  <% @classifieds.each do |f| %>
+    <% if !f.sold %>
+      <div class="center-div" id="index">
+        <div class="col-lg-12">
+          <div class="pull-right">
+            <div class="listingoptions">
+              <div class="col-md-3">
+                <p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+                <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
+                  <p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+                <%else%>
+                  <p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
+                <%end%>
+                <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
+              </div>
+            </div>
+          </div>
+          <%= link_to classified_path(f) , :class => "link" do %>
+            <div class="media">
+              <div class="mediabox">
+                <div class="media-left" href="#">
+                  <!--<div class="imgholder">-->
+                  <!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
+                  <% if f.photos.first %>
+                    <%= image_tag f.photos.first.image.url , :class => "media-object"%>
+                  <%end%>
+                  <!--</div>-->
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading"> <%= f.title %></h5>
+                  <div class="details">
+                    <p><small><%= f.created_month %></small></p>
+                    <% if f.category.parent_id? %>
+                      <small><%= f.category.root.name %></small> >
 									<%end%>
-								<!--</div>-->
-							</div>
-							<div class="media-body">
-								<h5 class="media-heading"> <%= f.title %></h5>
-								
-								<div class="details">
-									<p><small><%= f.created_month %></small></p>
-									<% if f.category.parent_id? %>
-										<small><%= f.category.root.name %></small> >
-									<%end%>
-									<small><%= f.category.name %></small>
-								</div>
-								<div class="price ">                    
-									<h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-
-
-		<%end%>
-	<%end%>
-	<%end%>
-
-
-	<div class="center-div">
-		<div class="digg_pagination">
-			<%= will_paginate @classifieds , :previous_label => '<', :next_label => '>' %>
-		</div>
-		</div>
-
-
-
+                    <small><%= f.category.name %></small>
+                  </div>
+                  <div class="price ">
+                    <h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    <%end%>
+  <%end%>
+  <div class="center-div">
+    <div class="digg_pagination">
+      <%= will_paginate @classifieds , :previous_label => '<', :next_label => '>' %>
+    </div>
+  </div>
 </div>
-

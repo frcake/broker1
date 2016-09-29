@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+
+
+# config/locale/en.yml
+en:
+  number:
+    format:
+      delimiter: ","
+      separator: "."
+  # or
+  number:
+    currency:
+      format:
+        delimiter: ","
+        separator: "."
