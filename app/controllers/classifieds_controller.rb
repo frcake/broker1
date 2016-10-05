@@ -5,9 +5,7 @@ class ClassifiedsController < ApplicationController
   #before_action :require_user, only: [:index, :show]
 
   before_action :set_category
-
-
-
+  helper_method :sort_column, :sort_direction
 
   def image_urls
     @classified = Classified.find(params[:id])
@@ -31,7 +29,11 @@ class ClassifiedsController < ApplicationController
   def search
     @search = Sunspot.search(Classified ) do
       paginate(:page => params[:page] || 1, :per_page => 10)
-      order_by(:created_at , :desc)
+      if params[:sort]
+        order_by(sort_column , sort_direction)
+      else
+        order_by(:created_at , :desc)
+      end
       fulltext params[:search]
       with(:created_at)
 
@@ -68,6 +70,7 @@ class ClassifiedsController < ApplicationController
 
     end
     @classifieds = @search.results
+    #@classifieds.order(params[:sort])
   end
 
 
@@ -114,7 +117,7 @@ class ClassifiedsController < ApplicationController
         facet(:cat)
         facet(:treecat)
       end
-      @classifieds = @search.results
+      @classifieds = @search.results.order(params[:sort])
     else
       #redirect_to '/'
       #@classified=@search.results
@@ -312,5 +315,13 @@ class ClassifiedsController < ApplicationController
 
   def classified_params
     params.require(:classified).permit(:make,:giveaway,:sell,:trade ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country ,:category  ,:description , :category_id,:photos , :created_at)
+  end
+
+  def sort_column
+    %w[price created_at].include?(params[:sort]) ? params[:sort] : "created_at"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 end

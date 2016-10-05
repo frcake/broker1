@@ -89,4 +89,8 @@ gem 'money-rails'
 gem 'htmlbeautifier', '~> 0.0.9'
 gem "ruby-beautify", "~> 0.92.2"
 
+#gem 'ratyrate', :github => 'wazery/ratyrate'
+
+gem 'jquery-turbolinks'
+
 gem 'ratyrate'

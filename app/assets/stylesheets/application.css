@@ -355,6 +355,21 @@ textarea { resize:vertical ; }
 /*.center-well {
   width : 800px;
 }*/
+
+/*#sortfilters .current{
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+#sortfilters .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+#sortfilters .desc {
+  background-image: url(/images/down_arrow.gif);
+}
+
+*/
+
 .center-div{
  margin: 0 auto;
  max-width: 700px;  

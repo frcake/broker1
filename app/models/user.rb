@@ -3,8 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
-  ratyrate_rateable 'rating'
   ratyrate_rater
+  ratyrate_rateable 'rating'
+  
   acts_as_messageable
 
   #has_secure_password

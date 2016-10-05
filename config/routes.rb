@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
+  
   devise_for :users, :controllers => { registrations: 'registrations' }
 
 
@@ -70,8 +71,6 @@ Rails.application.routes.draw do
 
   get '/newlisting' => 'classifieds#new' , as: :newlisting
 
-
-
   post '/newlisting' => 'classifieds#create'
 
   get '/editlisting/:id' => 'classifieds#edit' , as: :editlisting
@@ -91,12 +90,6 @@ Rails.application.routes.draw do
     resources :classifieds do
     end
   end
-
-
-
-
-
-
 
   resources :photos
 

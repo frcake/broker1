@@ -12,7 +12,7 @@
 /*jslint nomen: true, unparam: true, regexp: true */
 /*global $, window, document */
 
-$(function () {
+/*$(function () {
 
     function update(coords)
     {
@@ -28,7 +28,6 @@ $(function () {
       onSelect: update,
       onChange: update
     });
-
 
     'use strict';
 
@@ -101,3 +100,4 @@ $(function () {
 
   });
 });
+*/
