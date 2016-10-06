@@ -13,194 +13,6 @@ ar_internal_metadata:
     - '2016-07-21 08:23:58.617310'
 
 ---
-classifieds:
-  columns:
-  - id
-  - make
-  - model
-  - year
-  - color
-  - title
-  - condition
-  - price
-  - offer
-  - make_country
-  - description
-  - user_id
-  - created_at
-  - updated_at
-  - category_id
-  records: 
-  - - 38
-    - Korg
-    - Kaossilator
-    - '2010'
-    - 
-    - Korg Kaossilator Dynamic Phrase Synthesizer
-    - Mint
-    - '1400'
-    - 
-    - USA
-    - asd
-    - 1
-    - '2016-09-16 10:29:38.014975'
-    - '2016-09-16 10:29:38.014975'
-    - 216
-  - - 39
-    - Fender
-    - Precision Deluxe
-    - '1996'
-    - 
-    - Fender American Precision Deluxe Bass 1996
-    - Mint
-    - '1600'
-    - 
-    - USA
-    - a
-    - 4
-    - '2016-09-16 12:30:24.640489'
-    - '2016-09-16 12:30:24.640489'
-    - 249
-  - - 40
-    - Fender
-    - Stratocaster Sambora
-    - '1995'
-    - 
-    - Fender usa Sambora
-    - Mint
-    - '2500'
-    - 
-    - USA
-    - sa
-    - 4
-    - '2016-09-16 13:34:19.109825'
-    - '2016-09-16 13:34:19.109825'
-    - 244
-  - - 63
-    - Gibson
-    - SG Special T
-    - '2016'
-    - 
-    - Gibson SG με 1969 Minihumbuckers!
-    - Mint
-    - '1000'
-    - 
-    - USA
-    - Gibson SG με 1969 Minihumbuckers!
-    - 4
-    - '2016-09-20 07:19:17.345652'
-    - '2016-09-20 07:19:17.345652'
-    - 244
-  - - 64
-    - Copycat
-    - Precision Deluxe
-    - '2010'
-    - 
-    - Precision Deluxe - Copy!
-    - Good
-    - '2010'
-    - 
-    - China
-    - High copy
-    - 4
-    - '2016-09-20 09:13:49.598898'
-    - '2016-09-20 09:13:49.598898'
-    - 249
-
----
-photos:
-  columns:
-  - id
-  - classified_id
-  - created_at
-  - updated_at
-  - image_file_name
-  - image_content_type
-  - image_file_size
-  - image_updated_at
-  records: 
-  - - 16
-    - 38
-    - '2016-09-16 10:29:38.077027'
-    - '2016-09-16 10:29:38.077027'
-    - korg_kaossilator_dynamic_phrase_synthesi-1473376381-687-e.jpg
-    - image/jpeg
-    - 48334
-    - '2016-09-16 10:29:38.065786'
-  - - 17
-    - 38
-    - '2016-09-16 10:29:38.111683'
-    - '2016-09-16 10:29:38.111683'
-    - korg_kaossilator_dynamic_phrase_synthesi-1473376381-752-e.jpg
-    - image/jpeg
-    - 48202
-    - '2016-09-16 10:29:38.103383'
-  - - 18
-    - 38
-    - '2016-09-16 10:29:38.135250'
-    - '2016-09-16 10:29:38.135250'
-    - korg_kaossilator_dynamic_phrase_synthesi-1473376381-778-e.jpg
-    - image/jpeg
-    - 32332
-    - '2016-09-16 10:29:38.127147'
-  - - 19
-    - 39
-    - '2016-09-16 12:30:24.698351'
-    - '2016-09-16 12:30:24.698351'
-    - fender_american_precision_deluxe_bass_19-1473647114-487-e.jpg
-    - image/jpeg
-    - 32332
-    - '2016-09-16 12:30:24.687624'
-  - - 20
-    - 39
-    - '2016-09-16 12:30:24.720698'
-    - '2016-09-16 12:30:24.720698'
-    - fender_american_precision_deluxe_bass_19-1473647127-720-e.jpg
-    - image/jpeg
-    - 85908
-    - '2016-09-16 12:30:24.712471'
-  - - 21
-    - 39
-    - '2016-09-16 12:30:24.743860'
-    - '2016-09-16 12:30:24.743860'
-    - fender_american_precision_deluxe_bass_19-1473647133-678-e.jpg
-    - image/jpeg
-    - 98146
-    - '2016-09-16 12:30:24.735616'
-  - - 22
-    - 39
-    - '2016-09-16 12:30:24.766636'
-    - '2016-09-16 12:30:24.766636'
-    - fender_american_precision_deluxe_bass_19-1473647136-23-e.jpg
-    - image/jpeg
-    - 55164
-    - '2016-09-16 12:30:24.758872'
-  - - 23
-    - 40
-    - '2016-09-16 13:34:19.155375'
-    - '2016-09-16 13:34:19.155375'
-    - 5c515291-1470559055-772-e.jpeg
-    - image/jpeg
-    - 63151
-    - '2016-09-16 13:34:19.139854'
-  - - 26
-    - 63
-    - '2016-09-20 07:19:17.412835'
-    - '2016-09-20 07:19:17.412835'
-    - SG.jpg
-    - image/jpeg
-    - 39456
-    - '2016-09-20 07:19:17.394911'
-  - - 27
-    - 64
-    - '2016-09-20 09:13:49.655770'
-    - '2016-09-20 09:13:49.655770'
-    - fender_american_precision_deluxe_bass_19-1473647127-720-e.jpg
-    - image/jpeg
-    - 85908
-    - '2016-09-20 09:13:49.642035'
-
----
 categories:
   columns:
   - id
@@ -958,6 +770,295 @@ categories:
     - 
 
 ---
+classifieds:
+  columns:
+  - id
+  - make
+  - model
+  - year
+  - color
+  - title
+  - condition
+  - offer
+  - make_country
+  - description
+  - user_id
+  - created_at
+  - updated_at
+  - category_id
+  - sold
+  - hold
+  - price_cents
+  - giveaway
+  - trade
+  - sell
+  records: 
+  - - 39
+    - Fender
+    - Precision Deluxe
+    - '1996'
+    - 
+    - Fender American Precision Deluxe Bass 1996
+    - Mint
+    - 
+    - USA
+    - a
+    - 4
+    - '2016-09-16 12:30:24.640489'
+    - '2016-09-28 20:17:01.727896'
+    - 249
+    - false
+    - false
+    - 140000
+    - false
+    - false
+    - true
+  - - 40
+    - Fender
+    - Stratocaster Sambora
+    - '1995'
+    - 
+    - Fender usa Sambora
+    - Mint
+    - 
+    - USA
+    - sa
+    - 4
+    - '2016-09-16 13:34:19.109825'
+    - '2016-09-27 16:18:44.127533'
+    - 244
+    - false
+    - false
+    - 120000
+    - false
+    - false
+    - true
+  - - 63
+    - Gibson
+    - SG Special T
+    - '2016'
+    - 
+    - Gibson SG με 1969 Minihumbuckers!
+    - Mint
+    - 
+    - USA
+    - Gibson SG με 1969 Minihumbuckers!
+    - 4
+    - '2016-09-20 07:19:17.345652'
+    - '2016-09-27 16:18:52.553424'
+    - 244
+    - false
+    - false
+    - 100000
+    - false
+    - false
+    - true
+  - - 64
+    - Copycat
+    - Precision Deluxe
+    - '2010'
+    - 
+    - Precision Deluxe - Copy!
+    - Good
+    - 
+    - China
+    - High copy
+    - 4
+    - '2016-09-20 09:13:49.598898'
+    - '2016-09-27 16:19:01.837452'
+    - 249
+    - false
+    - false
+    - 110000
+    - false
+    - false
+    - true
+  - - 65
+    - Dumble
+    - Overdrive Special
+    - '2010'
+    - 
+    - Dumble Overdrive Special
+    - Mint
+    - 
+    - Greece
+    - asdasd
+    - 4
+    - '2016-09-21 06:54:02.543788'
+    - '2016-09-27 16:19:09.689864'
+    - 260
+    - false
+    - false
+    - 200000
+    - false
+    - false
+    - true
+  - - 66
+    - Clavia
+    - Nord Lead 4 Rack
+    - '2010'
+    - 
+    - Clavia Nord Lead 4 Rack
+    - Used
+    - 
+    - USA
+    - re
+    - 4
+    - '2016-09-21 07:17:41.838678'
+    - '2016-09-27 16:19:19.357183'
+    - 216
+    - false
+    - false
+    - 60000
+    - false
+    - false
+    - true
+  - - 67
+    - Gibson
+    - Hard Case
+    - '1969'
+    - 
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - Used
+    - 
+    - USA
+    - "αυθεντικη θηκη Gibson 355 του '69αυθεντικη θηκη Gibson 355 του '69αυθεντικη
+      θηκη Gibson 355 του '69"
+    - 1
+    - '2016-09-21 07:30:55.880817'
+    - '2016-09-27 16:26:02.654780'
+    - 234
+    - false
+    - false
+    - 16000
+    - false
+    - false
+    - true
+  - - 68
+    - Hercules
+    - KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2010'
+    - 
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - Good
+    - 
+    - China
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - 1
+    - '2016-09-21 09:46:00.867610'
+    - '2016-09-27 16:26:11.491239'
+    - 229
+    - false
+    - false
+    - 3000
+    - false
+    - false
+    - true
+  - - 69
+    - Modular System
+    - System
+    - '2016'
+    - 
+    - Modular System
+    - Mint
+    - 
+    - USA
+    - ss
+    - 5
+    - '2016-09-21 15:39:22.506509'
+    - '2016-09-27 16:26:47.423785'
+    - 216
+    - false
+    - true
+    - 8000
+    - false
+    - false
+    - true
+  - - 70
+    - Boss
+    - CH-1 Super Chorus
+    - '2010'
+    - 
+    - Boss CH-1 Super Chorus
+    - Used
+    - 
+    - USA
+    - b
+    - 5
+    - '2016-09-21 16:09:05.529986'
+    - '2016-09-27 16:26:55.951898'
+    - 213
+    - false
+    - true
+    - 8000
+    - false
+    - false
+    - true
+  - - 71
+    - Pro-Ject
+    - Essential II & MM
+    - ''
+    - 
+    - Pro-Ject Essential II & MM
+    - Good
+    - 
+    - China
+    - I'm looking at the "change picture" link that appears when you mouseover your
+      profile picture on Facebook. I want to add a similar link to all images that
+      appear on my site, but instead links to download the full size photo. Can this
+      be done with simple CSS or do I need some sort of jquery, etc?
+    - 4
+    - '2016-09-22 07:49:05.017850'
+    - '2016-09-27 16:19:28.127083'
+    - 210
+    - false
+    - false
+    - 25000
+    - false
+    - false
+    - true
+  - - 82
+    - Fender
+    - Super Reverb Silverface
+    - '1970'
+    - 
+    - Fender Super Reverb Silverface 1978
+    - Good
+    - 
+    - USA
+    - Fender Super Reverb Silverface 1978
+    - 4
+    - '2016-09-29 18:15:42.065436'
+    - '2016-09-29 18:15:42.065436'
+    - 259
+    - false
+    - false
+    - 0
+    - true
+    - false
+    - false
+  - - 84
+    - Suhr
+    - Sheraton II
+    - '2010'
+    - 
+    - Suhr pro series C2
+    - Parts
+    - 
+    - USA
+    - ''
+    - 2
+    - '2016-10-04 17:38:01.129780'
+    - '2016-10-04 17:38:01.129780'
+    - 244
+    - false
+    - false
+    - 200000
+    - false
+    - false
+    - true
+
+---
 favorite_classifieds:
   columns:
   - id
@@ -966,101 +1067,61 @@ favorite_classifieds:
   - created_at
   - updated_at
   records: 
-  - - 3
-    - 2
-    - 38
-    - '2016-09-16 10:40:59.406202'
-    - '2016-09-16 10:40:59.406202'
+  - - 12
+    - 1
+    - 71
+    - '2016-09-22 12:17:02.670896'
+    - '2016-09-22 12:17:02.670896'
+  - - 13
+    - 1
+    - 68
+    - '2016-09-22 12:17:15.234357'
+    - '2016-09-22 12:17:15.234357'
+  - - 19
+    - 4
+    - 71
+    - '2016-09-27 16:19:50.989313'
+    - '2016-09-27 16:19:50.989313'
+  - - 21
+    - 9
+    - 69
+    - '2016-09-27 19:51:52.664014'
+    - '2016-09-27 19:51:52.664014'
+  - - 22
+    - 9
+    - 69
+    - '2016-09-27 19:51:53.603905'
+    - '2016-09-27 19:51:53.603905'
+  - - 23
+    - 4
+    - 70
+    - '2016-09-30 23:44:01.397003'
+    - '2016-09-30 23:44:01.397003'
+  - - 24
+    - 4
+    - 84
+    - '2016-10-05 12:18:04.351283'
+    - '2016-10-05 12:18:04.351283'
+  - - 25
+    - 4
+    - 65
+    - '2016-10-05 12:18:40.853165'
+    - '2016-10-05 12:18:40.853165'
 
 ---
-users:
+flags:
   columns:
   - id
-  - first_name
-  - email
-  - region
-  - telephone
-  - stars
   - created_at
   - updated_at
-  - encrypted_password
-  - reset_password_token
-  - reset_password_sent_at
-  - remember_created_at
-  - sign_in_count
-  - current_sign_in_at
-  - last_sign_in_at
-  - current_sign_in_ip
-  - last_sign_in_ip
+  - user_id
+  - classified_id
   records: 
   - - 1
-    - Michael
-    - mail@mail.com
-    - 
-    - 
-    - 
-    - '2016-09-16 10:15:38.496631'
-    - '2016-09-19 18:05:23.790339'
-    - "$2a$11$4Z1BpFu2eVxXZmn0sy55w.l4L.LOhbuFD7DpPEPeivbRPFwFoJoEC"
-    - 
-    - 
-    - 
-    - 4
-    - '2016-09-19 18:05:23.788317'
-    - '2016-09-19 12:25:55.956204'
-    - 192.168.1.8
-    - 127.0.0.1
-  - - 2
-    - Seller
-    - seller@mail.com
-    - Athens
-    - 210 80 80 801
-    - 
-    - '2016-09-16 10:30:59.183759'
-    - '2016-09-16 10:50:12.842287'
-    - "$2a$11$65evAEOf.sRw0HHm.3cR1.x9GwePXVnXsSQjstacjHgMBMkmTkSAS"
-    - 
-    - 
-    - 
-    - 1
-    - '2016-09-16 10:30:59.201312'
-    - '2016-09-16 10:30:59.201312'
-    - 127.0.0.1
-    - 127.0.0.1
-  - - 3
-    - john
-    - john@mail.com
-    - 
-    - 
-    - 
-    - '2016-09-16 11:27:55.237245'
-    - '2016-09-16 11:27:55.250199'
-    - "$2a$11$tcjuCHv9BWBNxu9..KYHSeRWUgPBO.QT4SSG2FKBCyOxe08ZXUmAy"
-    - 
-    - 
-    - 
-    - 1
-    - '2016-09-16 11:27:55.249062'
-    - '2016-09-16 11:27:55.249062'
-    - 127.0.0.1
-    - 127.0.0.1
-  - - 4
-    - alice
-    - alice@mail.com
-    - 
-    - 
-    - 
-    - '2016-09-16 11:28:10.982698'
-    - '2016-09-20 06:37:49.345346'
-    - "$2a$11$xU8pf9jIDusNREuKM1o.8OSLEBrmmeRLC8JyIXVxgi85y.p9MoeR6"
-    - 
-    - 
-    - 
-    - 4
-    - '2016-09-20 06:37:49.344090'
-    - '2016-09-19 19:07:03.171331'
-    - 127.0.0.1
-    - 192.168.1.6
+    - '2016-10-05 12:50:23.472034'
+    - '2016-10-05 12:50:23.472034'
+    - 2
+    - 84
 
 ---
 mailboxer_conversations:
@@ -1078,76 +1139,106 @@ mailboxer_conversations:
     - Korg Kaossilator Dynamic Phrase Synthesizer
     - '2016-09-16 10:31:58.360317'
     - '2016-09-16 10:31:58.360317'
-
----
-mailboxer_receipts:
-  columns:
-  - id
-  - receiver_type
-  - receiver_id
-  - notification_id
-  - is_read
-  - trashed
-  - deleted
-  - mailbox_type
-  - created_at
-  - updated_at
-  - is_delivered
-  - delivery_method
-  - message_id
-  records: 
-  - - 1
-    - User
-    - 1
-    - 1
-    - false
-    - false
-    - false
-    - inbox
-    - '2016-09-16 10:30:29.791683'
-    - '2016-09-16 10:30:29.791683'
-    - false
-    - 
-    - 
-  - - 2
-    - User
-    - 1
-    - 1
-    - true
-    - false
-    - false
-    - sentbox
-    - '2016-09-16 10:30:29.793797'
-    - '2016-09-16 10:30:29.793797'
-    - false
-    - 
-    - 
   - - 3
-    - User
-    - 1
-    - 2
-    - false
-    - false
-    - false
-    - inbox
-    - '2016-09-16 10:31:58.373881'
-    - '2016-09-16 10:31:58.373881'
-    - false
-    - 
-    - 
+    - Precision Deluxe - Copy!
+    - '2016-09-21 11:30:35.258295'
+    - '2016-09-21 11:30:35.258295'
   - - 4
-    - User
-    - 2
-    - 2
-    - true
-    - false
-    - false
-    - sentbox
-    - '2016-09-16 10:31:58.375910'
-    - '2016-09-16 10:31:58.375910'
-    - false
-    - 
-    - 
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 11:42:24.755856'
+    - '2016-09-21 11:42:24.755856'
+  - - 5
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - '2016-09-21 11:50:06.506958'
+    - '2016-09-21 11:58:21.136882'
+  - - 6
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 11:58:44.571620'
+    - '2016-09-21 11:58:44.571620'
+  - - 7
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:00:37.491971'
+    - '2016-09-21 12:00:37.491971'
+  - - 8
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:02:32.434224'
+    - '2016-09-21 12:02:32.434224'
+  - - 9
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:03:56.641450'
+    - '2016-09-21 12:03:56.641450'
+  - - 10
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:04:34.754733'
+    - '2016-09-21 12:04:34.754733'
+  - - 11
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:06:27.360138'
+    - '2016-09-21 12:06:27.360138'
+  - - 12
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:21:10.035616'
+    - '2016-09-21 12:21:10.035616'
+  - - 13
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:21:48.715954'
+    - '2016-09-21 12:21:48.715954'
+  - - 14
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:24:11.474702'
+    - '2016-09-21 12:24:11.474702'
+  - - 15
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:26:52.594376'
+    - '2016-09-21 12:26:52.594376'
+  - - 16
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:27:05.340264'
+    - '2016-09-21 12:27:05.340264'
+  - - 17
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:27:52.907004'
+    - '2016-09-21 12:27:52.907004'
+  - - 18
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:30:57.938325'
+    - '2016-09-21 12:30:57.938325'
+  - - 19
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:34:31.022373'
+    - '2016-09-21 12:34:31.022373'
+  - - 20
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:37:39.813941'
+    - '2016-09-21 12:37:39.813941'
+  - - 21
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 12:38:01.807046'
+    - '2016-09-21 12:38:01.807046'
+  - - 22
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - '2016-09-21 12:39:50.252835'
+    - '2016-09-21 12:39:50.252835'
+  - - 23
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 14:12:04.891744'
+    - '2016-09-21 14:12:04.891744'
+  - - 24
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - '2016-09-21 14:12:56.088205'
+    - '2016-09-21 14:12:56.088205'
+  - - 25
+    - "Κλαρίνο"
+    - '2016-09-24 08:51:07.779848'
+    - '2016-09-24 08:51:07.779848'
+  - - 26
+    - Native Instruments Traktor Audio 2 MKII USB Kάρτα Ήχου
+    - '2016-09-25 11:55:27.056452'
+    - '2016-09-25 11:55:27.056452'
+  - - 27
+    - Boss CH-1 Super Chorus
+    - '2016-09-30 23:44:32.583222'
+    - '2016-09-30 23:44:32.583222'
 
 ---
 mailboxer_notifications:
@@ -1203,3 +1294,1760 @@ mailboxer_notifications:
     - '2016-09-16 10:31:58.360317'
     - false
     - 
+  - - 3
+    - Mailboxer::Message
+    - "Χαίρεται alice , \r\nΕνδιαφέρομαι για την αγγελία : Precision Deluxe - Copy!\r\n\r\nPOSA?"
+    - Precision Deluxe - Copy!
+    - User
+    - 1
+    - 3
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 11:30:35.258295'
+    - '2016-09-21 11:30:35.258295'
+    - false
+    - 
+  - - 4
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nTEST\r\n"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 4
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 11:42:24.755856'
+    - '2016-09-21 11:42:24.755856'
+    - false
+    - 
+  - - 5
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : αυθεντικη θηκη Gibson
+      355 του '69\r\n\r\ntessss"
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - User
+    - 5
+    - 5
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 11:50:06.506958'
+    - '2016-09-21 11:50:06.506958'
+    - false
+    - 
+  - - 6
+    - Mailboxer::Message
+    - asd
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - User
+    - 5
+    - 5
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 11:58:21.079013'
+    - '2016-09-21 11:58:21.079013'
+    - false
+    - 
+  - - 7
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\nsup bro"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 6
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 11:58:44.571620'
+    - '2016-09-21 11:58:44.571620'
+    - false
+    - 
+  - - 8
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nPlease send it ?"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 7
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:00:37.491971'
+    - '2016-09-21 12:00:37.491971'
+    - false
+    - 
+  - - 9
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 8
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:02:32.434224'
+    - '2016-09-21 12:02:32.434224'
+    - false
+    - 
+  - - 10
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 9
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:03:56.641450'
+    - '2016-09-21 12:03:56.641450'
+    - false
+    - 
+  - - 11
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nkuki"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 10
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:04:34.754733'
+    - '2016-09-21 12:04:34.754733'
+    - false
+    - 
+  - - 12
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nkuki"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 11
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:06:27.360138'
+    - '2016-09-21 12:06:27.360138'
+    - false
+    - 
+  - - 13
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nkuki"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 12
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:21:10.035616'
+    - '2016-09-21 12:21:10.035616'
+    - false
+    - 
+  - - 14
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nasxg"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 13
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:21:48.715954'
+    - '2016-09-21 12:21:48.715954'
+    - false
+    - 
+  - - 15
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nBOG"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 14
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:24:11.474702'
+    - '2016-09-21 12:24:11.474702'
+    - false
+    - 
+  - - 16
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nBOG"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 15
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:26:52.594376'
+    - '2016-09-21 12:26:52.594376'
+    - false
+    - 
+  - - 17
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nYAKA"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 16
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:27:05.340264'
+    - '2016-09-21 12:27:05.340264'
+    - false
+    - 
+  - - 18
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nYAKA"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 17
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:27:52.907004'
+    - '2016-09-21 12:27:52.907004'
+    - false
+    - 
+  - - 19
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\nCOMEON GOOGLE\r\n"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 18
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:30:57.938325'
+    - '2016-09-21 12:30:57.938325'
+    - false
+    - 
+  - - 20
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n.kooklos"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 19
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:34:31.022373'
+    - '2016-09-21 12:34:31.022373'
+    - false
+    - 
+  - - 21
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n.kooklos"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 20
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:37:39.813941'
+    - '2016-09-21 12:37:39.813941'
+    - false
+    - 
+  - - 22
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\n\r\nasg"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 21
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:38:01.807046'
+    - '2016-09-21 12:38:01.807046'
+    - false
+    - 
+  - - 23
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : αυθεντικη θηκη Gibson
+      355 του '69\r\n\r\nfggf"
+    - "αυθεντικη θηκη Gibson 355 του '69"
+    - User
+    - 5
+    - 22
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 12:39:50.252835'
+    - '2016-09-21 12:39:50.252835'
+    - false
+    - 
+  - - 24
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\nahhahaha"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 23
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 14:12:04.891744'
+    - '2016-09-21 14:12:04.891744'
+    - false
+    - 
+  - - 25
+    - Mailboxer::Message
+    - "Χαίρεται Michael , \r\nΕνδιαφέρομαι για την αγγελία : Hercules KS120B EZ-LOK
+      1 Tier Keyboard Stand\r\nSO COOL\r\n"
+    - Hercules KS120B EZ-LOK 1 Tier Keyboard Stand
+    - User
+    - 5
+    - 24
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-21 14:12:56.088205'
+    - '2016-09-21 14:12:56.088205'
+    - false
+    - 
+  - - 26
+    - Mailboxer::Message
+    - "Χαίρεται Magkas , \r\nΕνδιαφέρομαι για την αγγελία : Κλαρίνο\r\n\r\nPOSA"
+    - "Κλαρίνο"
+    - User
+    - 4
+    - 25
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-24 08:51:07.779848'
+    - '2016-09-24 08:51:07.779848'
+    - false
+    - 
+  - - 27
+    - Mailboxer::Message
+    - "Χαίρεται Yaburas , \r\nΕνδιαφέρομαι για την αγγελία : Native Instruments Traktor
+      Audio 2 MKII USB Kάρτα Ήχου\r\n\r\nPosa re mouni"
+    - Native Instruments Traktor Audio 2 MKII USB Kάρτα Ήχου
+    - User
+    - 4
+    - 26
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-25 11:55:27.056452'
+    - '2016-09-25 11:55:27.056452'
+    - false
+    - 
+  - - 28
+    - Mailboxer::Message
+    - "Alice,\r\n\r\nθέλεις να μου δώσεις το κινητό σου να πάμε για κανένα ποτάκι;;;;;
+      ;)\r\nΑν είσαι καλό κορίτσι θα ΤΟΝ/ΤΗΝ πάρεις τσάμπα!"
+    - Native Instruments Traktor Audio 2 MKII USB Kάρτα Ήχου
+    - User
+    - 7
+    - 26
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-25 11:58:21.664206'
+    - '2016-09-25 11:58:21.664206'
+    - false
+    - 
+  - - 29
+    - Mailboxer::Message
+    - "Alice,\r\n\r\nθέλεις να μου δώσεις το κινητό σου να πάμε για κανένα ποτάκι;;;;;
+      ;)\r\nΑν είσαι καλό κορίτσι θα ΤΟΝ/ΤΗΝ πάρεις τσάμπα!"
+    - Native Instruments Traktor Audio 2 MKII USB Kάρτα Ήχου
+    - User
+    - 7
+    - 26
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-25 11:58:56.611012'
+    - '2016-09-25 11:58:56.611012'
+    - false
+    - 
+  - - 30
+    - Mailboxer::Message
+    - "Χαίρεται mpdev , \r\nΕνδιαφέρομαι για την αγγελία : Boss CH-1 Super Chorus\r\n
+      Eisai malakas"
+    - Boss CH-1 Super Chorus
+    - User
+    - 4
+    - 27
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-09-30 23:44:32.583222'
+    - '2016-09-30 23:44:32.583222'
+    - false
+    - 
+
+---
+mailboxer_receipts:
+  columns:
+  - id
+  - receiver_type
+  - receiver_id
+  - notification_id
+  - is_read
+  - trashed
+  - deleted
+  - mailbox_type
+  - created_at
+  - updated_at
+  - is_delivered
+  - delivery_method
+  - message_id
+  records: 
+  - - 1
+    - User
+    - 1
+    - 1
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-16 10:30:29.791683'
+    - '2016-09-16 10:30:29.791683'
+    - false
+    - 
+    - 
+  - - 2
+    - User
+    - 1
+    - 1
+    - true
+    - true
+    - true
+    - sentbox
+    - '2016-09-16 10:30:29.793797'
+    - '2016-09-16 10:30:29.793797'
+    - false
+    - 
+    - 
+  - - 3
+    - User
+    - 1
+    - 2
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-16 10:31:58.373881'
+    - '2016-09-16 10:31:58.373881'
+    - false
+    - 
+    - 
+  - - 4
+    - User
+    - 2
+    - 2
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-16 10:31:58.375910'
+    - '2016-09-16 10:31:58.375910'
+    - false
+    - 
+    - 
+  - - 5
+    - User
+    - 4
+    - 3
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-21 11:30:35.367683'
+    - '2016-09-21 11:30:35.367683'
+    - false
+    - 
+    - 
+  - - 6
+    - User
+    - 1
+    - 3
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 11:30:35.369415'
+    - '2016-09-21 11:30:35.369415'
+    - false
+    - 
+    - 
+  - - 7
+    - User
+    - 1
+    - 4
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 11:42:24.774852'
+    - '2016-09-21 11:42:24.774852'
+    - false
+    - 
+    - 
+  - - 8
+    - User
+    - 5
+    - 4
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 11:42:24.778017'
+    - '2016-09-21 11:42:24.778017'
+    - false
+    - 
+    - 
+  - - 9
+    - User
+    - 1
+    - 5
+    - true
+    - true
+    - true
+    - inbox
+    - '2016-09-21 11:50:06.518098'
+    - '2016-09-21 11:50:06.518098'
+    - false
+    - 
+    - 
+  - - 10
+    - User
+    - 5
+    - 5
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 11:50:06.519785'
+    - '2016-09-21 11:50:06.519785'
+    - false
+    - 
+    - 
+  - - 11
+    - User
+    - 1
+    - 6
+    - true
+    - true
+    - true
+    - inbox
+    - '2016-09-21 11:58:21.081480'
+    - '2016-09-21 11:58:21.081480'
+    - false
+    - 
+    - 
+  - - 12
+    - User
+    - 5
+    - 6
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 11:58:21.083475'
+    - '2016-09-21 11:58:21.083475'
+    - false
+    - 
+    - 
+  - - 13
+    - User
+    - 1
+    - 7
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 11:58:44.585395'
+    - '2016-09-21 11:58:44.585395'
+    - false
+    - 
+    - 
+  - - 14
+    - User
+    - 5
+    - 7
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 11:58:44.587736'
+    - '2016-09-21 11:58:44.587736'
+    - false
+    - 
+    - 
+  - - 15
+    - User
+    - 1
+    - 8
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:00:37.591349'
+    - '2016-09-21 12:00:37.591349'
+    - false
+    - 
+    - 
+  - - 16
+    - User
+    - 5
+    - 8
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:00:37.593325'
+    - '2016-09-21 12:00:37.593325'
+    - false
+    - 
+    - 
+  - - 17
+    - User
+    - 1
+    - 9
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:02:32.450167'
+    - '2016-09-21 12:02:32.450167'
+    - false
+    - 
+    - 
+  - - 18
+    - User
+    - 5
+    - 9
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:02:32.454219'
+    - '2016-09-21 12:02:32.454219'
+    - false
+    - 
+    - 
+  - - 19
+    - User
+    - 1
+    - 10
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:03:56.656224'
+    - '2016-09-21 12:03:56.656224'
+    - false
+    - 
+    - 
+  - - 20
+    - User
+    - 5
+    - 10
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:03:56.658222'
+    - '2016-09-21 12:03:56.658222'
+    - false
+    - 
+    - 
+  - - 21
+    - User
+    - 1
+    - 11
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:04:34.768106'
+    - '2016-09-21 12:04:34.768106'
+    - false
+    - 
+    - 
+  - - 22
+    - User
+    - 5
+    - 11
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:04:34.769785'
+    - '2016-09-21 12:04:34.769785'
+    - false
+    - 
+    - 
+  - - 23
+    - User
+    - 1
+    - 12
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:06:27.463025'
+    - '2016-09-21 12:06:27.463025'
+    - false
+    - 
+    - 
+  - - 24
+    - User
+    - 5
+    - 12
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:06:27.464982'
+    - '2016-09-21 12:06:27.464982'
+    - false
+    - 
+    - 
+  - - 25
+    - User
+    - 1
+    - 13
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:21:10.157085'
+    - '2016-09-21 12:21:10.157085'
+    - false
+    - 
+    - 
+  - - 26
+    - User
+    - 5
+    - 13
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:21:10.158723'
+    - '2016-09-21 12:21:10.158723'
+    - false
+    - 
+    - 
+  - - 27
+    - User
+    - 1
+    - 14
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:21:48.733509'
+    - '2016-09-21 12:21:48.733509'
+    - false
+    - 
+    - 
+  - - 28
+    - User
+    - 5
+    - 14
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:21:48.736314'
+    - '2016-09-21 12:21:48.736314'
+    - false
+    - 
+    - 
+  - - 29
+    - User
+    - 1
+    - 15
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:24:11.585293'
+    - '2016-09-21 12:24:11.585293'
+    - false
+    - 
+    - 
+  - - 30
+    - User
+    - 5
+    - 15
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:24:11.587223'
+    - '2016-09-21 12:24:11.587223'
+    - false
+    - 
+    - 
+  - - 31
+    - User
+    - 1
+    - 16
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:26:52.615162'
+    - '2016-09-21 12:26:52.615162'
+    - false
+    - 
+    - 
+  - - 32
+    - User
+    - 5
+    - 16
+    - true
+    - true
+    - false
+    - sentbox
+    - '2016-09-21 12:26:52.618151'
+    - '2016-09-21 12:26:52.618151'
+    - false
+    - 
+    - 
+  - - 33
+    - User
+    - 1
+    - 17
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:27:05.352082'
+    - '2016-09-21 12:27:05.352082'
+    - false
+    - 
+    - 
+  - - 34
+    - User
+    - 5
+    - 17
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:27:05.353740'
+    - '2016-09-21 12:27:05.353740'
+    - false
+    - 
+    - 
+  - - 35
+    - User
+    - 1
+    - 18
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:27:52.918697'
+    - '2016-09-21 12:27:52.918697'
+    - false
+    - 
+    - 
+  - - 36
+    - User
+    - 5
+    - 18
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:27:52.920373'
+    - '2016-09-21 12:27:52.920373'
+    - false
+    - 
+    - 
+  - - 37
+    - User
+    - 1
+    - 19
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:30:57.950258'
+    - '2016-09-21 12:30:57.950258'
+    - false
+    - 
+    - 
+  - - 38
+    - User
+    - 5
+    - 19
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:30:57.951960'
+    - '2016-09-21 12:30:57.951960'
+    - false
+    - 
+    - 
+  - - 39
+    - User
+    - 1
+    - 20
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:34:31.048369'
+    - '2016-09-21 12:34:31.048369'
+    - false
+    - 
+    - 
+  - - 40
+    - User
+    - 5
+    - 20
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:34:31.051754'
+    - '2016-09-21 12:34:31.051754'
+    - false
+    - 
+    - 
+  - - 41
+    - User
+    - 1
+    - 21
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:37:39.831478'
+    - '2016-09-21 12:37:39.831478'
+    - false
+    - 
+    - 
+  - - 42
+    - User
+    - 5
+    - 21
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:37:39.833328'
+    - '2016-09-21 12:37:39.833328'
+    - false
+    - 
+    - 
+  - - 43
+    - User
+    - 1
+    - 22
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:38:01.822442'
+    - '2016-09-21 12:38:01.822442'
+    - false
+    - 
+    - 
+  - - 44
+    - User
+    - 5
+    - 22
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:38:01.825202'
+    - '2016-09-21 12:38:01.825202'
+    - false
+    - 
+    - 
+  - - 45
+    - User
+    - 1
+    - 23
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 12:39:50.271812'
+    - '2016-09-21 12:39:50.271812'
+    - false
+    - 
+    - 
+  - - 46
+    - User
+    - 5
+    - 23
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 12:39:50.275211'
+    - '2016-09-21 12:39:50.275211'
+    - false
+    - 
+    - 
+  - - 47
+    - User
+    - 1
+    - 24
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 14:12:04.987608'
+    - '2016-09-21 14:12:04.987608'
+    - false
+    - 
+    - 
+  - - 48
+    - User
+    - 5
+    - 24
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 14:12:04.989549'
+    - '2016-09-21 14:12:04.989549'
+    - false
+    - 
+    - 
+  - - 49
+    - User
+    - 1
+    - 25
+    - false
+    - true
+    - true
+    - inbox
+    - '2016-09-21 14:12:56.193833'
+    - '2016-09-21 14:12:56.193833'
+    - false
+    - 
+    - 
+  - - 50
+    - User
+    - 5
+    - 25
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-21 14:12:56.195371'
+    - '2016-09-21 14:12:56.195371'
+    - false
+    - 
+    - 
+  - - 51
+    - User
+    - 6
+    - 26
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-24 08:51:07.883408'
+    - '2016-09-24 08:51:07.883408'
+    - false
+    - 
+    - 
+  - - 52
+    - User
+    - 4
+    - 26
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-24 08:51:07.884939'
+    - '2016-09-24 08:51:07.884939'
+    - false
+    - 
+    - 
+  - - 53
+    - User
+    - 7
+    - 27
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-25 11:55:27.116400'
+    - '2016-09-25 11:55:27.116400'
+    - false
+    - 
+    - 
+  - - 54
+    - User
+    - 4
+    - 27
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-25 11:55:27.117974'
+    - '2016-09-25 11:55:27.117974'
+    - false
+    - 
+    - 
+  - - 55
+    - User
+    - 4
+    - 28
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-25 11:58:21.666783'
+    - '2016-09-25 11:58:21.666783'
+    - false
+    - 
+    - 
+  - - 56
+    - User
+    - 7
+    - 28
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-25 11:58:21.668605'
+    - '2016-09-25 11:58:21.668605'
+    - false
+    - 
+    - 
+  - - 57
+    - User
+    - 4
+    - 29
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-25 11:58:56.613215'
+    - '2016-09-25 11:58:56.613215'
+    - false
+    - 
+    - 
+  - - 58
+    - User
+    - 7
+    - 29
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-25 11:58:56.614695'
+    - '2016-09-25 11:58:56.614695'
+    - false
+    - 
+    - 
+  - - 59
+    - User
+    - 5
+    - 30
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-09-30 23:44:32.691677'
+    - '2016-09-30 23:44:32.691677'
+    - false
+    - 
+    - 
+  - - 60
+    - User
+    - 4
+    - 30
+    - true
+    - false
+    - false
+    - sentbox
+    - '2016-09-30 23:44:32.693339'
+    - '2016-09-30 23:44:32.693339'
+    - false
+    - 
+    - 
+
+---
+photos:
+  columns:
+  - id
+  - classified_id
+  - created_at
+  - updated_at
+  - image_file_name
+  - image_content_type
+  - image_file_size
+  - image_updated_at
+  records: 
+  - - 19
+    - 39
+    - '2016-09-16 12:30:24.698351'
+    - '2016-09-16 12:30:24.698351'
+    - fender_american_precision_deluxe_bass_19-1473647114-487-e.jpg
+    - image/jpeg
+    - 32332
+    - '2016-09-16 12:30:24.687624'
+  - - 20
+    - 39
+    - '2016-09-16 12:30:24.720698'
+    - '2016-09-16 12:30:24.720698'
+    - fender_american_precision_deluxe_bass_19-1473647127-720-e.jpg
+    - image/jpeg
+    - 85908
+    - '2016-09-16 12:30:24.712471'
+  - - 21
+    - 39
+    - '2016-09-16 12:30:24.743860'
+    - '2016-09-16 12:30:24.743860'
+    - fender_american_precision_deluxe_bass_19-1473647133-678-e.jpg
+    - image/jpeg
+    - 98146
+    - '2016-09-16 12:30:24.735616'
+  - - 22
+    - 39
+    - '2016-09-16 12:30:24.766636'
+    - '2016-09-16 12:30:24.766636'
+    - fender_american_precision_deluxe_bass_19-1473647136-23-e.jpg
+    - image/jpeg
+    - 55164
+    - '2016-09-16 12:30:24.758872'
+  - - 23
+    - 40
+    - '2016-09-16 13:34:19.155375'
+    - '2016-09-16 13:34:19.155375'
+    - 5c515291-1470559055-772-e.jpeg
+    - image/jpeg
+    - 63151
+    - '2016-09-16 13:34:19.139854'
+  - - 26
+    - 63
+    - '2016-09-20 07:19:17.412835'
+    - '2016-09-20 07:19:17.412835'
+    - SG.jpg
+    - image/jpeg
+    - 39456
+    - '2016-09-20 07:19:17.394911'
+  - - 27
+    - 64
+    - '2016-09-20 09:13:49.655770'
+    - '2016-09-20 09:13:49.655770'
+    - fender_american_precision_deluxe_bass_19-1473647127-720-e.jpg
+    - image/jpeg
+    - 85908
+    - '2016-09-20 09:13:49.642035'
+  - - 28
+    - 65
+    - '2016-09-21 06:54:02.606249'
+    - '2016-09-21 06:54:02.606249'
+    - undefined-1448436158-163-e.jpg
+    - image/jpeg
+    - 74605
+    - '2016-09-21 06:54:02.594324'
+  - - 29
+    - 65
+    - '2016-09-21 06:54:02.629814'
+    - '2016-09-21 06:54:02.629814'
+    - undefined-1448436159-542-e.jpg
+    - image/jpeg
+    - 94516
+    - '2016-09-21 06:54:02.621847'
+  - - 30
+    - 65
+    - '2016-09-21 06:54:02.651700'
+    - '2016-09-21 06:54:02.651700'
+    - undefined-1448436162-367-e.jpg
+    - image/jpeg
+    - 97005
+    - '2016-09-21 06:54:02.643855'
+  - - 31
+    - 65
+    - '2016-09-21 06:54:02.699057'
+    - '2016-09-21 06:54:02.699057'
+    - undefined-1448437821-785-e.jpg
+    - image/jpeg
+    - 185633
+    - '2016-09-21 06:54:02.676388'
+  - - 32
+    - 66
+    - '2016-09-21 07:17:41.907759'
+    - '2016-09-21 07:17:41.907759'
+    - clavia_nord_lead_4_rack-1473782962-798-e.jpg
+    - image/jpeg
+    - 28804
+    - '2016-09-21 07:17:41.894219'
+  - - 33
+    - 66
+    - '2016-09-21 07:17:41.933388'
+    - '2016-09-21 07:17:41.933388'
+    - clavia_nord_lead_4_rack-1473782962-855-e.jpg
+    - image/jpeg
+    - 60661
+    - '2016-09-21 07:17:41.924725'
+  - - 34
+    - 67
+    - '2016-09-21 07:30:55.944862'
+    - '2016-09-21 07:30:55.944862'
+    - GIBSONCASE.jpg
+    - image/jpeg
+    - 84962
+    - '2016-09-21 07:30:55.931853'
+  - - 35
+    - 68
+    - '2016-09-21 09:46:00.918046'
+    - '2016-09-21 09:46:00.918046'
+    - hercules_ks120b_ez_lok_1_tier_keyboard_s-1456761295-15-e.jpg
+    - image/jpeg
+    - 70115
+    - '2016-09-21 09:46:00.907068'
+  - - 36
+    - 69
+    - '2016-09-21 15:39:22.559181'
+    - '2016-09-21 15:39:22.559181'
+    - modular_system-1473614438-719-e.png
+    - image/png
+    - 1364437
+    - '2016-09-21 15:39:22.536247'
+  - - 37
+    - 69
+    - '2016-09-21 15:39:22.616145'
+    - '2016-09-21 15:39:22.616145'
+    - modular_system-1473614445-92-e.png
+    - image/png
+    - 1467153
+    - '2016-09-21 15:39:22.595613'
+  - - 38
+    - 69
+    - '2016-09-21 15:39:22.668672'
+    - '2016-09-21 15:39:22.668672'
+    - modular_system-1473614446-363-e.png
+    - image/png
+    - 1407894
+    - '2016-09-21 15:39:22.652948'
+  - - 39
+    - 70
+    - '2016-09-21 16:09:05.578311'
+    - '2016-09-21 16:09:05.578311'
+    - boss_stereo_chorus_ch1-1449737049-417-e.jpg
+    - image/jpeg
+    - 45521
+    - '2016-09-21 16:09:05.566630'
+  - - 40
+    - 71
+    - '2016-09-22 07:49:05.075731'
+    - '2016-09-22 07:49:05.075731'
+    - pro_ject_essential_ii_mm-1468411723-634-e.jpg
+    - image/jpeg
+    - 71316
+    - '2016-09-22 07:49:05.064310'
+  - - 41
+    - 71
+    - '2016-09-22 07:49:05.108869'
+    - '2016-09-22 07:49:05.108869'
+    - pro_ject_essential_ii_mm-1468411723-971-e.jpg
+    - image/jpeg
+    - 68289
+    - '2016-09-22 07:49:05.094009'
+  - - 42
+    - 71
+    - '2016-09-22 07:49:05.149015'
+    - '2016-09-22 07:49:05.149015'
+    - pro_ject_essential_ii_mm-1468411727-199-e.jpg
+    - image/jpeg
+    - 35974
+    - '2016-09-22 07:49:05.138482'
+  - - 43
+    - 71
+    - '2016-09-22 07:49:05.179576'
+    - '2016-09-22 07:49:05.179576'
+    - pro_ject_essential_ii_mm-1468411736-472-e.jpg
+    - image/jpeg
+    - 90051
+    - '2016-09-22 07:49:05.169580'
+  - - 47
+    - 82
+    - '2016-09-29 18:15:42.107828'
+    - '2016-09-29 18:15:42.107828'
+    - undefined-1466877373-707-e.jpg
+    - image/jpeg
+    - 123693
+    - '2016-09-29 18:15:42.092897'
+  - - 48
+    - 82
+    - '2016-09-29 18:15:42.143371'
+    - '2016-09-29 18:15:42.143371'
+    - undefined-1466878681-443-e.png
+    - image/png
+    - 1265942
+    - '2016-09-29 18:15:42.131251'
+  - - 49
+    - 84
+    - '2016-10-04 17:38:01.188369'
+    - '2016-10-04 17:38:01.188369'
+    - 5c515291-1470559055-772-e.jpeg
+    - image/jpeg
+    - 63151
+    - '2016-10-04 17:38:01.171295'
+
+---
+rates:
+  columns:
+  - id
+  - rater_id
+  - rateable_type
+  - rateable_id
+  - stars
+  - dimension
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 4
+    - User
+    - 1
+    - 5.0
+    - rating
+    - '2016-09-29 19:22:45.800441'
+    - '2016-09-29 19:22:45.800441'
+  - - 2
+    - 4
+    - User
+    - 5
+    - 2.0
+    - rating
+    - '2016-09-29 19:23:39.784544'
+    - '2016-09-29 19:23:39.784544'
+  - - 3
+    - 1
+    - User
+    - 4
+    - 4.0
+    - rating
+    - '2016-09-29 21:37:38.033486'
+    - '2016-09-29 21:37:38.033486'
+  - - 4
+    - 2
+    - User
+    - 4
+    - 2.0
+    - rating
+    - '2016-10-04 16:04:17.997641'
+    - '2016-10-04 16:04:17.997641'
+  - - 5
+    - 2
+    - User
+    - 1
+    - 0.0
+    - rating
+    - '2016-10-04 16:17:52.046402'
+    - '2016-10-04 16:17:52.046402'
+
+---
+rating_caches:
+  columns:
+  - id
+  - cacheable_type
+  - cacheable_id
+  - avg
+  - qty
+  - dimension
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - User
+    - 1
+    - 2.5
+    - 2
+    - rating
+    - '2016-09-29 19:22:45.826054'
+    - '2016-10-04 16:17:52.072013'
+  - - 2
+    - User
+    - 5
+    - 2.0
+    - 1
+    - rating
+    - '2016-09-29 19:23:39.801160'
+    - '2016-09-29 19:23:39.801160'
+  - - 3
+    - User
+    - 4
+    - 3.0
+    - 2
+    - rating
+    - '2016-09-29 21:37:38.049872'
+    - '2016-10-04 16:04:18.024531'
+
+---
+users:
+  columns:
+  - id
+  - first_name
+  - email
+  - region
+  - telephone
+  - stars
+  - created_at
+  - updated_at
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  records: 
+  - - 1
+    - Michael
+    - mpapasimeon@outlook.com
+    - Athens
+    - '2105124545'
+    - 
+    - '2016-09-16 10:15:38.496631'
+    - '2016-09-30 06:48:08.955302'
+    - "$2a$11$4Z1BpFu2eVxXZmn0sy55w.l4L.LOhbuFD7DpPEPeivbRPFwFoJoEC"
+    - 
+    - 
+    - 
+    - 15
+    - '2016-09-30 06:48:08.952863'
+    - '2016-09-29 21:37:03.063689'
+    - 213.249.31.253
+    - 192.168.1.7
+  - - 2
+    - Seller
+    - seller@mail.com
+    - Athens
+    - 210 80 80 801
+    - 
+    - '2016-09-16 10:30:59.183759'
+    - '2016-10-04 19:44:28.587349'
+    - "$2a$11$65evAEOf.sRw0HHm.3cR1.x9GwePXVnXsSQjstacjHgMBMkmTkSAS"
+    - 
+    - 
+    - 
+    - 13
+    - '2016-10-04 19:44:28.583238'
+    - '2016-10-04 14:02:34.932597'
+    - 127.0.0.1
+    - 5.203.148.48
+  - - 3
+    - john
+    - john@mail.com
+    - 
+    - 
+    - 
+    - '2016-09-16 11:27:55.237245'
+    - '2016-09-16 11:27:55.250199'
+    - "$2a$11$tcjuCHv9BWBNxu9..KYHSeRWUgPBO.QT4SSG2FKBCyOxe08ZXUmAy"
+    - 
+    - 
+    - 
+    - 1
+    - '2016-09-16 11:27:55.249062'
+    - '2016-09-16 11:27:55.249062'
+    - 127.0.0.1
+    - 127.0.0.1
+  - - 4
+    - alice
+    - alice@mail.com
+    - Athens
+    - '2108080800'
+    - 
+    - '2016-09-16 11:28:10.982698'
+    - '2016-10-05 12:16:35.978329'
+    - "$2a$11$xU8pf9jIDusNREuKM1o.8OSLEBrmmeRLC8JyIXVxgi85y.p9MoeR6"
+    - 
+    - 
+    - 
+    - 50
+    - '2016-10-05 12:16:35.977007'
+    - '2016-10-05 12:08:53.445888'
+    - 192.168.1.7
+    - 192.168.1.8
+  - - 5
+    - mpdev
+    - mpdevcake@gmail.com
+    - 
+    - 
+    - 
+    - '2016-09-21 11:29:59.807746'
+    - '2016-09-29 21:41:50.995298'
+    - "$2a$11$xXSp.hG0Y2BL9RC6jZWJRujqf4jmB1comLxmFoAmgC1YL6KY3bS5."
+    - 
+    - 
+    - 
+    - 4
+    - '2016-09-29 21:41:50.994106'
+    - '2016-09-27 16:26:33.773647'
+    - 192.168.1.7
+    - 127.0.0.1
+  - - 6
+    - Magkas
+    - rfarmaki@outlook.com
+    - 
+    - 
+    - 
+    - '2016-09-24 08:49:13.267549'
+    - '2016-09-24 08:49:13.281503'
+    - "$2a$11$cNiK9FmRzlMRsc3AIhoue.wpClNnwiOuKd6UU.ygQVzE71kL0.2P."
+    - 
+    - 
+    - 
+    - 1
+    - '2016-09-24 08:49:13.280541'
+    - '2016-09-24 08:49:13.280541'
+    - 192.168.1.8
+    - 192.168.1.8
+  - - 7
+    - Yaburas
+    - kon_gia@yahoo.gr
+    - 
+    - 
+    - 
+    - '2016-09-25 09:35:00.888551'
+    - '2016-09-25 09:35:00.902929'
+    - "$2a$11$vT/6B8Q8BLS0HIuz8i9KX.44bvMPnOVA9WKfjg8wE32Ki7l4y1fXm"
+    - 
+    - 
+    - 
+    - 1
+    - '2016-09-25 09:35:00.901996'
+    - '2016-09-25 09:35:00.901996'
+    - 85.73.233.176
+    - 85.73.233.176
+  - - 8
+    - George Ksm
+    - kosmidis.george92@gmail.com
+    - 
+    - 
+    - 
+    - '2016-09-26 11:41:50.512459'
+    - '2016-09-26 11:41:50.532106'
+    - "$2a$11$tRe7aBqAfpq/cCuR6qaBuunC/etwUrJqxzbvvbxdqQ5p6tutlol4C"
+    - 
+    - 
+    - 
+    - 1
+    - '2016-09-26 11:41:50.531135'
+    - '2016-09-26 11:41:50.531135'
+    - 85.75.42.226
+    - 85.75.42.226
+  - - 9
+    - Snowtoos
+    - jimvelis@hotmail.com
+    - 
+    - 
+    - 
+    - '2016-09-27 19:30:31.636215'
+    - '2016-09-27 19:50:50.373689'
+    - "$2a$11$O.l9/OwoXMOJ0UfuOUg.duAccK74QoQssIZVmldDnxqAjG3iRDhsu"
+    - 
+    - 
+    - '2016-09-27 19:50:50.357745'
+    - 2
+    - '2016-09-27 19:50:50.372550'
+    - '2016-09-27 19:30:31.651051'
+    - 109.178.59.46
+    - 109.178.59.46
