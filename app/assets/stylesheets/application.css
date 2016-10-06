@@ -26,6 +26,10 @@
   margin:0;
 }
 
+a {
+  outline : 0 !important;
+}
+
  html,body {
   font-family: 'Roboto' !important;
     /*background: url("brokerback.png"); 
@@ -211,8 +215,6 @@
   padding:0;
   float:none ;
   font-size: 14px;
-
-
 }
 
 
@@ -291,12 +293,6 @@
 }
 /*NAVBAR DROPMENU END*/
 
-
-
-
-
-
-
 /* footer */
 
 .site-footer {
@@ -346,15 +342,7 @@ textarea { resize:vertical ; }
 
 
 
-
-
-/* INDEX STYLE */
-
-/* {margin: 0; padding: 0;}*/
-
-/*.center-well {
-  width : 800px;
-}*/
+/* SORTING */
 
 /*#sortfilters .current{
   padding-right: 12px;
@@ -369,6 +357,60 @@ textarea { resize:vertical ; }
 }
 
 */
+
+
+#sortfilters {
+  margin-top :30px !important;
+  position:relative;
+  /*border: 1px dotted #e9e9e9;*/
+}
+
+
+#sortfilters ul {
+  position:absolute;
+  left:10px;
+  padding:0;
+  margin: 0;
+}
+#sortfilters li {
+
+  display:inline-block;
+  padding :10px;
+  border : 1px dotted #e9e9e9;
+}
+
+#sortfilters li:hover {
+  border: 1px solid #e9e9e9;
+  background-color: #f2f2f2;
+}
+
+#sortfilters a {
+  color:#888888;
+}
+
+#sortfilters a ,a:hover , a:active , a:visited {
+  text-decoration: none !important; 
+}
+
+
+
+#sortfilters {
+  margin:auto;
+}
+
+
+
+
+
+/* INDEX STYLE */
+
+/* {margin: 0; padding: 0;}*/
+
+/*.center-well {
+  width : 800px;
+}*/
+
+
 
 .center-div{
  margin: 0 auto;

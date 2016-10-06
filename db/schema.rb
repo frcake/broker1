@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929190605) do
+ActiveRecord::Schema.define(version: 20161005125011) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(version: 20160929190605) do
     t.datetime "updated_at",    null: false
     t.index ["classified_id"], name: "index_favorite_classifieds_on_classified_id"
     t.index ["user_id"], name: "index_favorite_classifieds_on_user_id"
+  end
+
+  create_table "flags", force: :cascade do |t|
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.integer  "classified_id"
+    t.index ["classified_id"], name: "index_flags_on_classified_id"
+    t.index ["user_id"], name: "index_flags_on_user_id"
   end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|

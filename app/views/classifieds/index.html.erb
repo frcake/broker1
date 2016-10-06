@@ -1,7 +1,24 @@
+
+ <!-- classifieds sorting! -->
+  <div class="center-div" id="sortfilters">
+    <ul class="pull-right">
+      <!--<li>
+        <h5>Ταξινόμηση: </h5>
+      </li>-->
+       
+      <li class="sortbtn">
+        <%= sortable "price", "Τιμή" %>
+      </li>
+      <li class="sortbtn">
+        <%= sortable "updated_at", "Ημερομηνία" %>
+      </li>      
+    </ul>
+  </div>
 <div class="indexbox">
   <%if @category%>
     Κατηγορία:<%= @category.name %>
   <%end%>
+
   <% if @search %>
     <div class="col-md-2 col-sm-offset-1 visible-lg">
       <div class="facets">
@@ -130,10 +147,7 @@
       </div>
     </div>
   <%end%>
-  <!-- classifieds sorting! -->
-  <div class="center-div" id="sortfilters">
-    <p><%= sortable "price", "Ταξινόμηση με την Τιμή" %></p>
-  </div>
+ 
   <!-- classifieds start here -->
   <% @classifieds.each do |f| %>
     <% if !f.sold %>
@@ -142,13 +156,20 @@
           <div class="pull-right">
             <div class="listingoptions">
               <div class="col-md-3">
+                <!-- MESSAGE -->
                 <p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+                <!-- FAVORITE -->
                 <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
                   <p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
                 <%else%>
                   <p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
                 <%end%>
-                <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-flag"  , :style => "color:#EB573B" %></p>
+                <!-- FLAG -->
+                <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
+                  <p><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+                <%else%>
+                  <p><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+                <%end%>
               </div>
             </div>
           </div>

@@ -46,20 +46,15 @@ class ClassifiedsController < ApplicationController
       active_giveaway = with(:giveaway,params[:giveaway]) if params[:giveaway].present?
       active_sell = with(:sell,params[:sell]) if params[:sell].present?
       active_trade = with(:trade,params[:trade]) if params[:trade].present?
+      with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
+      with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
 
 
 
       facet(:giveaway)
       facet(:sell)
       facet(:trade)
-
-
-      facet :price
-      with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
-      with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
-
-
-
+      facet(:price)
       facet(:model)
       #facet(:model , exclude: active_condition)
       facet(:make)
@@ -70,7 +65,6 @@ class ClassifiedsController < ApplicationController
 
     end
     @classifieds = @search.results
-    #@classifieds.order(params[:sort])
   end
 
 
@@ -87,7 +81,11 @@ class ClassifiedsController < ApplicationController
 
       @search = Sunspot.search(Classified) do
         paginate(:page => params[:page] || 1, :per_page => 10)
-        order_by(:created_at , :desc)
+        if params[:sort]
+          order_by(sort_column , sort_direction)
+        else
+          order_by(:created_at , :desc)
+        end
         fulltext params[:search]
         with(:categoryid,nested_categories)
         with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
@@ -107,7 +105,6 @@ class ClassifiedsController < ApplicationController
         facet(:giveaway)
         facet(:sell)
         facet(:trade)
-
         facet(:price)
         facet(:model)
         #facet(:model , exclude: active_condition)
@@ -117,7 +114,7 @@ class ClassifiedsController < ApplicationController
         facet(:cat)
         facet(:treecat)
       end
-      @classifieds = @search.results.order(params[:sort])
+      @classifieds = @search.results
     else
       #redirect_to '/'
       #@classified=@search.results
@@ -301,6 +298,24 @@ class ClassifiedsController < ApplicationController
     end
   end
 
+
+
+  def flag
+    type = params[:type]
+    @classified = Classified.find(params[:id])
+    if type == "flag"
+      current_user.flaggings << @classified
+      redirect_to :back#, notice: 'You favorited #{@classified.title}'
+
+    elsif type == "unflag"
+      current_user.flaggings.delete(@classified)
+      redirect_to :back#, notice: 'Unfavorited #{@classified.title}'
+
+    else
+      # Type missing, nothing happens
+      redirect_to :back#, notice: 'Nothing happened.'
+    end
+  end
 
 
 

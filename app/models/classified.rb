@@ -9,6 +9,8 @@ class Classified < ApplicationRecord
 
   has_many :favorite_classifieds, dependent: :destroy
   has_many :favorited_by , through: :favorite_classifieds , source: :user #for the favorite_by to work :source is needed
+  has_many :flags
+  has_many :flagged_by , through: :flags , source: :user
 
   accepts_nested_attributes_for :photos
 

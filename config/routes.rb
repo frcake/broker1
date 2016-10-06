@@ -8,11 +8,9 @@ Rails.application.routes.draw do
   #map.resources :users, :has_many => :classifieds
   get '/' => 'classifieds#index'
   resources :classifieds do
-    put :favorite, on: :member
+    put :favorite , on: :member
     put :sold , on: :member
-    #put :hold , on: :member
-
-
+    put :flag , on: :member
     resources :messages do
     end
   end
