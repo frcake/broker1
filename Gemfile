@@ -94,3 +94,8 @@ gem "ruby-beautify", "~> 0.92.2"
 gem 'jquery-turbolinks'
 
 gem 'ratyrate'
+
+
+#gem 'trix'
+
+gem 'tinymce-rails'

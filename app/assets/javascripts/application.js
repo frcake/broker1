@@ -16,4 +16,11 @@
 //= require pictures
 //= require jquery.raty
 //= require ratyrate
+//= require tinymce
 //= require_tree .
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+

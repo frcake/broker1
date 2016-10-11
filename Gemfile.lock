@@ -209,6 +209,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    tinymce-rails (4.4.3)
+      railties (>= 3.1.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -270,6 +272,7 @@ DEPENDENCIES
   sunspot_rails
   sunspot_solr
   therubyracer
+  tinymce-rails
   turbolinks (~> 5)
   twitter-bootstrap-rails (= 2.2.8)
   tzinfo-data
@@ -279,4 +282,4 @@ DEPENDENCIES
   yaml_db
 
 BUNDLED WITH
-   1.12.5
+   1.13.2

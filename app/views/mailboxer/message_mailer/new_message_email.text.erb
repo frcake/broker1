@@ -1,10 +1,10 @@
-You have a new message: <%= @subject %>
+broker: <%= @subject %>
 ===============================================
 
-You have received a new message:
+Μύνημα:
 
 -----------------------------------------------
 <%= @message.body.html_safe? ? @message.body : strip_tags(@message.body) %>
 -----------------------------------------------
 
-Visit broker and go to your inbox for more info.
+

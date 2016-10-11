@@ -1,50 +1,37 @@
 <div class="new">
   <div class="container-fluid">
     <section class="container">
-      <div class="container-page">        
+      <div class="container-page">
         <div class="col-md-6">
           <h3 class="dark-grey">Φωτογραφίες</h3>
           <%= form_for :user, url: '/users' do |f| %>
-          <div class="form-group col-lg-12">
-            <!--<label>Φωτογραφίες</label>-->
-            <%= f.text_area :first_name, :placeholder => "" , :class => "form-control"%>
+            <div class="form-group col-lg-12">
+              <!--<label>Φωτογραφίες</label>-->
+              <%= f.text_area :first_name, :placeholder => "" , :class => "form-control"%>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="dark-grey">Οδηγός για σωστές φωτογραφίες</h3>
+            <div class="content">
+              <p>
+                Βεβαιωθείτε οτι υπάρχει επαρκής φωτισμός 
+            </p>
+              <p>
+                Προσπαθήστε να καλύψετε μέρη που έχουν σημασία
+            </p>
+              <p>
+                σε σχέση με τον εξοπλισμό που πουλάτε (π.χ. μπράτσο κιθάρας)
+            </p>
+            </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
-        <div class="col-md-6">
-          <h3 class="dark-grey">Οδηγός για σωστές φωτογραφίες</h3>
-          <div class="content">
-            <p>
-              Βεβαιωθείτε οτι υπάρχει επαρκής φωτισμός 
-            </p>
-            <p>
-              Προσπαθήστε να καλύψετε μέρη που έχουν σημασία
-            </p>    
-            <p>
-              σε σχέση με τον εξοπλισμό που πουλάτε (π.χ. μπράτσο κιθάρας)
-            </p> 
-          </div>    
-          
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
-</div>
-
-
-
-
-<!--
+  <!--
           <div class="linkbtn">
-            <%= f.submit "Εγγραφή", class: "btn-submit" %>
-            <% end %>
+            <%#= f.submit "Εγγραφή", class: "btn-submit" %>
+            <%# end %>
 
           </div>
 

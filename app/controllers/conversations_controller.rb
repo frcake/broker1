@@ -31,33 +31,33 @@ class ConversationsController < ApplicationController
   end
 
 
-def destroy
-  @conversation.move_to_trash(current_user)
-  flash[:success] = 'The conversation was moved to trash.'
-  redirect_to conversations_path
-end
-
-def restore
-  @conversation.untrash(current_user)
-  flash[:success] = 'The conversation was restored.'
-  redirect_to conversations_path
-end
-
-
-def empty_trash
-  @mailbox.trash.each do |conversation|
-    conversation.receipts_for(current_user).update_all(deleted: true)
+  def destroy
+    @conversation.move_to_trash(current_user)
+    flash[:success] = 'The conversation was moved to trash.'
+    redirect_to conversations_path
   end
-  flash[:success] = 'Your trash was cleaned!'
-  redirect_to conversations_path
-end
+
+  def restore
+    @conversation.untrash(current_user)
+    flash[:success] = 'The conversation was restored.'
+    redirect_to conversations_path
+  end
 
 
-def mark_as_read
-  @conversation.mark_as_read(current_user)
-  flash[:success] = 'The conversation was marked as read.'
-  redirect_to conversations_path
-end
+  def empty_trash
+    @mailbox.trash.each do |conversation|
+      conversation.receipts_for(current_user).update_all(deleted: true)
+    end
+    flash[:success] = 'Your trash was cleaned!'
+    redirect_to conversations_path
+  end
+
+
+  def mark_as_read
+    @conversation.mark_as_read(current_user)
+    flash[:success] = 'The conversation was marked as read.'
+    redirect_to conversations_path
+  end
 
 
 
@@ -82,7 +82,7 @@ end
   def show
   end
 
-  
+
 
   def get_conversation
     @conversation ||= @mailbox.conversations.find(params[:id])
@@ -212,16 +212,16 @@ end
       format.html {
         if params[:location].present? and params[:location] == 'conversation'
           redirect_to conversations_path(:box => :trash)
-	else
+  else
           redirect_to conversations_path(:box => @box,:page => params[:page])
-	end
+  end
       }
       format.js {
         if params[:location].present? and params[:location] == 'conversation'
           render :js => "window.location = '#{conversations_path(:box => @box,:page => params[:page])}';"
-	else
+  else
           render 'conversations/destroy'
-	end
+  end
       }
     end
   end

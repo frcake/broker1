@@ -233,9 +233,11 @@ class ClassifiedsController < ApplicationController
       #format.html { redirect_to @classified, notice: 'Classified was successfully created.' }
       #format.json { render json: @classified, status: :created, location: @classified }
     else
-      #format.html { render action: "new" }
-      #format.json { render json: @classified.errors, status: :unprocessable_entity }
-      redirect_to '/'
+      respond_to do |format|
+        format.html { render action: "new" }
+        format.json { render json: @classified.errors, status: :unprocessable_entity }
+      end
+      #r#edirect_to '/'
     end
 
 

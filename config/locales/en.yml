@@ -35,3 +35,9 @@ en:
       format:
         delimiter: ","
         separator: "."
+
+
+  mailboxer:
+    message_mailer:
+      subject_new: 'broker Nέο μήνυμα: %{subject}'
+      subject_reply: 'broker Απάντηση σε μήνυμα: %{subject}'

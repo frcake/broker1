@@ -4,17 +4,28 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>You have a new reply: <%= @subject %></h1>
+    <h1 style="color:#FF0000;">broker</h1>
+    <h3 style="color:#e9e9e9;">notify</h3>
+    <h3><%= @message.subject %></h3>
     <p>
-      You have received a new reply:
+      Μήνημα
     </p>
     <blockquote>
-      <p>
+      <p style ="padding:20px;border:1px solid #e9e9e9;">
         <%= raw @message.body %>
       </p>
     </blockquote>
+
     <p>
-      Visit <%= link_to root_url, root_url %> and go to your inbox for more info.
+      Όνομα Αποστολέα: <%= @message.sender.name %>
     </p>
+    <p>
+      Email Αποστολέα: <%= @message.sender.email %>
+    </p>
+    <p>
+      Ημερομηνία αποστολής: <%= @message.created_at.strftime("%d - %B - %Y") %>
+    </p>
+    
+   
   </body>
 </html>

@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   end
 
 
-  def name 
+  def name
     first_name
   end
 

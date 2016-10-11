@@ -9,12 +9,14 @@
             <div class="pull-right">
                 <div class="listingoptions" id="optionssmalldiv">
                     <div class="col-md-3">
-                        <p><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
-                        <p><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
+                        <p data-toggle="tooltip" title="Διόρθωση αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
+                        <p data-toggle="tooltip" title="Διαγραφή αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
+
+
                         <% if f.sold == true %>
-                            <p><%= link_to "", sold_classified_path(f, type: "unsold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#0BFF59"  , :id => "optionssmall", method: :put %> </p>
+                            <p data-toggle="tooltip" title="Επαναφορά αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "unsold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#0BFF59"  , :id => "optionssmall", method: :put %> </p>
                         <%else%>
-                            <p><%= link_to "", sold_classified_path(f, type: "sold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#262626"  , :id => "optionssmall", method: :put %> </p>
+                            <p data-toggle="tooltip" title="Sold!" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "sold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#262626"  , :id => "optionssmall", method: :put %> </p>
                         <%end%>                       
                         
                     </div>

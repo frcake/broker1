@@ -1,24 +1,21 @@
-
- <!-- classifieds sorting! -->
-  <div class="center-div" id="sortfilters">
-    <ul class="pull-right">
-      <!--<li>
+<!-- classifieds sorting! -->
+<div class="center-div" id="sortfilters">
+  <ul data-toggle="tooltip" title="Ταξινόμηση" class="whithtooltip">
+    <!--<li>
         <h5>Ταξινόμηση: </h5>
       </li>-->
-       
-      <li class="sortbtn">
-        <%= sortable "price", "Τιμή" %>
-      </li>
-      <li class="sortbtn">
-        <%= sortable "updated_at", "Ημερομηνία" %>
-      </li>      
-    </ul>
-  </div>
+    <li class="sortbtn"   >
+      <%= sortable "price", "Τιμή" %>
+    </li>
+    <li class="sortbtn">
+      <%= sortable "updated_at", "Ημερομηνία" %>
+    </li>
+  </ul>
+</div>
 <div class="indexbox">
   <%if @category%>
     Κατηγορία:<%= @category.name %>
   <%end%>
-
   <% if @search %>
     <div class="col-md-2 col-sm-offset-1 visible-lg">
       <div class="facets">
@@ -75,11 +72,13 @@
           <% for row in @search.facet(:sell).rows %>
             <% if row.value%>
               <li>
+
                 <% if params[:sell].blank? %>
                   <%= link_to("Πώληση", params.merge(:page  => 1,:sell => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
                 <% else %>
                   <strong><%= "Πώληση" %></strong> (<%= link_to "remove", :sell => nil %>)
-        <% end %>
+                <% end %>
+
               </li>
             <% end %>
           <%end%>
@@ -90,7 +89,7 @@
                   <%= link_to("Χαρίζεται", params.merge(:page  => 1,:giveaway => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
                 <% else %>
                   <strong><%= "Χαρίζεται" %></strong> (<%= link_to "remove", :giveaway => nil %>)
-        <% end %>
+                <% end %>
               </li>
             <% end %>
           <%end%>
@@ -101,7 +100,7 @@
                   <%= link_to("Ανταλλαγή", params.merge(:page  => 1,:trade => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
                 <% else %>
                   <strong><%= "Ανταλλαγή" %></strong> (<%= link_to "remove", :trade => nil %>)
-        <% end %>
+                <% end %>
               </li>
             <% end %>
           <%end%>
@@ -147,7 +146,6 @@
       </div>
     </div>
   <%end%>
- 
   <!-- classifieds start here -->
   <% @classifieds.each do |f| %>
     <% if !f.sold %>
@@ -157,18 +155,18 @@
             <div class="listingoptions">
               <div class="col-md-3">
                 <!-- MESSAGE -->
-                <p><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+                <p data-toggle="tooltip" title="Αποστολή μυνήματος" class="whithtooltip" data-placement="right"><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
                 <!-- FAVORITE -->
                 <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
-                  <p><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+                  <p data-toggle="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
                 <%else%>
-                  <p><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
+                  <p data-toggle="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
                 <%end%>
                 <!-- FLAG -->
                 <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
-                  <p><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+                  <p data-toggle="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
                 <%else%>
-                  <p><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+                  <p data-toggle="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
                 <%end%>
               </div>
             </div>
@@ -187,12 +185,14 @@
                 <div class="media-body">
                   <h5 class="media-heading"> <%= f.title %></h5>
                   <div class="details">
+
                     <p><small><%= f.created_month %></small></p>
                     <% if f.category.parent_id? %>
-                      <small><%= f.category.root.name %></small> >
-                  <%end%>
-                    <small><%= f.category.name %></small>
-                  </div>
+                      <small class="hidden-xs"><%= f.category.root.name %> </small> 
+                      <small class="hidden-xs"> > </small>                  
+                    <%end%>
+                      <small class="hidden-xs"><%= f.category.name %></small>
+                    </div>
                   <div class="price ">
                     <h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
                   </div>
