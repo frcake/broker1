@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005125011) do
+ActiveRecord::Schema.define(version: 20161011174633) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -127,6 +127,12 @@ ActiveRecord::Schema.define(version: 20161005125011) do
     t.string   "message_id"
     t.index ["notification_id"], name: "index_mailboxer_receipts_on_notification_id"
     t.index ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type"
+  end
+
+  create_table "makes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "overall_averages", force: :cascade do |t|

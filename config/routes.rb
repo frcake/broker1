@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     put :favorite , on: :member
     put :sold , on: :member
     put :flag , on: :member
+    get :autocomplete_make_name, :on => :collection
     resources :messages do
     end
   end

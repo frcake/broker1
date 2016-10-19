@@ -1,11 +1,13 @@
 
 class ClassifiedsController < ApplicationController
-
+autocomplete :make, :name
 
   #before_action :require_user, only: [:index, :show]
 
   before_action :set_category
   helper_method :sort_column, :sort_direction
+
+  
 
   def image_urls
     @classified = Classified.find(params[:id])

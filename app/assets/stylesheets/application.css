@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
 
  */
 
@@ -363,7 +364,7 @@ textarea { resize:vertical ; }
 
 */
 
-.tooltip-inner {
+/*.tooltip-inner {
   font-family: 'Roboto' !important;
   font-weight: 400; 
   color : #888888 !important;
@@ -374,13 +375,16 @@ textarea { resize:vertical ; }
 }
 
 
- /*.tooltip-arrow {
+ /*.tooltip-arrow 
   border-left-color: #888888 !important ;
 }
 
 #profilebtn .tooltip-arrow {
   border-color: transparent !important;
 }*/
+
+
+
 
 
 #sortfilters {
@@ -1302,3 +1306,126 @@ body.mce-content-body {
     font-size: 14px;
     padding:10px;
 }
+
+
+
+
+/* SIDEBAR */
+
+
+ /* The side navigation menu */
+.sidenav {
+
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    /*transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+   font-size: 20px;
+   padding:5px 10px 5px 10px;
+    text-decoration: none !important;    
+    color: #818181;
+    background: transparent;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .removebtn {
+    color: #e9e9e9;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#mainpush {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+/* TOOLTIPS */
+
+#tooltip
+{
+  text-align: center;
+  color: #fff;
+  background: #111;
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+}
+
+  #tooltip:after /* triangle decoration */
+  {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #111;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+  }
+
+    #tooltip.top:after
+    {
+      border-top-color: transparent;
+      border-bottom: 10px solid #111;
+      top: -20px;
+      bottom: auto;
+    }
+
+    #tooltip.left:after
+    {
+      left: 10px;
+      margin: 0;
+    }
+
+    #tooltip.right:after
+    {
+      right: 10px;
+      left: auto;
+      margin: 0;
+    }
+
+
+
+
+
+
+
