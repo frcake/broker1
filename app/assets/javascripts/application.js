@@ -37,13 +37,6 @@ $( "#dropdown" ).select2({
   
 
 
-
-
-
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
 	// If localStorage is supported by the browser
@@ -70,6 +63,13 @@ function closeNav() {
 	/*$('togglebtn').click(function() {
 	  $('sidenav').toggleClass('comeBack');
 	});*/
+
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
 
 
 $( function()

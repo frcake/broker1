@@ -531,6 +531,9 @@ width : 800px;
 .new {
 
   /* border:1px solid blue;*/
+  padding:30px;
+  width:100%;
+  height:auto;
 }
 
 .new .col-md-6 {
@@ -541,10 +544,10 @@ width : 800px;
   font-weight: 300;
 }
 
-.container-page > .col-md-4 {
+.new .row > .col-md-5 {
 
   /*border :1px solid #dfdfdf;*/
-  padding: 20px;
+  padding: 30px 30px 30px 0;
 }
 
 /* PRFILE LISTING options*/
