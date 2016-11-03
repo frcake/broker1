@@ -1,13 +1,16 @@
 
 class ClassifiedsController < ApplicationController
-autocomplete :make, :name
+
+  respond_to :html , :json 
+  autocomplete :make, :name
+
 
   #before_action :require_user, only: [:index, :show]
 
   before_action :set_category
   helper_method :sort_column, :sort_direction
 
-  
+
 
   def image_urls
     @classified = Classified.find(params[:id])
@@ -29,7 +32,7 @@ autocomplete :make, :name
 
 
   def search
-    @search = Sunspot.search(Classified ) do
+    @search = Sunspot.search(Classified) do
       paginate(:page => params[:page] || 1, :per_page => 10)
       if params[:sort]
         order_by(sort_column , sort_direction)
@@ -48,11 +51,12 @@ autocomplete :make, :name
       active_giveaway = with(:giveaway,params[:giveaway]) if params[:giveaway].present?
       active_sell = with(:sell,params[:sell]) if params[:sell].present?
       active_trade = with(:trade,params[:trade]) if params[:trade].present?
+      active_askfor = with(:askingfor,params[:askingfor]) if params[:askingfor].present?
       with(:price).less_than_or_equal_to(params[:prcmax].to_i) if params[:prcmax].present?
       with(:price).greater_than_or_equal_to(params[:prcmin].to_i) if params[:prcmin].present?
 
 
-
+      facet(:askingfor)
       facet(:giveaway)
       facet(:sell)
       facet(:trade)
@@ -99,11 +103,12 @@ autocomplete :make, :name
         active_category = with(:cat,params[:cat]) if params[:cat].present?
         active_subcategory = with(:treecat,params[:treecat]) if params[:treecat].present?
         active_giveaway = with(:giveaway,params[:giveaway]) if params[:giveaway].present?
+        active_askfor = with(:askingfor,params[:askingfor]) if params[:askingfor].present?
         active_sell = with(:sell,params[:sell]) if params[:sell].present?
         active_trade = with(:trade,params[:trade]) if params[:trade].present?
 
 
-
+        facet(:askingfor)
         facet(:giveaway)
         facet(:sell)
         facet(:trade)
@@ -138,16 +143,10 @@ autocomplete :make, :name
   def show
     @classified = Classified.find(params[:id])
     @photos = @classified.photos #CW
-
     @image_urls=[]
-
     @classified.photos.each do |photo|
-
       @image_urls.push(photo.image.url)
-
     end
-
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @classified }
@@ -159,7 +158,6 @@ autocomplete :make, :name
 
   def edit
     @classified = Classified.find(params[:id])
-
   end
 
 
@@ -170,7 +168,6 @@ autocomplete :make, :name
 
 
     if @classified.update_attributes(classified_params)
-
 
 
       if params[:images]
@@ -265,26 +262,6 @@ autocomplete :make, :name
 
 
 
-
-
-  def hold
-    type = params[:type]
-    @classified = Classified.find(params[:id])
-
-    if type == "hold"
-      @classified.update_attributes(:hold => true )
-      redirect_to :back
-    elsif type == "unhold"
-      @classified.update_attributes(:hold => false )
-      redirect_to :back
-    end
-  end
-
-
-
-
-
-
   def favorite
     type = params[:type]
     @classified = Classified.find(params[:id])
@@ -333,7 +310,7 @@ autocomplete :make, :name
   end
 
   def classified_params
-    params.require(:classified).permit(:make,:giveaway,:sell,:trade ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country ,:category  ,:description , :category_id,:photos , :created_at)
+    params.require(:classified).permit(:make,:askingfor ,:giveaway,:sell,:trade ,:sold,:model,:year,:color,:title,:condition,:price,:offer,:make_country ,:category  ,:description , :category_id,:photos , :created_at)
   end
 
   def sort_column

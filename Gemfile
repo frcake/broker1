@@ -103,3 +103,7 @@ gem 'jquery-ui-rails'
 gem 'tinymce-rails'
 
 gem 'rails3-jquery-autocomplete', git: 'https://github.com/francisd/rails3-jquery-autocomplete'
+
+gem 'select2-rails'
+
+#gem 'dropzonejs-rails'

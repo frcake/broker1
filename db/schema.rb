@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011174633) do
+ActiveRecord::Schema.define(version: 20161019232321) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20161011174633) do
     t.boolean  "giveaway",     default: false
     t.boolean  "trade",        default: false
     t.boolean  "sell",         default: true
+    t.boolean  "askingfor",    default: false
     t.index ["category_id"], name: "index_classifieds_on_category_id"
     t.index ["user_id"], name: "index_classifieds_on_user_id"
   end

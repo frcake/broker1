@@ -11,7 +11,7 @@
     </div>
     <div class="form-group col-lg-12">
       <label>Κατηγορία</label>
-      <%= f.select :category_id, nested_set_options(Category, @category) {|i| "#{i.root.name unless !i.parent_id} #{'>' unless !i.parent_id}  #{i.name}" } %>
+      <%= f.select :category_id, nested_set_options(Category, @category) {|i| "#{i.root.name unless !i.parent_id} #{'>' unless !i.parent_id}  #{i.name}" } , {include_blank:true}  , :class => 'select2' %>
     </div>
   </div>
 </div>

@@ -48,7 +48,7 @@
           <% end %>
         <% end %>
       <%end%>
-      <% for rowmainpush in @search.facet(:giveaway).rows %>
+      <% for row in @search.facet(:giveaway).rows %>
         <% if row.value %>
           <% if params[:giveaway].blank?%>
             <%= link_to("Χαρίζεται", params.merge(:page  => 1,:giveaway => row.value).permit!) %>
@@ -180,6 +180,17 @@
                   <%= link_to("Ανταλλαγή", params.merge(:page  => 1,:trade => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
                 <% else %>
                   <strong><%= "Ανταλλαγή" %></strong> (<%= link_to "remove", :trade => nil %>)
+                <% end %>
+              </li>
+            <% end %>
+          <%end%>
+          <% for row in @search.facet(:askingfor).rows %>
+            <% if row.value %>
+              <li>
+                <% if params[:askingfor].blank?%>
+                  <%= link_to("Ζητείται", params.merge(:page  => 1,:askingfor => row.value).permit!) %> <small class="rowcount"><%= row.count %></small>
+                <% else %>
+                  <strong><%= "Ζητείται" %></strong> (<%= link_to "remove", :askingfor => nil %>)
                 <% end %>
               </li>
             <% end %>
