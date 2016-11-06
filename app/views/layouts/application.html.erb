@@ -99,7 +99,10 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <%= yield %>
+    <%#= render partial: "news" %>
+    <div class="container" id="maincontainer">
+      <%= yield %>
+    </div>
   </div>
   <div class="pre-footer">
   </div>

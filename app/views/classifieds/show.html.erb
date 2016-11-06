@@ -81,6 +81,9 @@
                   <% if @classified.user.email.present? %>
                     <li>Email: <strong><%= link_to @classified.user.email, profile_path(@classified.user_id)%></strong></li>
                   <%end%>
+                  <% if @classified.user.region.present? %>
+                    <li>Περιοχή: <strong><%=  @classified.user.region%></strong></li>
+                  <%end%>
                 </ul>
               </small>
             </div>
