@@ -1,0 +1,8 @@
+<%= simple_form_for conversation_path(1), url: :conversations do |f| %>
+  <%= f.input :recipients %>
+  <%= f.input :subject %>
+  <%= f.input :body, as: :text %>
+  
+   <%= f.button :submit, class: 'btn-primary' %>
+<%= f.button :submit, 'Cancel', type: :reset, class: 'btn-danger' %>
+<%end%>

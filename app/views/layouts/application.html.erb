@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brokr</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin' rel='stylesheet' type='text/css'>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="page-wrap">
+      <div class="header">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">broker</a>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <!-- <input type="text" class="form-control" placeholder="Search..."> -->
+                  <%= form_tag classifieds_path, :method => :get do %>
+                    <p>
+                      <%= text_field_tag :search, params[:search] , :class => "form-control" , :id => "searchfield" %>
+                      <%= submit_tag "Search", :name => nil , :class => "btn btn-default" , :id => "search" %>
+                    </p>
+                  <% end %>
+                </div>
+                <!--<button type="submit" class="btn btn-default"><i class="material-icons">search</i></button>-->
+              </form>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Νέα Αγγελία!", newlisting_path , class: "signupbtn"   %></li>
+                <% if user_signed_in? %>
+                  <li rel="tooltip" title="Προφίλ" title="Προφίλ" class="whithtooltip" data-placement="bottom" id="profilebtn"><%= link_to current_user.first_name , profile_path(current_user)%></li>
+                  <li><%=  link_to('Logout', destroy_user_session_path, :method => :delete)%></li>
+                <% else %>
+                  <li><%= link_to('Sign up', new_user_registration_path) %></li>
+                  <li><%= link_to('Login', new_user_session_path)  %></li>
+                <% end %>
+                <!--<li><a href="#">Logout</a></li>-->
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </div>
+      <div class="supporting">
+        <div class="container">
+          <ul class="nav navbar-default">
+            <% Category.roots.includes(:children , children: :children).each do |f| %>
+              <li class="dropdown">
+                <%= link_to f.name , category_classifieds_path(f), { :class => 'dropdown-toggle' } %></a>
+              <ul class="dropdown-menu">
+                <% f.children.each do |kid|%>
+                  <li class="dropdown">
+                    <%= link_to  category_classifieds_path(kid) , { :class => 'dropdown-toggle' } do  %>
+                      <%= kid.name %>
+                      <% unless kid.children.blank? %>
+                        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                      <%end%>
+                    <%end %>
+                    <% unless kid.children.blank? %>
+                      <ul class="dropdown-menu sub-menu">
+                        <% kid.children.each do |grandkid| %>
+                          <li><%= link_to grandkid.name , category_classifieds_path(grandkid)%></li>
+                        <%end%>
+                      </ul>
+                    <%end%>
+                  </li>
+                <%end%>
+              </ul>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%#= render partial: "news" %>
+    <div class="container" id="maincontainer">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="pre-footer">
+  </div>
+  <footer class="site-footer">
+    <div class="footerbg">
+      <p>broker</p>
+    </div>
+  </footer>
+</body>
+</html>

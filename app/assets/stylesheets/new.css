@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/* body */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
+
+
+
+body {
+    font-family: 'Roboto' !important;
+    font-weight: 300 !important;
+ 
+}
+
+
+span {
+	color : #FF0000;
+}
+
+
+/* header */
+.header {
+	text-align: center;
+	width:100%;
+
+}
+
+.header h1 {
+	margin:30px 0 30px 0;
+	font-size: 100px;
+	font-weight: 300;
+	color :#FF0000;
+}
+
+
+
+
+/* container-fluid */
+
+
+
+.new .container-fluid {
+	margin-top: 100px;
+}
+
+
+.new .container-fluid .content {
+	margin-top :40px;
+}
+
+
+.content .btn-primary {
+	background: none;
+	font-weight: 500;
+	border : 3px solid #FF0000;
+	margin-top : 23px;
+	color :#FF0000;
+
+}
+
+.content .btn-primary:hover {
+	background: none !important;
+	color :#FF0000 !important;
+	border : 3px solid #FF0000;
+	
+}
+
+
+.content .btn-primary:click {
+	background: none !important;
+	color :#FF0000 !important;
+	border : 3px solid #FF0000;
+	
+}
+
+.content .btn-primary:visited {
+	background: none !important;
+	color :#FF0000 !important;
+	
+}
+
+.linkbtn {
+	margin-top:30px;	
+}
+
+
+.linkbtn .btn-submit {
+	
+	border : 2px solid #FF0000;
+	border-radius: 3px;
+	padding:5px 15px 5px 15px;
+	text-decoration: none;
+	color :  #FF0000;
+	font-weight: 300;
+	font-size: 17px;
+	background: none;
+	
+}
+
+.linkbtn .btn-submit:hover  {
+	text-decoration: none;
+	font-style: none;
+	color :  #FF0000;
+}
+.linkbtn .btn-submit:visited  {
+	text-decoration: none;
+	font-style: none;
+	color :  #FF0000;
+}
+.linkbtn .btn-submit:click {
+	text-decoration: none;
+	font-style: none;
+	color :  #FF0000;
+}
+
+
+
+/* login */
+
+
+#login li {
+	text-decoration : none;
+	display: block ;
+
+	padding:15px;
+}

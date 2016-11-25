@@ -1,0 +1,44 @@
+<%= form_for @classified , :html => {multipart: true} do |f| %>
+  <div class="new">
+    <div class="container-fluid">
+      <!-- RENDERING PARTIALS -->
+      <section class="container">
+        <div class="container-page">
+          <%= render :partial => "classifiederrors", :locals=>{:f=>f} %>
+        </div>
+      </section>
+      <section class="container">
+        <div class="container-page">
+          <h3 class="dark-grey">Περιγραφή Εξοπλισμού</h3>
+        </div>
+      </section>
+      <section class="container">
+        <div class="container-page">
+          <%= render :partial => "classifiedfields", :locals=>{:f=>f} %>
+        </div>
+      </section>
+      <section class="container">
+        <div class="container-page">
+          <%= render :partial => "classifiedtype", :locals=>{:f=>f} %>
+        </div>
+      </section>
+      <section class="container">
+        <div class="container-page">
+          <%= render :partial => "classifieddescription", :locals=>{:f=>f} %>
+        </div>
+      </section>
+      <section class="container">
+        <div class="container-page">
+          <%= render :partial => "classifiedimage", :locals=>{:f=>f} %>
+        </div>
+      </section>
+    </div>
+    <section class="container">
+      <div class="linkbtn">
+        <%= f.submit nil, class: "btn-submit" %>
+      <% end %>
+    </div>
+  </section>
+</div>
+<div class="pre-footer">
+</div>

@@ -1,0 +1,3 @@
+class Make < ApplicationRecord
+	
+end

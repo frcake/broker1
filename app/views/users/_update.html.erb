@@ -1,0 +1,78 @@
+<div class="new">
+  <div class="container-fluid">
+    <section class="container">
+      <div class="container-page">        
+        <div class="col-md-6">
+          <h3 class="dark-grey">Αλλαγή Προφίλ</h3>
+
+
+
+          <%= form_for(current_user) do |f| %>
+
+
+          <div class="form-group col-lg-12">
+            <label>Όνομα χρήστη</label>
+            <%= f.text_field :first_name, :placeholder => "" , :class => "form-control"%>
+          </div>
+
+          
+
+          <div class="form-group col-lg-12">
+            <label>Περιοχή</label>  
+            <%= f.text_field :region, :placeholder => "" , :class => "form-control"%>
+          </div>
+
+
+          <div class="form-group col-lg-12">
+            <label>Τηλέφωνο</label> 
+            <%= f.text_field :telephone, :placeholder => "" , :class => "form-control"%>
+          </div>
+
+
+          <div class="form-group col-lg-12">
+            <label>Email</label>
+            <%= f.email_field :email, :placeholder => "" , :class => "form-control"%>
+          </div>  
+
+          <div class="form-group col-lg-6">
+            <label>Κωδικός</label>
+            <%= f.password_field :password, :placeholder => "" , :class => "form-control"%>
+          </div>
+          <div class="form-group col-lg-12">
+            <div class="linkbtn">
+              <%= f.submit "Ανανέωση" , class: "btn-submit"%>
+
+              <%end%>  
+            </div>
+          </div>  
+        </div>
+
+
+        <div class="col-md-6">
+          <h3 class="dark-grey">Στοιχεία χρήστη</h3>
+          <div class="content">
+            <p>Μπορείτε να προσθέσετε το τηλέφωνο ώστε να γίνεται πιο εύκολα η</p>
+            <p>επικοινωνία με τα μέλη που ενδιαφέροντε για τις αγγελίες σας</p> 
+            <p>Το <span>broker</span> δεν χρησημοποιεί τα στοιχεία σας</p>  
+            <p>για διαφημιστικούς λόγους.</p>  
+          </div>    
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+
+
+
+              <!--<div class="col-sm-6">
+                <input type="checkbox" class="checkbox" />Sigh up for our newsletter
+              </div>
+
+              <div class="col-sm-6">
+                <input type="checkbox" class="checkbox" />Send notifications to this email
+              </div>      -->   

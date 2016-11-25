@@ -1,0 +1,10 @@
+<% if @classified.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@classified.errors.count, "Λάθη") %> , η αγγελία δεν αποθηκεύτηκε.</h2>
+    <ul>
+      <% @classified.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

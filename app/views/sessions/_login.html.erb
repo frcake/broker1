@@ -1,0 +1,54 @@
+ <div class="header">
+  <div class="container">
+    <h1>broker</h1>
+  </div>
+</div>
+
+<div class="new">
+  <div class="container-fluid">
+    <section class="container">
+      <div class="container-page">        
+        <div class="col-md-6 col-md-offset-3" id="login">
+          <ul>
+
+           <li><h3 class="dark-grey">Είσοδος</h3></li>
+           <%= form_for(:session, url: login_path) do |f| %>
+
+
+
+           <li><%= f.email_field :email, :placeholder => "Email" , :class => "form-control"%></li> 
+
+
+           <li> <%= f.password_field :password, :placeholder => "Κωδικός" , :class => "form-control"%></li>
+
+
+           <div class="linkbtn">
+
+            <li><%= f.submit "Είσοδος", class: "btn-submit" %></li>
+            <% end %>
+          </div>
+
+
+        </ul>
+      </div>
+
+<!--
+      <div class="col-sm-6">
+        <input type="checkbox" class="checkbox" />Sigh up for our newsletter
+      </div>
+
+      <div class="col-sm-6">
+        <input type="checkbox" class="checkbox" />Send notifications to this email
+      </div>        
+-->      
+
+
+    </div>
+  </section>
+</div>
+
+
+
+
+</div>
+

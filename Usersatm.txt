@@ -1,0 +1,10 @@
+id: 1, 	first_name: "Carlos", 	email: "carlos@email.com", region: nil, telephone: nil, stars: nil, created_at: "2016-08-19 12:34:16", updated_at: "2016-08-19 12:34:16">, 
+id: 2, 	first_name: "Frieda", 	email: "freida@email.com", region: nil, telephone: nil, stars: nil, created_at: "2016-08-19 12:34:16", updated_at: "2016-08-19 12:34:16">, 
+id: 3, 	first_name: "Julian", 	email: "julian@email.com", region: nil, telephone: nil, stars: nil, created_at: "2016-08-19 12:34:16", updated_at: "2016-08-19 12:34:16">, 
+id: 4, 	first_name: "Michael", 	email: "mail@mail.com", region: "Marousi", telephone: "210 80 80 801", stars: nil, created_at: "2016-08-19 12:34:16", updated_at: "2016-09-12 11:56:23">, 
+id: 29, first_name: "Gardelis", email: "kon_gia@yahoo.gr", region: nil, telephone: nil, stars: nil, created_at: "2016-09-05 10:42:50", updated_at: "2016-09-05 10:42:50">, 
+id: 30, first_name: "test1", 	email: "test@test.com", region: nil, telephone: nil, stars: nil, created_at: "2016-09-07 07:28:16", updated_at: "2016-09-07 07:28:16">, 
+id: 31, first_name: "test2", 	email: "test2@test.com", region: nil, telephone: nil, stars: nil, created_at: "2016-09-07 14:46:26", updated_at: "2016-09-07 14:46:26">, 
+id: 32, first_name: "Chris", 	email: "chris@chris.com", region: nil, telephone: nil, stars: nil, created_at: "2016-09-07 16:57:29", updated_at: "2016-09-07 16:57:29">, 
+id: 37, first_name: "Seller", 	email: "seller@mail.com", region: "Athens", telephone: "210 8080900", stars: nil, created_at: "2016-09-09 14:38:14", updated_at: "2016-09-12 10:57:26">, 
+id: 38, first_name: "tsapat", 	email: "tsapat@gmail.com", region: nil, telephone: nil, stars: nil, created_at: "2016-09-12 08:12:07", updated_at: "2016-09-12 08:12:07">]>

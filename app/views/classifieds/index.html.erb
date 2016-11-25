@@ -1,0 +1,179 @@
+<!-- classifieds sorting! -->
+<div class="center-div" id="sortfilters">
+  <div id="mySidenav" class="sidenav hidden-lg">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <% if @search %>
+      <%= link_to "Εκκαθάριση Φίλτρων", :make => nil , :class => "removebtn" %>
+      <div >
+        <h6>Μάρκα</h6>
+        <% for row in @search.facet(:make).rows %>
+          <% if params[:make].blank? %>
+            <%= link_to(row.value, params.merge(:page  => 1,:make => row.value).permit!) %>
+          <% else %>
+            <strong style="color:#ffffff;"><%= row.value %></strong>
+          <% end %>
+        <% end %>
+      </div>
+      <h6>Χώρα Κατασκευής</h6>
+      <% for row in @search.facet(:make_country).rows %>
+        <% if params[:make_country].blank? %>
+          <%= link_to(row.value, params.merge(:page  => 1,:make_country => row.value).permit!) %>
+        <% else %>
+          <strong style="color:#ffffff;"><%= row.value %></strong>
+        <% end %>
+      <% end %>
+      <h6>Κατάσταση</h6>
+      <% for row in @search.facet(:condition).rows %>
+        <% if params[:condition].blank? %>
+          <%= link_to(row.value, params.merge(:page  => 1,:condition => row.value).permit!) %>
+        <% else %>
+          <strong style="color:#ffffff;"><%= row.value %></strong>
+        <% end %>
+      <% end %>
+      <h6>Κατηγορία</h6>
+      <% for row in @search.facet(:cat).rows %>
+        <% if params[:cat].blank? %>
+          <%= link_to(row.value, params.merge(:page  => 1,:cat => row.value).permit!) %>
+        <% else %>
+          <strong style="color:#ffffff;"><%= row.value %></strong>
+        <% end %>
+      <% end %>
+      <h6>Τύπος</h6>
+      <% for row in @search.facet(:sell).rows %>
+        <% if row.value%>
+          <% if params[:sell].blank? %>
+            <%= link_to("Πώληση", params.merge(:page  => 1,:sell => row.value).permit!) %>
+          <% else %>
+            <strong style="color:#ffffff;"><%= "Πώληση" %></strong>
+          <% end %>
+        <% end %>
+      <%end%>
+      <% for row in @search.facet(:giveaway).rows %>
+        <% if row.value %>
+          <% if params[:giveaway].blank?%>
+            <%= link_to("Χαρίζεται", params.merge(:page  => 1,:giveaway => row.value).permit!) %>
+          <% else %>
+            <strong style="color:#ffffff;"><%= "Χαρίζεται" %></strong>
+          <% end %>
+        <% end %>
+      <%end%>
+      <% for row in @search.facet(:trade).rows %>
+        <% if row.value %>
+          <% if params[:trade].blank?%>
+            <%= link_to("Ανταλλαγή", params.merge(:page  => 1,:trade => row.value).permit!) %> <!--<small class="rowcount"><%= row.count %></small>-->
+          <% else %>
+            <strong style="color:#ffffff;"><%= "Ανταλλαγή" %></strong>
+          <% end %>
+        <% end %>
+      <%end%>
+      <% for row in @search.facet(:askingfor).rows %>
+        <% if row.value %>
+          <% if params[:askingfor].blank?%>
+            <%= link_to("Ζητείται", params.merge(:page  => 1,:askingfor => row.value).permit!) %>
+          <% else %>
+            <strong style="color:#ffffff;"><%= "Ζητείται" %></strong>
+          <% end %>
+        <% end %>
+      <%end%>
+    <%end%>
+  </div>
+  <!-- Right after the browser renders the sidebar -->
+  <script type="text/javascript">
+    // If localStorage is supported by the browser
+                if (typeof(Storage) !== "undefined") {
+                    // If we need to open the bar
+                    if(localStorage.getItem("sidebar") == "opened"){
+                        // Open the bar
+                        document.getElementById("mySidenav").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                    }
+                }
+  </script>
+  <div class="toolsandsort">
+    <ul class="withtooltip">
+      <li class="sortbtn hidden-lg">
+        <span  onclick="openNav()">> Φίλτρα</span>
+      </li>
+      <li class="sortbtn"   >
+        <%= sortable "price", "Τιμή" %>
+      </li>
+      <li class="sortbtn">
+        <%= sortable "updated_at", "Ημερομηνία" %>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="indexbox">
+  <%if @category%>
+    Κατηγορία:<%= @category.name %>
+  <%end%>
+  <% if @search %>
+    <div class="col-md-2  visible-lg">
+      <div class="facets">
+        <%= render :partial => "facets" %>
+      </div>
+    </div>
+  <%end%>
+  <!-- classifieds start here -->
+  <% @classifieds.each do |f| %>
+    <% if !f.sold %>
+      <div class="center-div" id="index">
+        <div class="col-lg-12">
+          <div class="pull-right">
+            <div class="listingoptions">
+              <div class="col-md-3">
+                <!-- MESSAGE -->
+                <p rel="tooltip" title="Αποστολή μυνήματος" class="whithtooltip" data-placement="right"><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
+                <!-- FAVORITE -->
+                <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
+                  <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+                <%else%>
+                  <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
+                <%end%>
+                <!-- FLAG -->
+                <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
+                  <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+                <%else%>
+                  <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+                <%end%>
+              </div>
+            </div>
+          </div>
+          <%= link_to classified_path(f) , :class => "link" do %>
+            <div class="media">
+              <div class="mediabox">
+                <div class="media-left" href="#">
+                  <!--<div class="imgholder">-->
+                  <!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
+                  <% if f.photos.first %>
+                    <%= image_tag f.photos.first.image.url , :class => "media-object"%>
+                  <%end%>
+                  <!--</div>-->
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading"> <%= f.title %></h5>
+                  <div class="details">
+                    <p><small><%= f.created_month %></small></p>
+                    <% if f.category.parent_id? %>
+                      <small class="hidden-xs"><%= f.category.root.name %> </small>
+                      <small class="hidden-xs"> > </small>
+                    <%end%>
+                    <small class="hidden-xs"><%= f.category.name %></small>
+                  </div>
+                  <div class="price ">
+                    <h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    <%end%>
+  <%end%>
+  <div class="center-div">
+    <div class="digg_pagination">
+      <%= will_paginate @classifieds , :previous_label => '<', :next_label => '>' %>
+    </div>
+  </div>
+</div>
