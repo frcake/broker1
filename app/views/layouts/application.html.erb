@@ -46,7 +46,7 @@
               <ul class="nav navbar-nav">
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><%= link_to "Νέα Αγγελία!", newlisting_path , class: "signupbtn"   %></li>
+                <li><%= link_to "Νέα Αγγελία!", application_index_path , class: "signupbtn"   %><%#= link_to "Νέα Αγγελία!", newlisting_path , class: "signupbtn"   %></li>
                 <% if user_signed_in? %>
                   <li rel="tooltip" title="Προφίλ" title="Προφίλ" class="whithtooltip" data-placement="bottom" id="profilebtn"><%= link_to current_user.first_name , profile_path(current_user)%></li>
                   <li><%=  link_to('Logout', destroy_user_session_path, :method => :delete)%></li>
@@ -102,6 +102,7 @@
     <%#= render partial: "news" %>
     <div class="container" id="maincontainer">
       <%= yield %>
+
     </div>
   </div>
   <div class="pre-footer">

@@ -66,7 +66,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :application
 
   get '/newlisting' => 'classifieds#new' , as: :newlisting
 

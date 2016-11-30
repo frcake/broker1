@@ -21,10 +21,20 @@ class ApplicationController < ActionController::Base
   def redirect_back_or(path)
     redirect_to request.referer || path
   end
+
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update){ |u| 
       u.permit(:password, :password_confirmation, :current_password) 
     }
+  end
+
+  def show_createitem 
+    #render :partial => "createitem"
+  end
+
+  def index 
+    #render :partial => "createitem"
   end
 
 end

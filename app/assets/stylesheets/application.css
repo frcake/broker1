@@ -1262,3 +1262,22 @@ body.mce-content-body {
   left: auto;
   margin: 0
 }
+
+
+
+/*DUMMY PAGE */
+
+
+.choicebtn {
+  padding : 30px;
+  background:red;
+
+}
+
+#dummy .row .col-md-4 {
+  
+}
+
+#dummy .row {
+  height:auto;
+}

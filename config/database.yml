@@ -36,7 +36,7 @@ test:
 
 production:
   #<<: *default
-  #database: db/production.postgresql
+  #database: db/production.postgresql1
     adapter: postgresql
     database: broker
     #username: frcake  
