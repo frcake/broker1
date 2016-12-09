@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #map.resources :users, :has_many => :classifieds
   get '/' => 'classifieds#index'
+  resources :services
   resources :classifieds do
     put :favorite , on: :member
     put :sold , on: :member
@@ -32,7 +33,7 @@ Rails.application.routes.draw do
   #  end
   #end
 
-
+  get 'tags/:tag', to: 'services#index' , as: :tag
 
   get '/profile/:id' => 'users#show' , as: :profile
 
@@ -66,7 +67,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :application
+  resources :application , only: [:index]
 
   get '/newlisting' => 'classifieds#new' , as: :newlisting
 

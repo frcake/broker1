@@ -1,0 +1,21 @@
+ 
+<div class="section3">
+  <div class="form-group col-lg-6">
+    <hr>
+    <h3 class="dark-grey">Φωτογραφίες</h3>
+    <% if @service.photos.exists? %>
+      <% @service.photos.each do |z| %>
+        <div class="classifiedimage">
+          <%= image_tag z.image %>
+          <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+        </div>
+      <%end%>
+    <%end%>
+    <div class="control-group">
+      <%= f.label :photos, :class => 'control-label' %>
+      <div class="controls">
+        <%= file_field_tag "images[]", type: :file, multiple: true  %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -231,8 +231,9 @@ body {
 /* E-COMMERCE DIV */
 
 #commerce {
+  padding:50px;
   height:auto;
-  background-color:#f2f2f2;
+  /*background-color:#f2f2f2;*/
 }
 
 #commercerow {
@@ -809,8 +810,13 @@ width : 800px;
   text-align: left;
 }
 
+
 .details p {
   margin: 0;
+}
+
+.details #tagtails {
+  overflow-x: hidden;
 }
 
 .center-div {

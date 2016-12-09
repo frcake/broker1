@@ -1,0 +1,66 @@
+<div class="indexbox">
+  <div class="center-div" id="classifiedshow">
+    <div class="container-fluid">
+      <div class="row" id="showtitle">
+        <div class="col-sm-9 pull-left" id="titlecol">
+          <div class="h3title">
+            <h3 class="dark-grey" id="title"><%= @service.title %></h3>
+          </div>
+        </div>
+        <div class="col-sm-3 pull-right">
+          <h3 class="dark-grey pull-right" id="prc"><%= @service.price %><small><span class="glyphicon glyphicon-euro" id="prceuro"></span></small></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" id="carousel">
+          <div id="image">
+            <%= carousel_for @image_urls  %>
+          </div>
+        </div>
+      </div>
+     
+      <div class="row" id="cdescription">
+        <div class="col-md-12">
+          <div class="text">
+            <%= @service.description.html_safe %>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="fields">
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <div class="fields">
+              <small>
+                <ul>
+                  <li>Τύπος: <strong><%= @service.categ%></strong></li>     
+                  <li>Περιοχή: <strong><%= @service.regions%></strong></li>  
+                  <li>Ειδικότητα: <strong><%= @service.specialty%></strong></li>  
+                  <li>Tags: <%= raw @service.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></li>                              
+                </ul>
+              </small>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="fields">
+              <small>
+                <ul>
+                  <li>Άγγελία απο το μέλος: <strong><%= link_to @service.user.first_name, profile_path(@service.user_id)%></strong></li>
+                  <% if @service.user.telephone.present? %>
+                    <li>Τηλέφωνο: <strong><%= link_to @service.user.telephone, profile_path(@service.user_id)%></strong></li>
+                  <%end%>
+                  <% if @service.user.email.present? %>
+                    <li>Email: <strong><%= link_to @service.user.email, profile_path(@service.user_id)%></strong></li>
+                  <%end%>
+                  <% if @service.user.region.present? %>
+                    <li>Περιοχή: <strong><%=  @service.user.region%></strong></li>
+                  <%end%>
+
+                </ul>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

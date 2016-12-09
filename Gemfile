@@ -89,8 +89,8 @@ gem 'twitter-bootstrap-rails','2.2.8'
 
 gem 'kaminari'
 
-gem 'less-rails'
-
+#gem 'less-rails'
+gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 
 gem 'money-rails'
 
@@ -114,5 +114,7 @@ gem 'tinymce-rails'
 gem 'rails3-jquery-autocomplete', git: 'https://github.com/francisd/rails3-jquery-autocomplete'
 
 gem 'select2-rails'
+
+gem 'acts-as-taggable-on', '~> 4.0'
 
 #gem 'dropzonejs-rails'

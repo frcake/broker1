@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/MustafaZain/less-rails
+  revision: 31d48a0716b89966b787148eb9da54c495f10825
+  specs:
+    less-rails (2.8.1)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
+
+GIT
   remote: https://github.com/francisd/rails3-jquery-autocomplete
   revision: 9884a40f2bb1a8fa3ffab445e6d2c74c3ee99a0d
   specs:
@@ -45,6 +55,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     arel (7.1.4)
     awesome_nested_set (3.1.1)
       activerecord (>= 4.0.0, < 5.1)
@@ -84,7 +96,7 @@ GEM
       activesupport (>= 4.1.0)
     htmlbeautifier (0.0.12)
     i18n (0.7.0)
-    jbuilder (2.6.0)
+    jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.2.1)
@@ -94,7 +106,7 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
-    jquery-ui-rails (5.0.5)
+    jquery-ui-rails (6.0.0)
       railties (>= 3.2.16)
     json (2.0.2)
     kaminari (0.17.0)
@@ -102,12 +114,7 @@ GEM
       activesupport (>= 3.0.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
-    less-rails (2.8.0)
-      actionpack (>= 4.0)
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
-    libv8 (3.16.14.15)
+    libv8 (3.16.14.17)
     localtunnel (1.0.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -122,7 +129,7 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
-    minitest (5.9.1)
+    minitest (5.10.0)
     monetize (1.4.0)
       money (~> 6.7)
     money (6.7.1)
@@ -150,7 +157,7 @@ GEM
     pg (0.19.0)
     pg (0.19.0-x86-mingw32)
     pr_geohash (1.0.0)
-    puma (3.6.0)
+    puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -220,10 +227,10 @@ GEM
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
-    thor (0.19.1)
+    thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    tinymce-rails (4.4.3)
+    tinymce-rails (4.5.0)
       railties (>= 3.1.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
@@ -235,9 +242,9 @@ GEM
       railties (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.8)
+    tzinfo-data (1.2016.10)
       tzinfo (>= 1.0.0)
-    uglifier (3.0.3)
+    uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
@@ -259,6 +266,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 4.0)
   awesome_nested_set
   bcrypt (~> 3.1.7)
   byebug
@@ -271,7 +279,7 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails
   kaminari
-  less-rails
+  less-rails!
   localtunnel
   mailboxer
   money-rails

@@ -19,8 +19,6 @@
 //= require jquery.raty
 //= require ratyrate
 //= require tinymce
-//= require jquery-ui/autocomplete
-
 //= require_tree .
 
 $( "#dropdown" ).select2({

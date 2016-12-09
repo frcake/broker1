@@ -1,0 +1,40 @@
+<div class="col-md-6">
+  <div class="section1">
+    <div class="form-group col-lg-6">
+      <label>Τύπος</label>
+      <%= f.text_field :categ, :placeholder => "π.χ. Μαθήματα" ,  :class => "form-control"  %>
+      <%#= f.select :make , Classified::BRANDS , {include_blank:true} , :class => 'select2' %>
+    </div>
+    <div class="form-group col-lg-6">
+      <label>Ειδικότητα (separated by commas)</label>
+      <%= f.text_field :tag_list, :value => @service.tag_list.join(', '), :class => "form-control"%>
+    </div>
+    <!--<div class="form-group col-lg-5">
+      <label>Ειδικότητα</label>
+      <%#= f.text_field :specialty, :placeholder => "π.χ. Κιθάρας" , :class => "form-control"%>
+    </div>-->
+    <div class="form-group col-lg-3">
+      <label>Περιοχές</label>
+      <%= f.text_field :regions, :class => "form-control"%>
+    </div>    
+    <!--<div class="form-group col-lg-4">
+      <label>Κατάσταση</label>
+        <%#= f.select :condition , Classified::CONDITIONS , {include_blank:true} , :class => 'select2' %>       
+    </div>
+    <div class="form-group col-lg-5">
+      <label>Χώρα κατασκευής</label>
+      <%#= f.text_field :make_country, :placeholder => "" , :class => "form-control"%>
+    </div>-->
+    <div class="form-group col-lg-3">
+      <label>Τιμή</label>
+      <%= f.text_field :price, :placeholder => "" , :class => "form-control"%>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 visible-lg">
+  <h3 class="dark-grey">Κατηγοριοποίηση αγγελίας</h3>
+  <div class="content">
+    <p>Η σωστή κατηγοριοποίηση βοηθάει τόσο τους πιθανούς αγοραστές</p>
+    <p>Όσο και εμάς να προσφέρουμε τα σωστά αποτελέσματα στις αναζητήσεις</p>
+  </div>
+</div>
