@@ -1,43 +1,34 @@
 class NotificationsController < ApplicationController
-
   before_filter :authenticate_user!
   before_filter :get_mailbox, :get_actor
-  before_filter :check_current_subject_is_owner, :only => [:show, :update, :destroy]
-  
+  before_filter :check_current_subject_is_owner, only: [:show, :update, :destroy]
+
   def index
     @notifications = @mailbox.notifications.not_trashed.page(params[:page]).per(10)
   end
 
-  def show
-    
-  end
+  def show; end
 
-  def new
+  def new; end
 
-  end
+  def edit; end
 
-  def edit
-
-  end
-
-  def create
-
-  end
+  def create; end
 
   def update
     if params[:read].present?
-      if params[:read].eql?("Read")
+      if params[:read].eql?('Read')
         @actor.mark_as_read @notification
-      elsif params[:read].eql?("Unread")
+      elsif params[:read].eql?('Unread')
         @actor.mark_as_unread @notification
       end
     end
     @notifications = @mailbox.notifications.not_trashed.page(params[:page]).per(10)
-    render :action => :index
+    render action: :index
   end
-  
+
   def update_all
-    @notifications= @mailbox.notifications.all
+    @notifications = @mailbox.notifications.all
     @actor.mark_as_read @notifications
 
     if request.xhr?
@@ -50,7 +41,7 @@ class NotificationsController < ApplicationController
   def destroy
     @notification.receipt_for(@actor).move_to_trash
     @notifications = @mailbox.notifications.not_trashed.page(params[:page]).per(10)
-    render :action => :index
+    render action: :index
   end
 
   private
@@ -63,15 +54,12 @@ class NotificationsController < ApplicationController
     @actor = Actor.normalize(current_subject)
   end
 
-
   def check_current_subject_is_owner
-    
     @notification = Notification.find_by_id(params[:id])
 
-    if @notification.nil? #TODO or !@notification.is_receiver?(@actor)
+    if @notification.nil? # TODO: or !@notification.is_receiver?(@actor)
       redirect_to notifications_path
-    return
+      return
     end
   end
-
 end

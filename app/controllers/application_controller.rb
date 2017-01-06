@@ -1,17 +1,9 @@
 class ApplicationController < ActionController::Base
-
-
-
-
-
-
   protect_from_forgery with: :exception
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-
-
 
   rescue_from ActiveRecord::RecordNotFound do
     flash[:warning] = 'Resource not found.'
@@ -22,33 +14,27 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || path
   end
 
-
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update){ |u| 
-      u.permit(:password, :password_confirmation, :current_password) 
-    }
+    devise_parameter_sanitizer.permit(:account_update) do |u|
+      u.permit(:password, :password_confirmation, :current_password)
+    end
   end
 
-  def show_createitem 
-    #render :partial => "createitem"
+  def show_createitem
+    # render :partial => "createitem"
   end
 
-  def index 
-    #render :partial => "createitem"
+  def index
+    # render :partial => "createitem"
   end
-
 end
 
-  #helper_method :current_user
+# helper_method :current_user
 
+# def current_user
+#	@current_user ||= User.find(session[:user_id]) if session[:user_id]
+# end
 
-  #def current_user
-  #	@current_user ||= User.find(session[:user_id]) if session[:user_id]
-  #end
-
-
-  #def require_user
- # 	redirect_to	'/login' unless current_user	
-  #end
-
-
+# def require_user
+# 	redirect_to	'/login' unless current_user
+# end

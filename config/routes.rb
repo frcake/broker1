@@ -1,56 +1,54 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  
-  devise_for :users, :controllers => { registrations: 'registrations' }
 
+  devise_for :users, controllers: { registrations: 'registrations' }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #map.resources :users, :has_many => :classifieds
+  # map.resources :users, :has_many => :classifieds
+
   get '/' => 'classifieds#index'
+
   resources :services
   resources :classifieds do
-    put :favorite , on: :member
-    put :sold , on: :member
-    put :flag , on: :member
-    get :autocomplete_make_name, :on => :collection
+    put :favorite, on: :member
+    put :sold, on: :member
+    put :flag, on: :member
+    get :autocomplete_make_name, on: :collection
     resources :messages do
     end
   end
-  root :to => 'classifieds#index'
 
-  #get 'show/:id' => 'classifieds#show' , as: :classified
+  # root to: 'classifieds#index'
 
+  # get 'show/:id' => 'classifieds#show' , as: :classified
 
-  #get 'signup' => 'users#new' , as: :signup #DEVISE
-  #resources :users #DEVISE
+  # get 'signup' => 'users#new' , as: :signup #DEVISE
+  # resources :users #DEVISE
 
-  #post 'signup' => 'users#create' #DEVISE
+  # post 'signup' => 'users#create' #DEVISE
 
-
-  #resource :user, only: [:edit] do
+  # resource :user, only: [:edit] do
   # collection do
   #    patch 'update_password'
   #  end
-  #end
+  # end
 
-  get 'tags/:tag', to: 'services#index' , as: :tag
+  get 'tags/:tag', to: 'services#index', as: :tag
 
-  get '/profile/:id' => 'users#show' , as: :profile
+  get '/profile/:id' => 'users#show', as: :profile
 
-  #get '/edit/:id' => 'users#edit' , as: :edit
+  # get '/edit/:id' => 'users#edit' , as: :edit
 
-  #post 'update' => 'users#update' , as: :update
+  # post 'update' => 'users#update' , as: :update
 
+  # get '/login' => 'sessions#new' , as: :login #DEVISE
 
-  #get '/login' => 'sessions#new' , as: :login #DEVISE
+  # post '/login' => 'sessions#create' #DEVISE
 
-  #post '/login' => 'sessions#create' #DEVISE
-
-  #delete '/logout' => 'sessions#destroy' #DEVISE
-
+  # delete '/logout' => 'sessions#destroy' #DEVISE
 
   resources :passwords
-  resources :messages , only: [:new,:create]
+  resources :messages, only: [:new, :create]
 
   resources :conversations, only: [:index, :show, :destroy] do
     member do
@@ -67,24 +65,19 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :application , only: [:index]
+  resources :application, only: [:index]
 
-  get '/newlisting' => 'classifieds#new' , as: :newlisting
+  get '/newlisting' => 'classifieds#new', as: :newlisting
 
   post '/newlisting' => 'classifieds#create'
 
-  get '/editlisting/:id' => 'classifieds#edit' , as: :editlisting
+  get '/editlisting/:id' => 'classifieds#edit', as: :editlisting
 
   # post 'update' => 'classifieds#update'
 
+  get '/listing/:id' => 'users#list', as: :listinglist # list inside profile navtab
 
-
-
-  get '/listing/:id' => 'users#list' , as: :listinglist #list inside profile navtab
-
-
-  get 'back' => 'application#back' , as: :back
-
+  get 'back' => 'application#back', as: :back
 
   resources :categories do
     resources :classifieds do
@@ -93,10 +86,8 @@ Rails.application.routes.draw do
 
   resources :photos
 
-  #photo stuff
+  # photo stuff
 
-  #get 'photo/new' => 'photos#new'
-  #get 'photoindex' => 'photos#index' ,as: :photoindex
-
-
+  # get 'photo/new' => 'photos#new'
+  # get 'photoindex' => 'photos#index' ,as: :photoindex
 end

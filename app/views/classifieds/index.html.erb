@@ -80,14 +80,14 @@
   <!-- Right after the browser renders the sidebar -->
   <script type="text/javascript">
     // If localStorage is supported by the browser
-                if (typeof(Storage) !== "undefined") {
-                    // If we need to open the bar
-                    if(localStorage.getItem("sidebar") == "opened"){
-                        // Open the bar
-                        document.getElementById("mySidenav").style.width = "250px";
-                        document.getElementById("main").style.marginLeft = "250px";
-                    }
-                }
+                                if (typeof(Storage) !== "undefined") {
+                                    // If we need to open the bar
+                                    if(localStorage.getItem("sidebar") == "opened"){
+                                        // Open the bar
+                                        document.getElementById("mySidenav").style.width = "250px";
+                                        document.getElementById("main").style.marginLeft = "250px";
+                                    }
+                                }
   </script>
   <div class="toolsandsort">
     <ul class="withtooltip">
@@ -125,16 +125,18 @@
                 <!-- MESSAGE -->
                 <p rel="tooltip" title="Αποστολή μυνήματος" class="whithtooltip" data-placement="right"><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %></p>
                 <!-- FAVORITE -->
-                <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
-                  <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
-                <%else%>
-                  <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
-                <%end%>
-                <!-- FLAG -->
-                <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
-                  <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
-                <%else%>
-                  <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+                <% if current_user%>
+                  <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
+                    <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %></p>
+                  <%else%>
+                    <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %></p>
+                  <%end%>
+                  <!-- FLAG -->
+                  <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
+                    <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+                  <%else%>
+                    <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+                  <%end%>
                 <%end%>
               </div>
             </div>

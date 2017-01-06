@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-
   before_action :authenticate_user!
 
   def new
@@ -7,28 +6,20 @@ class MessagesController < ApplicationController
     @classified = Classified.find_by(id: params[:classified_id])
   end
 
-
   def name
     first_name
   end
 
-
-
-  def mailboxer_email(object)
+  def mailboxer_email(_object)
     email
   end
-
-
 
   def create
     classifieds = Classified.find_by(id: params[:classified_id])
     recipients = User.find_by(id: params[:recipient_id])
     conversation = current_user.send_message(recipients, params[:message][:body], params[:message][:subject]).conversation
-    flash[:success] = "Message has been sent!"
-    #NotifierMailer.welcome_email(@user).deliver_later
+    flash[:success] = 'Message has been sent!'
+    # NotifierMailer.welcome_email(@user).deliver_later
     redirect_to conversation_path(conversation)
   end
-
-
-
 end

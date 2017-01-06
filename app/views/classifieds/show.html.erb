@@ -25,27 +25,20 @@
         </div>
         <div class="col-md-6" id="right">
           <%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
-
-
           <!-- LIKE -->
-          <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
-            <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
-          <%else%>
-            <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+          <%if current_user%>
+            <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+              <%= link_to "", favorite_classified_path(@classified, type: "unfavorite") , :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+            <%else%>
+              <%= link_to "", favorite_classified_path(@classified, type: "favorite") , :class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+            <%end%>
+            <!-- FLAG -->
+            <%if current_user.flags.collect(&:classified_id).include?(@classified.id) %>
+              <p><%= link_to "", flag_classified_path(@classified, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+            <%else%>
+              <p><%= link_to "", flag_classified_path(@classified, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+            <%end%>
           <%end%>
-
-
-
-
-          <!-- FLAG -->
-          <%if current_user.flags.collect(&:classified_id).include?(@classified.id) %>
-            <p><%= link_to "", flag_classified_path(@classified, type: "unflag") , :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
-          <%else%>
-            <p><%= link_to "", flag_classified_path(@classified, type: "flag") , :class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
-          <%end%>
-
-
-          
         </div>
       </div>
       <div class="row" id="cdescription">
@@ -71,25 +64,33 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="fields">
+            <% if current_user%>
+              <div class="fields">
+                <small>
+                  <ul>
+                    <li>Άγγελία απο το μέλος: <strong><%= link_to @classified.user.first_name, profile_path(@classified.user_id)%></strong></li>
+                    <% if @classified.user.telephone.present? %>
+                      <li>Τηλέφωνο: <strong><%= link_to @classified.user.telephone, profile_path(@classified.user_id)%></strong></li>
+                    <%end%>
+                    <% if @classified.user.email.present? %>
+                      <li>Email: <strong><%= link_to @classified.user.email, profile_path(@classified.user_id)%></strong></li>
+                    <%end%>
+                    <% if @classified.user.region.present? %>
+                      <li>Περιοχή: <strong><%=  @classified.user.region%></strong></li>
+                    <%end%>
+                  </ul>
+                </small>
+              </div>
+            <%else%>
               <small>
-                <ul>
-                  <li>Άγγελία απο το μέλος: <strong><%= link_to @classified.user.first_name, profile_path(@classified.user_id)%></strong></li>
-                  <% if @classified.user.telephone.present? %>
-                    <li>Τηλέφωνο: <strong><%= link_to @classified.user.telephone, profile_path(@classified.user_id)%></strong></li>
-                  <%end%>
-                  <% if @classified.user.email.present? %>
-                    <li>Email: <strong><%= link_to @classified.user.email, profile_path(@classified.user_id)%></strong></li>
-                  <%end%>
-                  <% if @classified.user.region.present? %>
-                    <li>Περιοχή: <strong><%=  @classified.user.region%></strong></li>
-                  <%end%>
-                </ul>
+                <h5> Κάντε <%= link_to "Sign In" , new_user_session_path%> / <%=link_to "Sign Up", new_user_registration_path%></h5>
+                <h5>Για να δείτε τα στοιχεία επικοινωνίας.</h5>
               </small>
-            </div>
+            <%end%>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
