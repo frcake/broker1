@@ -21,9 +21,28 @@
 //= require tinymce
 //= require_tree .
 
+tinymce.init({
+selector: 'textarea',
+//merge with default formats
+style_formats_merge: true,
+//set up custom style formats
+style_formats: [
+        {title: 'Red Background', block: 'p', styles: {
+            'background-color': '#ffffff',
+            'color':'white',
+            'padding': '7px'}
+        },
+    	{title: 'Blue Background', block: 'p', styles: {
+        	'background-color': '#0000ff',
+            'color':'white',
+            'padding': '7px'}
+        }
+    ]
+});
+
 $( "#dropdown" ).select2({
 	theme: "bootstrap"
-   
+
 });
 
     $(document).ready(function() {
@@ -32,7 +51,7 @@ $( "#dropdown" ).select2({
       });
     });
 
-  
+
 
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -149,7 +168,7 @@ $( function()
 
 
   $( function() {
-    var availableTags = [   
+    var availableTags = [
         "1stClassRock",
 		"2box",
 		"2nd Sense Audio",
@@ -1649,4 +1668,3 @@ $( function()
   }*/
 	  });
   });
-

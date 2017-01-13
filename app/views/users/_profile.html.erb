@@ -33,8 +33,10 @@
       <br>
       <!-- STARS ARE HERE! -->
       <div class="small-2 large-4 columns">
-        <% if current_user %>
-          <%= rating_for @user, "rating" %>
+        <% if current_user == @user %>
+          <%= rating_for @user, "rating" , {readonly:true} %>
+        <%else %>
+          <%= rating_for @user, "rating"%>
         <% end %>
       </div>
       <% if @user == current_user %>

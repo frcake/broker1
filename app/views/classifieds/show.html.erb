@@ -1,4 +1,4 @@
-<div class="indexbox">
+<div class="indexbox" id="show">
   <div class="center-div" id="classifiedshow">
     <div class="container-fluid">
       <div class="row" id="showtitle">
@@ -11,7 +11,7 @@
           <h3 class="dark-grey pull-right" id="prc"><%= @classified.price %><small><span class="glyphicon glyphicon-euro" id="prceuro"></span></small></h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="carouselrow">
         <div class="col-md-12" id="carousel">
           <div id="image">
             <%= carousel_for @image_urls  %>

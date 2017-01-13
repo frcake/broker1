@@ -1,128 +1,89 @@
-
 <div class="indexbox">
-    <% @user.classifieds.each do |f| %>
-
+  <% @user.classifieds.each do |f| %>
     <div class="center-div" id="index">
-    <div class="col-lg-12">
+      <div class="col-lg-12">
         <% if @user == current_user %>
-        
-            <div class="pull-right">
-                <div class="listingoptions" id="optionssmalldiv">
-                    <div class="col-md-3">
-                        <p data-toggle="tooltip" title="Διόρθωση αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
-                        <p data-toggle="tooltip" title="Διαγραφή αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
-
-
-                        <% if f.sold == true %>
-                            <p data-toggle="tooltip" title="Επαναφορά αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "unsold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#0BFF59"  , :id => "optionssmall", method: :put %> </p>
-                        <%else%>
-                            <p data-toggle="tooltip" title="Sold!" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "sold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#262626"  , :id => "optionssmall", method: :put %> </p>
-                        <%end%>                       
-                        
-                    </div>
-                </div>
+          <div class="pull-right">
+            <div class="listingoptions" id="optionssmalldiv">
+              <div class="col-md-3">
+                <p data-toggle="tooltip" title="Διόρθωση αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
+                <p data-toggle="tooltip" title="Διαγραφή αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
+                <% if f.sold == true %>
+                  <p data-toggle="tooltip" title="Επαναφορά αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "unsold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#0BFF59"  , :id => "optionssmall", method: :put %> </p>
+                <%else%>
+                  <p data-toggle="tooltip" title="Sold!" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "sold") ,:class => "glyphicon glyphicon-ok" , :style => "color:#262626"  , :id => "optionssmall", method: :put %> </p>
+                <%end%>
+              </div>
             </div>
-
+          </div>
         <% end %>
         <%= link_to classified_path(f) , :class => "link" do %>
-        <div class="media">
-
+          <div class="media">
             <div class="mediabox">
-
-                <div class="media-left" href="#">
-                   
-
-                    <!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
-                  <% if f.photos.first %>
-                        <%= image_tag f.photos.first.image.url , :class => "media-object"%>
-
-                        <%end%>
-                    
-
+              <div class="media-left">
+                <!--<div class="imgholder">-->
+                <!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
+                <% if f.photos.first %>
+                  <%= image_tag f.photos.first.image.url , :class => "media-object"%>
+                <%end%>
+                <!--</div>-->
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"> <%= f.title %></h5>
+                <div class="details">
+                  <p><small><%= f.created_month %></small></p>
+                  <% if f.category.parent_id? %>
+                    <small class="hidden-xs"><%= f.category.root.name %> </small>
+                    <small class="hidden-xs"> > </small>
+                  <%end%>
+                  <small class="hidden-xs"><%= f.category.name %></small>
                 </div>
-
-                <div class="media-body">
-                    <h5 class="media-heading"> <%= f.title %></h5>
-
-                    <div class="price">                                     
-                        <h5><%= f.price %></h5>
-                    </div>
+                <div class="price ">
+                  <h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
-
-
-
-
+      </div>
     <%end%>
-    <%end%>
-
+  <%end%>
 </div>
-
-
-
 <div class="indexbox">
-    <% @user.services.each do |f| %>
-
+  <% @user.services.each do |f| %>
     <div class="center-div" id="index">
-    <div class="col-lg-12">
+      <div class="col-lg-12">
         <% if @user == current_user %>
-        
-            <div class="pull-right">
-                <div class="listingoptions" id="optionssmalldiv">
-                    <div class="col-md-3">
-                        <p data-toggle="tooltip" title="Διόρθωση αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", edit_service_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
-                        <p data-toggle="tooltip" title="Διαγραφή αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
-
-
-                                      
-                        
-                    </div>
-                </div>
+          <div class="pull-right">
+            <div class="listingoptions" id="optionssmalldiv">
+              <div class="col-md-3">
+                <p data-toggle="tooltip" title="Διόρθωση αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "", edit_service_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
+                <p data-toggle="tooltip" title="Διαγραφή αγγελίας" class="whithtooltip" data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete , :class => "glyphicon glyphicon-trash" , :id => "optionssmall" %></p>
+              </div>
             </div>
-
+          </div>
         <% end %>
         <%= link_to service_path(f) , :class => "link" do %>
-        <div class="media">
-
+          <div class="media">
             <div class="mediabox">
-
-                <div class="media-left" href="#">
-                   
-
-                    <!-- <img class="media-object" src="..." alt="Generic placeholder image">-->
-                  <% if f.photos.first %>
-                        <%= image_tag f.photos.first.image.url , :class => "media-object"%>
-
-                        <%end%>
-                    
-
+              <div class="media-left">
+                <% if f.photos.first %>
+                  <%= image_tag f.photos.first.image.url , :class => "media-object"%>
+                <%end%>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"> <%= f.title %></h5>
+                <div class="details">
+                  <%=raw f.tag_list%>
                 </div>
-
-                <div class="media-body">
-                    <h5 class="media-heading"> <%= f.title %></h5>
-
-                    <div class="price">                                     
-                        <h5><%= f.price %></h5>
-                    </div>
+                <div class="price ">
+                  <h5> <%=f.price %> <small><span class="glyphicon glyphicon-euro" style="color:#888888"></span></small> </h5>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
-
-    
-
-
+      </div>
     <%end%>
-    <%end%>
-
+  <%end%>
 </div>
-
-
-
-
-
-

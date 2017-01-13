@@ -1,5 +1,6 @@
 <div class="center-div">
   <div class="messages-box">
+    <%= link_to "<< Επιστροφή" , :back%>
     <% page_header "Αποστολή μηνύματος" %>
     <%= form_tag messages_path, method: :post do  %>
       <div class="form-group">
@@ -10,7 +11,7 @@
       <div class="form-group">
         <%= label_tag 'message[body]', 'Μήνυμα στον χρήστη : ' %>
         <%= label_tag(:recipient_id, "#{@user.first_name}") %>
-        <%= text_area_tag 'message[body]', "Χαίρεται #{@user.first_name} , \nΕνδιαφέρομαι για την αγγελία : #{@classified.title}",rows: 15, cols: 3, class: 'tinymce', required: true %>
+        <%= text_area_tag 'message[body]', "Χαίρετε #{@user.first_name} , \nΕνδιαφέρομαι για την αγγελία : #{@classified.title}",rows: 15, cols: 3, class: 'tinymce', required: true %>
         <%= tinymce :content_css => asset_path('application.css')%>
       </div>
       <div class="form-group">
