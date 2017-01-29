@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :classifieds do
     put :favorite, on: :member
     put :sold, on: :member
-    put :flag, on: :member
+    put :flag, on: :member, defaults: { format: 'js' }
     get :autocomplete_make_name, on: :collection
     resources :messages do
     end
