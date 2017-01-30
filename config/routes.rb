@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # map.resources :users, :has_many => :classifieds
 
-  get '/' => 'classifieds#index'
+  get '/' => 'application#home'
 
   resources :services
   resources :classifieds do
     put :favorite, on: :member
     put :sold, on: :member
-    put :flag, on: :member, defaults: { format: 'js' }
+    put :flag, on: :member # , defaults: { format: 'js' }
     get :autocomplete_make_name, on: :collection
     resources :messages do
     end

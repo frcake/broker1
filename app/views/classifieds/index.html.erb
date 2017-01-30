@@ -20,7 +20,7 @@
           <%= link_to(row.value, params.merge(:page  => 1,:make_country => row.value).permit!) %>
         <% else %>
           <strong style="color:#ffffff;"><%= row.value %></strong>
-        <% end %>
+        <% end %>f
       <% end %>
       <h6>Κατάσταση</h6>
       <% for row in @search.facet(:condition).rows %>
@@ -80,14 +80,14 @@
   <!-- Right after the browser renders the sidebar -->
   <script type="text/javascript">
     // If localStorage is supported by the browser
-                                                                if (typeof(Storage) !== "undefined") {
-                                                                    // If we need to open the bar
-                                                                    if(localStorage.getItem("sidebar") == "opened"){
-                                                                        // Open the bar
-                                                                        document.getElementById("mySidenav").style.width = "250px";
-                                                                        document.getElementById("main").style.marginLeft = "250px";
+                                                                    if (typeof(Storage) !== "undefined") {
+                                                                        // If we need to open the bar
+                                                                        if(localStorage.getItem("sidebar") == "opened"){
+                                                                            // Open the bar
+                                                                            document.getElementById("mySidenav").style.width = "250px";
+                                                                            document.getElementById("main").style.marginLeft = "250px";
+                                                                        }
                                                                     }
-                                                                }
   </script>
   <div class="toolsandsort">
     <ul class="withtooltip">
