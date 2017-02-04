@@ -9,7 +9,7 @@ class Classified < ApplicationRecord
   has_many :flags
   has_many :flagged_by, through: :flags, source: :user
 
-  accepts_nested_attributes_for :photos
+  accepts_nested_attributes_for :photos, allow_destroy: true
 
   monetize :price_cents
 

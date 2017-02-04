@@ -1,1 +1,68 @@
-<%= link_to "Browse Classifieds", classifieds_path()%>
+<section class="module">
+  <header>
+    <!--<h1>Responsive Image Mosaic</h1>-->
+  </header>
+  <section class="wraper">
+    <div class="figurehome">
+      <figure class='small'>
+        <a href="">
+          <%= link_to classifieds_path() do %>
+            <%= image_tag("_pedals.jpg" , :class => 'cover')%>
+          <%end%>
+        </a>
+        <figcaption class="transition-050 opacity85">
+          <a href="">
+            <strong class="text transition-050 title">Δες Αγγελιες</strong>
+            <span class="text transition-050 desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nostrum, voluptate voluptatum fugit nulla inventore </span>
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figurehome">
+      <figure class='small'>
+        <a href="">
+          <%= image_tag("synth__.jpg" , :class => 'cover')%>
+        </a>
+        <figcaption class="transition-050 opacity85">
+          <a href="">
+            <strong class="text transition-050 title">Τεχνικες ηχογραφησης του 1970</strong>
+            <span class="text transition-050 desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nostrum, voluptate voluptatum fugit nulla inventore </span>
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+    <figure class='small'>
+      <a href="">
+        <%= image_tag("mic.jpg" , :class => 'cover')%>
+      </a>
+      <figcaption class="transition-050 opacity85">
+        <a href="">
+          <strong class="text transition-050 title">title</strong>
+          <span class="text transition-050 desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nostrum, voluptate voluptatum fugit nulla inventore </span>
+        </a>
+      </figcaption>
+    </figure>
+    <figure class='small'>
+      <a href="">
+        <%= image_tag("4306172-fender-telecaster-wallpaper.jpg" , :class => 'cover')%>
+      </a>
+      <figcaption class="transition-050 opacity85">
+        <a href="">
+          <strong class="text transition-050 title">title</strong>
+          <span class="text transition-050 desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nostrum, voluptate voluptatum fugit nulla inventore </span>
+        </a>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="">
+        <%= image_tag("__synth.jpg" , :class => 'cover')%>
+      </a>
+      <figcaption class="transition-050 opacity85">
+        <a href="">
+          <strong class="text transition-050 title">title</strong>
+          <span class="text transition-050 desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nostrum, voluptate voluptatum fugit nulla inventore </span>
+        </a>
+      </figcaption>
+    </figure>
+  </section>
+</section>
