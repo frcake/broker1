@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require select2
 //= require bootstrap
+//= require bootstrap-sprockets
 //= require pictures
 //= require jquery.raty
 //= require ratyrate

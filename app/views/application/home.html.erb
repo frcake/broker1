@@ -21,7 +21,9 @@
     <div class="figurehome">
       <figure class='small'>
         <a href="">
-          <%= image_tag("synth__.jpg" , :class => 'cover')%>
+          <%= link_to posts_path() do %>
+            <%= image_tag("synth__.jpg" , :class => 'cover')%>
+          <%end%>
         </a>
         <figcaption class="transition-050 opacity85">
           <a href="">

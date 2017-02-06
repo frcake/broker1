@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/' => 'application#home'
 
   resources :services
+  resources :posts
   resources :classifieds do
     put :favorite, on: :member
     put :sold, on: :member
