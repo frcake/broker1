@@ -1,0 +1,21 @@
+<div class="col-md-6" id="left">
+  <h5 class="glyphicon glyphicon-heart"></h5>
+  <h5 class="">Loved by: <%= @classified.favorited_by.count %> </h5>
+</div>
+<div class="col-md-6" id="right">
+  <%= link_to "", new_classified_message_path(:recipient_id => @classified.user_id , :classified_id => @classified.id), :class => "glyphicon glyphicon-envelope" , :style => "color:#EFCE7B" %>
+  <!-- LIKE -->
+  <%if current_user%>
+    <%if current_user.favorite_classifieds.collect(&:classified_id).include?(@classified.id) %>
+      <%= link_to "", favorite_classified_path(@classified, type: "statsunfavorite") ,:remote => true, :class => "glyphicon glyphicon-heart" , :style => "color:#FF0000", method: :put %>
+    <%else%>
+      <%= link_to "", favorite_classified_path(@classified, type: "statsfavorite") , :remote => true,:class => "glyphicon glyphicon-heart-empty" , :style => "color:#000000", method: :put %>
+    <%end%>
+    <!-- FLAG -->
+    <%if current_user.flags.collect(&:classified_id).include?(@classified.id) %>
+      <p><%= link_to "", flag_classified_path(@classified, type: "statsunflag") ,:remote => true, :class => "glyphicon glyphicon-flag" , :style => "color:#EB573B", method: :put %></p>
+    <%else%>
+      <p><%= link_to "", flag_classified_path(@classified, type: "statsflag") , :remote => true,:class => "glyphicon glyphicon-flag" , :style => "color:#89E4FF", method: :put %></p>
+    <%end%>
+  <%end%>
+</div>

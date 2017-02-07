@@ -1,19 +1,19 @@
 <div class="listingoptions">
   <div class="col-md-3">
     <!-- MESSAGE -->
-    <p rel="tooltip" title="Αποστολή μυνήματος" class="whithtooltip" data-placement="right"><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope"  , :style => "color:#EFCE7B" %></p>
+    <p  title="Αποστολή μυνήματος" class="" data-placement="right"><%= link_to "", new_classified_message_path(:recipient_id => f.user_id , :classified_id => f.id), :class => "glyphicon glyphicon-envelope"  , :style => "color:#EFCE7B" %></p>
     <!-- FAVORITE -->
     <% if current_user%>
       <%if current_user.favorite_classifieds.collect(&:classified_id).include?(f.id) %>
-        <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :class => "glyphicon glyphicon-heart",:id => "opt" , :style => "color:#FF0000", method: :put %></p>
+        <p  title="Πρόσθεση στα αγαπημένα" class="fav" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "unfavorite") , :remote => true ,:class => "glyphicon glyphicon-heart favorite_classified",:id => "opt" , :style => "color:#FF0000", method: :put %></p>
       <%else%>
-        <p rel="tooltip" title="Πρόσθεση στα αγαπημένα" class="whithtooltip" data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") , :class => "glyphicon glyphicon-heart-empty",:id => "opt" , :style => "color:#000000", method: :put %></p>
+        <p title="Πρόσθεση στα αγαπημένα" class="unfav"  data-placement="right"><%= link_to "", favorite_classified_path(f, type: "favorite") ,:remote => true , :class => "glyphicon glyphicon-heart-empty unfavorite_classified",:id => "opt" , :style => "color:#000000", method: :put %></p>
       <%end%>
       <!-- FLAG -->
       <%if current_user.flags.collect(&:classified_id).include?(f.id) %>
-        <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") , :class => "glyphicon glyphicon-flag" ,:id => "opt", :style => "color:#EB573B", method: :put %></p>
+        <p  title="Ακατάλληλη αγγελία" class="" data-placement="right"><%= link_to "", flag_classified_path(f, type: "unflag") ,:remote => true, :class => "glyphicon glyphicon-flag" ,:id => "opt", :style => "color:#EB573B", method: :put %></p>
       <%else%>
-        <p rel="tooltip" title="Ακατάλληλη αγγελία" class="whithtooltip" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :class => "glyphicon glyphicon-flag" ,:id => "opt", :style => "color:#89E4FF", method: :put %></p>
+        <p  title="Ακατάλληλη αγγελία" class="" data-placement="right"><%= link_to "", flag_classified_path(f, type: "flag") , :remote => true,:class => "glyphicon glyphicon-flag" ,:id => "opt", :style => "color:#89E4FF", method: :put %></p>
       <%end%>
     <%end%>
   </div>

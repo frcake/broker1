@@ -157,9 +157,16 @@ class ClassifiedsController < ApplicationController
 
   def destroy
     @classified = Classified.find(params[:id])
-    redirect_to :back if @classified.destroy
+    # redirect_to :back if @classified.destroy
+    @classified.destroy
 
-    # respond_to do |format|
+    respond_to do |format|
+      # format.html { redirect_to :back }
+      format.json { head :no_content }
+      format.js   { render layout: false }
+    end
+
+    # respond_to do |format|s
     # format.html { redirect_to classifieds_url }
     # format.json { head :no_content }
     # end
@@ -206,12 +213,30 @@ class ClassifiedsController < ApplicationController
     @classified = Classified.find(params[:id])
     if type == 'favorite'
       current_user.favorites << @classified
-      redirect_to :back # , notice: 'You favorited #{@classified.title}'
-
+      respond_to do |format|
+        format.js { render 'favorite.js.erb' }
+      end
     elsif type == 'unfavorite'
       current_user.favorites.delete(@classified)
-      redirect_to :back # , notice: 'Unfavorited #{@classified.title}'
+      respond_to do |format|
+        format.js { render 'favorite.js.erb' }
+      end
 
+    elsif type == 'deletefavorite'
+      current_user.favorites.delete(@classified)
+      respond_to do |format|
+        format.js { render 'destroyfavorite.js.erb' }
+      end
+    elsif type == 'statsfavorite'
+      current_user.favorites << @classified
+      respond_to do |format|
+        format.js { render 'statsupdate.js.erb' }
+      end
+    elsif type == 'statsunfavorite'
+      current_user.favorites.delete(@classified)
+      respond_to do |format|
+        format.js { render 'statsupdate.js.erb' }
+      end
     else
       # Type missing, nothing happens
       redirect_to :back # , notice: 'Nothing happened.'
@@ -223,12 +248,30 @@ class ClassifiedsController < ApplicationController
     @classified = Classified.find(params[:id])
     if type == 'flag'
       current_user.flaggings << @classified
-      redirect_to :back # , notice: 'You favorited #{@classified.title}'
+      # redirect_to :back # , notice: 'You favorited #{@classified.title}'
+      respond_to do |format|
+        format.js
+      end
 
     elsif type == 'unflag'
       current_user.flaggings.delete(@classified)
-      redirect_to :back # , notice: 'Unfavorited #{@classified.title}'
+      # redirect_to :back # , notice: 'Unfavorited #{@classified.title}'
+      respond_to do |format|
+        format.js
+      end
+    elsif type == 'statsflag'
+      current_user.flaggings << @classified
+      # redirect_to :back # , notice: 'You favorited #{@classified.title}'
+      respond_to do |format|
+        format.js { render 'statsupdate.js.erb' }
+      end
 
+    elsif type == 'statsunflag'
+      current_user.flaggings.delete(@classified)
+      # redirect_to :back # , notice: 'Unfavorited #{@classified.title}'
+      respond_to do |format|
+        format.js { render 'statsupdate.js.erb' }
+      end
     else
       # Type missing, nothing happens
       redirect_to :back # , notice: 'Nothing happened.'

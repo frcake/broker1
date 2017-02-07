@@ -5,7 +5,7 @@
       <% if conversation.is_trashed?(current_user) %>
         <%= link_to 'Restore', restore_conversation_path(conversation), class: 'btn btn-xs btn-info', method: :post %>
       <% else %>
-        <p><%= link_to '', conversation_path(conversation), class: 'glyphicon glyphicon-trash', method: :delete, data: {confirm: 'Are you sure?'} %></p>
+        <p><%= link_to '', conversation_path(conversation), :remote => true,class: 'glyphicon glyphicon-trash delete_message', method: :delete, data: {confirm: 'Are you sure?'} %></p>
         <% if conversation.is_unread?(current_user) %>
           <p><%= link_to '', mark_as_read_conversation_path(conversation),class: 'glyphicon glyphicon-eye-open', method: :post %></p>
         <% end %>

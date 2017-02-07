@@ -48,11 +48,18 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "Νέα Αγγελία!", application_index_path , class: "signupbtn"   %><%#= link_to "Νέα Αγγελία!", newlisting_path , class: "signupbtn"   %></li>
                 <% if user_signed_in? %>
-                  <li rel="tooltip" title="Προφίλ" title="Προφίλ" class="whithtooltip" data-placement="bottom" id="profilebtn"><%= link_to current_user.first_name , profile_path(current_user)%></li>
-                  <li><%=  link_to('Logout', destroy_user_session_path, :method => :delete)%></li>
+                  <li rel="tooltip" title="Προφίλ" data-placement="bottom" id="profilebtn">
+                    <%= link_to  profile_path(current_user) do %>
+                      <%= label_tag current_user.first_name %><i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <%end%></li>
+                  <li><%=  link_to 'Logout', destroy_user_session_path, :method => :delete%></li>
                 <% else %>
-                  <li><%= link_to('Sign up', new_user_registration_path) %></li>
-                  <li><%= link_to('Login', new_user_session_path)  %></li>
+                  <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                  <li>
+                    <%= link_to  new_user_session_path  do %>
+                      <%= label_tag 'Login'%><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                    <%end%>
+                  </li>
                 <% end %>
                 <!--<li><a href="#">Logout</a></li>-->
               </ul>

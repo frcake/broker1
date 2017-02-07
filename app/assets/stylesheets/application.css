@@ -12,10 +12,13 @@
  *
  *= require select2
  *= require select2-bootstrap
- *= require_tree .
  *= require_self
  *= require jquery-ui
-
+ *= require jquery-ui/core
+ *= require jquery-ui/theme
+ *= require jquery-ui/tooltip
+ *= require font-awesome
+ *= require_tree .
  */
 
 
@@ -139,10 +142,24 @@ hr {
 
 .signupbtn {
   box-shadow: 1px 1px 2px #888888;
-  color: #000 !important;
-  font-weight: 300;
-  border: 1px solid #646464 !important;
+  color: #696969 !important;
+  font-weight: 600;
+  border: 2px solid #646464 !important;
   border-radius: 5px;
+  max-width: auto;
+}
+
+.signupbtn:hover {
+  /*box-shadow: 1px 1px 2px #888888;*/
+  background-color: #696969 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #696969 !important;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+#loginglyph {
+  color: #696969;
 }
 
 .highlight {

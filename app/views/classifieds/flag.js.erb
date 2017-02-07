@@ -1,1 +1,1 @@
-/*$("#opt").html("<%= escape_javascript(render :partial => 'listingoptions',:locals => {:f=>classified_path()}) %>")*/
+$("#update_option-<%=@classified.id%>").html("<%= escape_javascript(render('classifieds/listingoptions', f: @classified )) %>")

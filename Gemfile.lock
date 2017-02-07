@@ -97,6 +97,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     htmlbeautifier (0.0.12)
@@ -282,6 +284,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   coffee-script-source (= 1.8.0)
   devise
+  font-awesome-rails
   htmlbeautifier (~> 0.0.9)
   jbuilder (~> 2.5)
   jquery-rails

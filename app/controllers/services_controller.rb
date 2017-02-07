@@ -76,11 +76,14 @@ class ServicesController < ApplicationController
 
   def destroy
     @service = Service.find(params[:id])
-    redirect_to :back if @service.destroy
-    # respond_to do |format|
-    # format.html { redirect_to Services_url }
-    # format.json { head :no_content }
-    # end
+
+    @service.destroy
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.json { head :no_content }
+      format.js   { render layout: false }
+    end
   end
 
   def create

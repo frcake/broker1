@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :services
   resources :posts
   resources :classifieds do
-    put :favorite, on: :member
+    put :favorite, on: :member # , defaults: { format: 'js' }
     put :sold, on: :member
     put :flag, on: :member # , defaults: { format: 'js' }
     get :autocomplete_make_name, on: :collection

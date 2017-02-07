@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require jquery
-//= require jquery-ui
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui/widgets/tooltip
 //= require jquery.turbolinks
 //= require select2
 //= require bootstrap
-//= require bootstrap-sprockets
 //= require pictures
 //= require jquery.raty
 //= require ratyrate
@@ -46,12 +46,17 @@ $( "#dropdown" ).select2({
 
 });
 
-    $(document).ready(function() {
-      $('.select2').select2({
-		theme: "bootstrap"
-      });
-    });
+   $(document).ready(function() {
+     $('.select2').select2({
+	theme: "bootstrap"
+     });
+   });
 
+ $(document).ready(function() {
+  $(function(){
+    $(".listingoptions").tooltip();
+  });
+   });
 
 
 
@@ -78,12 +83,15 @@ function closeNav() {
 }
 
 
+
+
 	/*$('togglebtn').click(function() {
 	  $('sidenav').toggleClass('comeBack');
 	});*/
 
 
-
+/*
+TOOLTIPS
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
@@ -145,19 +153,7 @@ $( function()
 			else
 				tooltip.removeClass( 'top' );
 
-			tooltip.css( { left: pos_left, top: pos_top } )
-				   .animate( { top: '+=10', opacity: 1 }, 50 );
-		};
-
-		init_tooltip();
-		$( window ).resize( init_tooltip );
-
-		var remove_tooltip = function()
-		{
-			tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
-			{
-				$( this ).remove();
-			});
+			tooltip.css( { left: pos_left, top: pos_top } )});
 
 			target.attr( 'title', tip );
 		};
@@ -166,7 +162,7 @@ $( function()
 		tooltip.bind( 'click', remove_tooltip );
 	});
 });
-
+*/
 
   $( function() {
     var availableTags = [
