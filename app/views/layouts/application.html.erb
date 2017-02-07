@@ -69,56 +69,25 @@
           <!-- /.container-fluid -->
         </nav>
       </div>
-      <div class="supporting">
-        <div class="container">
-          <ul class="nav navbar-default">
-            <% Category.roots.includes(:children , children: :children).each do |f| %>
-              <li class="dropdown">
-                <%= link_to f.name , category_classifieds_path(f), { :class => 'dropdown-toggle' } %></a>
-              <ul class="dropdown-menu">
-                <% f.children.each do |kid|%>
-                  <li class="dropdown">
-                    <%= link_to  category_classifieds_path(kid) , { :class => 'dropdown-toggle' } do  %>
-                      <%= kid.name %>
-                      <% unless kid.children.blank? %>
-                        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                      <%end%>
-                    <%end %>
-                    <% unless kid.children.blank? %>
-                      <ul class="dropdown-menu sub-menu">
-                        <% kid.children.each do |grandkid| %>
-                          <li><%= link_to grandkid.name , category_classifieds_path(grandkid)%></li>
-                        <%end%>
-                      </ul>
-                    <%end%>
-                  </li>
-                <%end%>
-              </ul>
-            </li>
-          <%end%>
-          <li><span class="glyphicon glyphicon-option-vertical" aria-hidden="true" id="divider"></span></li>
-          <li><%= link_to "Υπηρεσίες" , services_path %></li>
-        </ul>
+      <%= render partial: 'layouts/dropmenu', cached: true %>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <%#= render partial: "news" %>
+      <div class="container" id="maincontainer">
+        <%#= breadcrumbs pretext: "You are here: ",separator: " &rsaquo; " %>
+        <%= yield %>
       </div>
-      <!-- /.container-fluid -->
     </div>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <%#= render partial: "news" %>
-    <div class="container" id="maincontainer">
-      <%= yield %>
+    <div class="pre-footer">
     </div>
-  </div>
-  <div class="pre-footer">
-  </div>
-  <footer class="site-footer">
-    <div class="footerbg">
-      <p>broker</p>
-    </div>
-  </footer>
-</body>
+    <footer class="site-footer">
+      <div class="footerbg">
+        <p>broker</p>
+      </div>
+    </footer>
+  </body>
 </html>

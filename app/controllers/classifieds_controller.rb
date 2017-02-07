@@ -24,7 +24,7 @@ class ClassifiedsController < ApplicationController
   end
 
   def search
-    @search = Sunspot.search(Classified) do
+    @search = Classified.search(include: [:photos, :category, :flags, :favorite_classifieds, :user]) do
       paginate(page: params[:page] || 1, per_page: 10)
       if params[:sort]
         order_by(sort_column, sort_direction)

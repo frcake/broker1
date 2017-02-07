@@ -1,0 +1,33 @@
+<div class="supporting">
+  <div class="container">
+    <ul class="nav navbar-default">
+      <% Category.roots.includes(:children , children: :children).each do |f| %>
+        <li class="dropdown">
+          <%= link_to f.name , category_classifieds_path(f), { :class => 'dropdown-toggle' } %></a>
+        <ul class="dropdown-menu">
+          <% f.children.each do |kid|%>
+            <li class="dropdown">
+              <%= link_to  category_classifieds_path(kid) , { :class => 'dropdown-toggle' } do  %>
+                <%= kid.name %>
+                <% unless kid.children.blank? %>
+                  <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                <%end%>
+              <%end%>
+              <% unless kid.children.blank? %>
+                <ul class="dropdown-menu sub-menu">
+                  <% kid.children.each do |grandkid| %>
+                    <li><%= link_to grandkid.name , category_classifieds_path(grandkid)%></li>
+                  <%end%>
+                </ul>
+              <%end%>
+            </li>
+          <%end%>
+        </ul>
+      </li>
+    <%end%>
+    <li><span class="glyphicon glyphicon-option-vertical" aria-hidden="true" id="divider"></span></li>
+    <li><%= link_to "Υπηρεσίες" , services_path %></li>
+  </ul>
+</div>
+<!-- /.container-fluid -->
+</div>

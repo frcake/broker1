@@ -111,4 +111,7 @@ gem 'acts-as-taggable-on', '~> 4.0'
 gem 'simple_form'
 
 gem 'font-awesome-rails'
+
+gem 'gretel'
+
 # gem 'dropzonejs-rails'
