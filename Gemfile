@@ -76,7 +76,7 @@ gem 'will_paginate'
 
 gem 'nested_form'
 
-gem 'twitter-bootstrap-rails', '2.2.8'
+gem 'twitter-bootstrap-rails'
 
 gem 'bootstrap-sass'
 
@@ -112,6 +112,6 @@ gem 'simple_form'
 
 gem 'font-awesome-rails'
 
-gem 'gretel'
+gem 'breadcrumbs_on_rails'
 
 # gem 'dropzonejs-rails'

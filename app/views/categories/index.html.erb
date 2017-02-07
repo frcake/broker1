@@ -1,34 +1,18 @@
-
-
 <div class="indexbox">
-	
-
-<!-- parent categories -->
-
-	<% @category.each do |z| %>
-		<% z.leaves.collect do |desc| %>
-			<% z.classifieds.each do |f|%>
-				<%= render :partial => "index", :locals=>{:f=>f} %>
-			<%end%>
-		<%end%>
-	<%end %>
-
-<!--rule out the parents -->
-
-	<% @category.each do |z| %>
-		<% z.children.collect do |desc| %>
-			<% desc.classifieds.each do |f|%>
-			<%= render :partial => "index", :locals=>{:f=>f} %>
-
-
-	
-
-			<%end%>
-		<%end%>
-	<%end%>
-
-
+  <!-- parent categories -->
+  <% @category.each do |z| %>
+    <% z.leaves.collect do |desc| %>
+      <% z.classifieds.each do |f|%>
+        <%= render :partial => "index", :locals=>{:f=>f} %>
+      <%end%>
+    <%end%>
+  <%end %>
+  <!--rule out the parents -->
+  <% @category.each do |z| %>
+    <% z.children.collect do |desc| %>
+      <% desc.classifieds.each do |f|%>
+        <%= render :partial => "index", :locals=>{:f=>f} %>
+      <%end%>
+    <%end%>
+  <%end%>
 </div>
-
-
-

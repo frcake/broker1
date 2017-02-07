@@ -8,6 +8,7 @@ class ClassifiedsController < ApplicationController
 
   before_action :set_category
   helper_method :sort_column, :sort_direction
+  add_breadcrumb 'Αγγελίες', :classifieds_path
 
   def image_urls
     @classified = Classified.find(params[:id])
@@ -15,6 +16,7 @@ class ClassifiedsController < ApplicationController
   end
 
   def new
+    add_breadcrumb 'Δημιουργία Αγγελίας', newlisting_path
     @classified = Classified.new
     # @photo = @classified.photos.build
     respond_to do |format|
@@ -65,7 +67,11 @@ class ClassifiedsController < ApplicationController
 
   def index
     if @category.present?
+
       @classifieds = @category.nested_classifieds
+      add_breadcrumb @category.root.name.to_s, category_classifieds_path(category_id: @category.root.id) if @category.root
+      add_breadcrumb @category.parent.name.to_s, category_classifieds_path(category_id: @category.parent.id) if @category.parent && @category.parent != @category.root
+      add_breadcrumb @category.name.to_s, :category_classifieds_path if @category != @category.root
       nested_categories = []
       @category.nested_categories.each do |f|
         nested_categories << f.id
@@ -116,6 +122,12 @@ class ClassifiedsController < ApplicationController
 
   def show
     @classified = Classified.find(params[:id])
+    @category = @classified.category
+    add_breadcrumb @classified.category.parent.parent.name.to_s, category_classifieds_path(category_id: @category.root.id) if @classified.category.parent.parent
+    add_breadcrumb @classified.category.parent.name.to_s, category_classifieds_path(category_id: @category.parent.id) if @classified.category.parent
+    add_breadcrumb @classified.category.name.to_s, category_classifieds_path(category_id: @category.id) if @classified.category.name
+
+    add_breadcrumb @classified.title.to_s, :classified_path
     @photos = @classified.photos # CW
     @image_urls = []
     @classified.photos.each do |photo|

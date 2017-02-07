@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :require_owner, only: [:edit, :update, :delete]
   def show
     @user = User.find(params[:id])
+    add_breadcrumb 'Προφίλ', profile_path
   end
 
   def update_password_with_password(params, *options)
