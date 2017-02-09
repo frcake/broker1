@@ -269,6 +269,28 @@ hr {
 }
 
 
+/* BREADCRUMBS */
+
+ol {
+  padding: 0 !important;
+}
+
+.breadcrumb {
+  padding-top: 4% !important;
+  margin-bottom: 0 !important;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #f1f1f1 !important;
+}
+
+.breadcrumb ul {
+  padding-top: 10px !important;
+  /* background-color: #fff !important;*/
+  border-bottom: 1px dashed #e1e1e1;
+  margin-right: 35px;
+}
+
+
 /* E-COMMERCE DIV */
 
 #commerce {
@@ -688,6 +710,7 @@ width : 800px;
 
 #show {
   /*background-color: #fff;*/
+  margin-top: 0;
 }
 
 #showtitle {
@@ -1011,6 +1034,9 @@ width : 800px;
   .sidenav a {
     font-size: 18px;
     padding: 5px 10px 5px 10px;
+  }
+  #title {
+    font-size: 17px;
   }
 }
 

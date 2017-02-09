@@ -14,7 +14,7 @@ class ConversationsController < ApplicationController
                      end
 
     @conversations = @conversations.paginate(page: params[:page], per_page: 10)
-    add_breadcrumb 'Προφιλ', profile_path(current_user)
+    add_breadcrumb 'Προφίλ', profile_path(current_user)
     add_breadcrumb 'Μηνύματα', conversations_path
   end
 

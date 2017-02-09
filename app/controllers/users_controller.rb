@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_owner, only: [:edit, :update, :delete]
+
+  add_breadcrumb 'Αγγελίες', :classifieds_path
   def show
     @user = User.find(params[:id])
     add_breadcrumb 'Προφίλ', profile_path

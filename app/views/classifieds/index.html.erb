@@ -1,6 +1,4 @@
-<ol class="breadcrumb">
-  <%= render_breadcrumbs(" ") %>
-</ol>
+<%= render "breadpart/breadcrumb" %>
 <!-- classifieds sorting! -->
 <div class="center-div" id="sortfilters">
   <div id="mySidenav" class="sidenav hidden-lg">
@@ -23,7 +21,7 @@
           <%= link_to(row.value, params.merge(:page  => 1,:make_country => row.value).permit!) %>
         <% else %>
           <strong style="color:#ffffff;"><%= row.value %></strong>
-        <% end %>f
+        <% end %>
       <% end %>
       <h6>Κατάσταση</h6>
       <% for row in @search.facet(:condition).rows %>
@@ -34,7 +32,6 @@
         <% end %>
       <% end %>
       <h6>Κατηγορία</h6>
-      CSS Control
       <% for row in @search.facet(:cat).rows %>
         <% if params[:cat].blank? %>
           <%= link_to(row.value, params.merge(:page  => 1,:cat => row.value).permit!) %>
@@ -84,14 +81,14 @@
   <!-- Right after the browser renders the sidebar -->
   <script type="text/javascript">
     // If localStorage is supported by the browser
-                                                                                                        if (typeof(Storage) !== "undefined") {
-                                                                                                            // If we need to open the bar
-                                                                                                            if(localStorage.getItem("sidebar") == "opened"){
-                                                                                                                // Open the bar
-                                                                                                                document.getElementById("mySidenav").style.width = "250px";
-                                                                                                                document.getElementById("main").style.marginLeft = "250px";
-                                                                                                            }
-                                                                                                        }
+            if (typeof(Storage) !== "undefined") {
+                // If we need to open the bar
+                if(localStorage.getItem("sidebar") == "opened"){
+                    // Open the bar
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                }
+            }
   </script>
   <div class="toolsandsort">
     <ul class="withtooltip">
@@ -108,9 +105,6 @@
   </div>
 </div>
 <div class="indexbox">
-  <%if @category%>
-    Κατηγορία:<%= @category.name %>
-  <%end%>
   <% if @search %>
     <div class="col-md-2  visible-lg">
       <div class="facets">
