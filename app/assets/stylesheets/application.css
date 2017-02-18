@@ -504,6 +504,14 @@ width : 800px;
 
 .media-object {
   padding: 0;
+  height: 100% !important;
+  max-width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 .mediabox {
@@ -572,15 +580,15 @@ width : 800px;
   text-decoration: none;
 }
 
-#index img {
+#index #imagecontainer {
+  position: relative;
   margin: 0 15px 0 15px;
   height: 80px;
   width: 100px;
 }
 
 #index .media-left {
-  /* max-height:200px;
-   /*border:1px solid #FF0000;*/
+  /*border-right: 2px solid #a9a9a9;*/
 }
 
 #index .col-md-6 {
