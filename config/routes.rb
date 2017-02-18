@@ -48,7 +48,7 @@ Rails.application.routes.draw do
 
   # delete '/logout' => 'sessions#destroy' #DEVISE
 
-  resources :passwords
+  # resources :passwords
   resources :messages, only: [:new, :create]
 
   resources :conversations, only: [:index, :show, :destroy] do

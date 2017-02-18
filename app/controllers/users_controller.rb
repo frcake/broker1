@@ -1,39 +1,15 @@
 class UsersController < ApplicationController
   before_action :require_owner, only: [:edit, :update, :delete]
+  before_action :authenticate_user!
+
+  def edit
+    @user = current_user
+  end
 
   add_breadcrumb 'Αγγελίες', :classifieds_path
   def show
     @user = User.find(params[:id])
     add_breadcrumb 'Προφίλ', profile_path
-  end
-
-  def update_password_with_password(params, *options)
-    current_password = params.delete(:current_password)
-
-    result = if valid_password?(current_password)
-               update_attributes(params, *options)
-             else
-               assign_attributes(params, *options)
-               valid?
-               errors.add(:current_password, current_password.blank? ? :blank : :invalid)
-               false
-    end
-
-    clean_up_passwords
-    result
-  end
-
-  def sold
-    type = params[:type]
-    @classified = Classifind.find(params[:id])
-
-    if type == 'sold'
-      @classified.sold = true
-      redirect_to :back
-    else
-      @classified.solr = false
-      redirect_to :back
-    end
   end
 
   def name
@@ -45,6 +21,15 @@ class UsersController < ApplicationController
   end
 
   private
+
+  # def account_update_params
+  #   params.require(:user).permit(:first_name, :email, :password, :password_confirmation, :telephone, :region, :reset_password_token)
+  # end
+
+  def user_params
+    # NOTE: Using `strong_parameters` gem
+    params.require(:user).permit(:first_name, :email, :password, :password_confirmation, :telephone, :region, :reset_password_token)
+  end
 
   def require_owner
     unless current_user == User.find(params[:id])

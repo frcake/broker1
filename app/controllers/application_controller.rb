@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
   add_breadcrumb 'Home', :root_path
 
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :configure_permitted_parameters, if: :devise_controller?
 
   rescue_from ActiveRecord::RecordNotFound do
     flash[:warning] = 'Resource not found.'
@@ -15,12 +15,10 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || path
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update) do |u|
-      u.permit(:password, :password_confirmation, :current_password)
-    end
-  end
-
+  #   def configure_permitted_parameters
+  #     update_attrs = [:password, :password_confirmation, :current_password, :reset_password_token]
+  #     devise_parameter_sanitizer.permit :account_update, keys: update_attrs
+  #   end
   def show_createitem
     # render :partial => "createitem"
   end
