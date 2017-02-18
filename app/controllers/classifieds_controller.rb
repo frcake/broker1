@@ -123,7 +123,9 @@ class ClassifiedsController < ApplicationController
   def show
     @classified = Classified.find(params[:id])
     @category = @classified.category
-    add_breadcrumb @classified.category.parent.parent.name.to_s, category_classifieds_path(category_id: @category.root.id) if @classified.category.parent.parent
+    if @classified.category.parent.present?
+      add_breadcrumb @classified.category.parent.parent.name.to_s, category_classifieds_path(category_id: @category.root.id) if @classified.category.parent.parent
+    end
     add_breadcrumb @classified.category.parent.name.to_s, category_classifieds_path(category_id: @category.parent.id) if @classified.category.parent
     add_breadcrumb @classified.category.name.to_s, category_classifieds_path(category_id: @category.id) if @classified.category.name
 
@@ -173,15 +175,9 @@ class ClassifiedsController < ApplicationController
     @classified.destroy
 
     respond_to do |format|
-      # format.html { redirect_to :back }
       format.json { head :no_content }
       format.js   { render layout: false }
     end
-
-    # respond_to do |format|s
-    # format.html { redirect_to classifieds_url }
-    # format.json { head :no_content }
-    # end
   end
 
   def create
@@ -194,6 +190,8 @@ class ClassifiedsController < ApplicationController
         params[:images].each do |image|
           @classified.photos.create(image: image)
         end
+      else
+        @classified.photos.create
       end
       redirect_to @classified
       # format.html { redirect_to @classified, notice: 'Classified was successfully created.' }
@@ -213,10 +211,14 @@ class ClassifiedsController < ApplicationController
 
     if type == 'sold'
       @classified.update_attributes(sold: true)
-      redirect_to :back
+      respond_to do |format|
+        format.js { render 'users/sold.js.erb' }
+      end
     elsif type == 'unsold'
       @classified.update_attributes(sold: false)
-      redirect_to :back
+      respond_to do |format|
+        format.js { render 'users/sold.js.erb' }
+      end
     end
   end
 

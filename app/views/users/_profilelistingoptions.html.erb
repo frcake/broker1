@@ -1,0 +1,11 @@
+<div class="listingoptions" id="optionssmalldiv">
+  <div class="col-md-3">
+    <p data-toggle="tooltip" title="Διόρθωση αγγελίας"  data-placement="right" id="profilebtn"><%= link_to "", editlisting_path(f) , :class => "glyphicon glyphicon-edit"  , :id => "optionssmall"   %></p>
+    <p data-toggle="tooltip" title="Διαγραφή αγγελίας"  data-placement="right" id="profilebtn"><%= link_to "",f, :confirm => "Are you sure?" ,:method => :delete ,:remote => true, :class => "glyphicon glyphicon-trash delete_classified" , :id => "optionssmall" %></p>
+    <% if f.sold == true %>
+      <p data-toggle="tooltip" title="Επαναφορά αγγελίας"  data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "unsold") ,:remote => true,:class => "glyphicon glyphicon-ok" , :style => "color:#0BFF59"  , :id => "optionssmall", method: :put %> </p>
+    <%else%>
+      <p data-toggle="tooltip" title="Sold!"  data-placement="right" id="profilebtn"><%= link_to "", sold_classified_path(f, type: "sold") ,:remote => true,:class => "glyphicon glyphicon-ok" , :style => "color:#262626"  , :id => "optionssmall", method: :put %> </p>
+    <%end%>
+  </div>
+</div>

@@ -32,15 +32,11 @@ class PhotosController < ApplicationController
     end
 
   def edit
-    # @classified = Classified.find(params[:classified_id])
-
     @photo = Photo.find(params[:id])
-    # @photo = Photo.find(params[:id])
   end
 
   def create
-    @photo = Photo.new(params[:photo])
-
+    @photo = Photo.new(photo_params)
     if @photo.save
       respond_to do |format|
         format.html do
@@ -55,13 +51,11 @@ class PhotosController < ApplicationController
     else
       render json: [{ error: 'custom_failure' }], status: 304
     end
-    end
+  end
 
   def update
     @classified = Classified.find(params[:classified_id])
-
     @photo = @classified.photos.find(params[:id])
-
     respond_to do |format|
       if @photo.update_attributes(photo_params)
         format.html { redirect_to classified_path(@classified), notice: 'Photo was successfully updated.' }
@@ -74,8 +68,6 @@ class PhotosController < ApplicationController
    end
 
   def destroy
-    # @classified = Classified.find(params[:classified_id])
-    # @photo = @classified.photos.find(params[:id])
     @photo = Photo.find(params[:id])
     @photo.destroy
 
@@ -100,6 +92,6 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:description, :classified_id, :image)
+    params.require.permit(:photo, :description, :classified_id, :image, :image_file_name, :image_content_type, :image_file_size, :service_id)
   end
 end
