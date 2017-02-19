@@ -149,11 +149,16 @@ class ClassifiedsController < ApplicationController
     @classified = Classified.find(params[:id])
     if current_user.id = @classified.user_id
       if @classified.update_attributes(classified_params)
-        if params[:images]
-          # The magic is here ;)
+        if params[:images] # The magic is here ;)
+          @classified.photos.each do |photo|
+            photo.destroy if photo.image_file_size.nil?
+          end
+
           params[:images].each do |image|
             @classified.photos.create(image: image)
           end
+        else
+          @classified.photos.create unless @classified.photos.exists?
         end
         respond_to do |format|
           format.html { redirect_to @classified, notice: 'Classified was successfully updated.' }

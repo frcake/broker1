@@ -1,4 +1,3 @@
- 
 <div class="section3">
   <div class="form-group col-lg-6">
     <hr>
@@ -6,8 +5,14 @@
     <% if @classified.photos.exists? %>
       <% @classified.photos.each do |z| %>
         <div class="classifiedimage">
-          <%= image_tag z.image %>
-          <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+          <% if !z.image_file_size.nil? %>
+            <%= image_tag z.image %>
+            <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+          <%else%>
+            <p>
+              Προσθέστε μια φωτογραφία στην Αγγελία σας!
+            </p>
+          <%end%>
         </div>
       <%end%>
     <%end%>
