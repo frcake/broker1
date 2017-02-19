@@ -72,10 +72,10 @@ class PhotosController < ApplicationController
     @photo.destroy
 
     respond_to do |format|
-      format.html { redirect_to :back }
-      format.js
+      format.json { head :no_content }
+      format.js   { render layout: false }
     end
-    end
+  end
 
   def make_default
     @photo = Photo.find(params[:id])

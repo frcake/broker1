@@ -198,9 +198,8 @@ class ClassifiedsController < ApplicationController
       else
         @classified.photos.create
       end
-      redirect_to @classified
-      # format.html { redirect_to @classified, notice: 'Classified was successfully created.' }
-      # format.json { render json: @classified, status: :created, location: @classified }
+      # redirect_to @classified
+
     else
       respond_to do |format|
         format.html { render action: 'new' }

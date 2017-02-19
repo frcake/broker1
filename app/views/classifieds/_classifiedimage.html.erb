@@ -6,8 +6,8 @@
       <% @classified.photos.each do |z| %>
         <div class="classifiedimage">
           <% if !z.image_file_size.nil? %>
-            <%= image_tag z.image %>
-            <%= link_to "Delete Photo",photo_path(z), :method => :delete %>
+            <%= image_tag z.image , class: "showimage" %>
+            <%= link_to "Delete Photo",photo_path(z), :method => :delete  , remote: true , class: "photo_delete"%>
           <%else%>
             <p>
               Προσθέστε μια φωτογραφία στην Αγγελία σας!
