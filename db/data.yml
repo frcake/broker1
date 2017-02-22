@@ -48,77 +48,77 @@ categories:
     - Ορχηστρικά
     - 
     - 87
-    - 88
+    - 110
     - 0
     - 0
   - - 6
     - Μπάσο
     - 
-    - 89
-    - 100
+    - 111
+    - 122
     - 0
     - 0
   - - 7
     - DJ
     - 
-    - 101
-    - 102
+    - 123
+    - 138
     - 0
     - 0
   - - 8
     - PA
     - 
-    - 103
-    - 104
+    - 139
+    - 186
     - 0
     - 0
   - - 9
     - Τύμπανα
     - 
-    - 105
-    - 122
+    - 187
+    - 204
     - 0
     - 0
   - - 10
     - Πετάλια
     - 
-    - 123
-    - 124
+    - 205
+    - 240
     - 0
     - 0
   - - 11
     - Παραδοσιακά
     - 
-    - 125
-    - 126
+    - 241
+    - 272
     - 0
     - 0
   - - 12
     - Hi-Fi
     - 
-    - 127
-    - 156
+    - 273
+    - 302
     - 0
     - 0
   - - 13
     - Synths
     - 
-    - 157
-    - 158
+    - 303
+    - 336
     - 0
     - 0
   - - 14
     - Parts
     - 
-    - 159
-    - 186
+    - 337
+    - 364
     - 0
     - 0
   - - 15
     - ProAudio
     - 
-    - 187
-    - 188
+    - 365
+    - 402
     - 0
     - 0
   - - 41
@@ -327,36 +327,36 @@ categories:
   - - 70
     - 4-χορδο
     - 6
-    - 90
-    - 91
+    - 112
+    - 113
     - 1
     - 0
   - - 71
     - 5-χορδο+
     - 6
-    - 92
-    - 93
+    - 114
+    - 115
     - 1
     - 0
   - - 72
     - Ακουστικό
     - 6
-    - 94
-    - 95
+    - 116
+    - 117
     - 1
     - 0
   - - 73
     - Αριστερόχειρες
     - 6
-    - 96
-    - 97
+    - 118
+    - 119
     - 1
     - 0
   - - 74
     - Κόντρα Μπάσο
     - 6
-    - 98
-    - 99
+    - 120
+    - 121
     - 1
     - 0
   - - 75
@@ -432,246 +432,995 @@ categories:
   - - 85
     - Ενισχυτές
     - 12
-    - 128
-    - 129
+    - 274
+    - 275
     - 1
     - 0
   - - 86
     - Καλώδια
     - 12
-    - 130
-    - 131
+    - 276
+    - 277
     - 1
     - 0
   - - 87
     - Digital Players
     - 12
-    - 132
-    - 133
+    - 278
+    - 279
     - 1
     - 0
   - - 88
     - Equalizers
     - 12
-    - 134
-    - 135
+    - 280
+    - 281
     - 1
     - 0
   - - 89
     - Ακουστικά
     - 12
-    - 136
-    - 137
+    - 282
+    - 283
     - 1
     - 0
   - - 90
     - Προενισχυτές
     - 12
-    - 138
-    - 139
+    - 284
+    - 285
     - 1
     - 0
   - - 91
     - Δέκτες
     - 12
-    - 140
-    - 141
+    - 286
+    - 287
     - 1
     - 0
   - - 92
     - Ηχεία
     - 12
-    - 142
-    - 143
+    - 288
+    - 289
     - 1
     - 0
   - - 93
     - Subwoofers
     - 12
-    - 144
-    - 145
+    - 290
+    - 291
     - 1
     - 0
   - - 94
     - Μπομπινόφωνα
     - 12
-    - 146
-    - 147
+    - 292
+    - 293
     - 1
     - 0
   - - 95
     - Κασετόφωνα
     - 12
-    - 148
-    - 149
+    - 294
+    - 295
     - 1
     - 0
   - - 96
     - Ραδιόφωνα
     - 12
-    - 150
-    - 151
+    - 296
+    - 297
     - 1
     - 0
   - - 97
     - Πικάπ
     - 12
-    - 152
-    - 153
+    - 298
+    - 299
     - 1
     - 0
   - - 98
     - Εξαρτήματα και Αξεσουάρ
     - 12
-    - 154
-    - 155
+    - 300
+    - 301
     - 1
     - 0
   - - 99
     - Parts Ενισχυτών
     - 14
-    - 160
-    - 161
+    - 338
+    - 339
     - 1
     - 0
   - - 100
     - Parts Μπάσου
     - 14
-    - 162
-    - 163
+    - 340
+    - 341
     - 1
     - 0
   - - 101
     - Μαγνήτες Μπάσου
     - 14
-    - 164
-    - 165
+    - 342
+    - 343
     - 1
     - 0
   - - 102
     - Σώματα Κιθάρας
     - 14
-    - 166
-    - 167
+    - 344
+    - 345
     - 1
     - 0
   - - 103
     - Parts Κιθάρας
     - 14
-    - 168
-    - 169
+    - 346
+    - 347
     - 1
     - 0
   - - 104
     - Μαγνήτες Κιθάρας
     - 14
-    - 170
-    - 171
+    - 348
+    - 349
     - 1
     - 0
   - - 105
     - Knobs
     - 14
-    - 172
-    - 173
+    - 350
+    - 351
     - 1
     - 0
   - - 106
     - Εξαρτήματα Πεταλιών
     - 14
-    - 174
-    - 175
+    - 352
+    - 353
     - 1
     - 0
   - - 107
     - Pickguards
     - 14
-    - 176
-    - 177
+    - 354
+    - 355
     - 1
     - 0
   - - 108
     - Ηχεία
     - 14
-    - 178
-    - 179
+    - 356
+    - 357
     - 1
     - 0
   - - 109
     - Λάμπες
     - 14
-    - 180
-    - 181
+    - 358
+    - 359
     - 1
     - 0
   - - 110
     - Κλειδιά
     - 14
-    - 182
-    - 183
+    - 360
+    - 361
     - 1
     - 0
   - - 111
     - Διάφορα
     - 14
-    - 184
-    - 185
+    - 362
+    - 363
     - 1
     - 0
   - - 112
     - Διάφορα Κρουστά
     - 9
-    - 106
-    - 107
+    - 188
+    - 189
     - 1
     - 0
   - - 113
     - Κύμβαλα
     - 9
-    - 108
-    - 109
+    - 190
+    - 191
     - 1
     - 0
   - - 114
     - Drum Machines και Samplers
     - 9
-    - 110
-    - 111
+    - 192
+    - 193
     - 1
     - 0
   - - 115
     - Κομμάτια Set
     - 9
-    - 112
-    - 113
+    - 194
+    - 195
     - 1
     - 0
   - - 116
     - Ηλεκτρονικά Τύμπανα
     - 9
-    - 114
-    - 115
+    - 196
+    - 197
     - 1
     - 0
   - - 117
     - Τύμπανα χειρός
     - 9
-    - 116
-    - 117
+    - 198
+    - 199
     - 1
     - 0
   - - 118
     - Pad Controllers
     - 9
-    - 118
-    - 119
+    - 200
+    - 201
     - 1
     - 0
   - - 119
     - Parts and Accessories
     - 9
-    - 120
-    - 121
+    - 202
+    - 203
+    - 1
+    - 0
+  - - 120
+    - Overdrive
+    - 10
+    - 206
+    - 207
+    - 1
+    - 0
+  - - 121
+    - Distortion
+    - 10
+    - 208
+    - 209
+    - 1
+    - 0
+  - - 122
+    - Fuzz
+    - 10
+    - 210
+    - 211
+    - 1
+    - 0
+  - - 123
+    - Delay
+    - 10
+    - 212
+    - 213
+    - 1
+    - 0
+  - - 124
+    - Reverb
+    - 10
+    - 214
+    - 215
+    - 1
+    - 0
+  - - 125
+    - Loopers
+    - 10
+    - 216
+    - 217
+    - 1
+    - 0
+  - - 126
+    - Wahs and Filters
+    - 10
+    - 218
+    - 219
+    - 1
+    - 0
+  - - 127
+    - Octave and Pitch
+    - 10
+    - 220
+    - 221
+    - 1
+    - 0
+  - - 128
+    - Chorus
+    - 10
+    - 222
+    - 223
+    - 1
+    - 0
+  - - 129
+    - Πολυ-εφέ
+    - 10
+    - 224
+    - 225
+    - 1
+    - 0
+  - - 130
+    - Κουρδιστήρια
+    - 10
+    - 226
+    - 227
+    - 1
+    - 0
+  - - 131
+    - Pedalboards
+    - 10
+    - 228
+    - 229
+    - 1
+    - 0
+  - - 132
+    - Tremolo
+    - 10
+    - 230
+    - 231
+    - 1
+    - 0
+  - - 133
+    - EQ
+    - 10
+    - 232
+    - 233
+    - 1
+    - 0
+  - - 134
+    - Noise Gate
+    - 10
+    - 234
+    - 235
+    - 1
+    - 0
+  - - 135
+    - Bass FX
+    - 10
+    - 236
+    - 237
+    - 1
+    - 0
+  - - 136
+    - Harmonizer
+    - 10
+    - 238
+    - 239
+    - 1
+    - 0
+  - - 137
+    - Γιουκαλίλι
+    - 11
+    - 242
+    - 243
+    - 1
+    - 0
+  - - 138
+    - Φυσαρμόνικα
+    - 11
+    - 244
+    - 245
+    - 1
+    - 0
+  - - 139
+    - Μπάντζο
+    - 11
+    - 246
+    - 247
+    - 1
+    - 0
+  - - 140
+    - Μαντολίνο
+    - 11
+    - 248
+    - 249
+    - 1
+    - 0
+  - - 141
+    - Ακορντεόν
+    - 11
+    - 250
+    - 251
+    - 1
+    - 0
+  - - 142
+    - Μπουζούκι
+    - 11
+    - 252
+    - 253
+    - 1
+    - 0
+  - - 143
+    - Μπαγλαμάς
+    - 11
+    - 254
+    - 255
+    - 1
+    - 0
+  - - 144
+    - Λύρα
+    - 11
+    - 256
+    - 257
+    - 1
+    - 0
+  - - 145
+    - Κλαρίνο
+    - 11
+    - 258
+    - 259
+    - 1
+    - 0
+  - - 146
+    - Τζουράς
+    - 11
+    - 260
+    - 261
+    - 1
+    - 0
+  - - 147
+    - Γκάιντα
+    - 11
+    - 262
+    - 263
+    - 1
+    - 0
+  - - 148
+    - Καχόν
+    - 11
+    - 264
+    - 265
+    - 1
+    - 0
+  - - 149
+    - Λαούτο
+    - 11
+    - 266
+    - 267
+    - 1
+    - 0
+  - - 150
+    - Σάζι
+    - 11
+    - 268
+    - 269
+    - 1
+    - 0
+  - - 151
+    - Ούτι
+    - 11
+    - 270
+    - 271
+    - 1
+    - 0
+  - - 152
+    - Βιολί
+    - 5
+    - 88
+    - 89
+    - 1
+    - 0
+  - - 153
+    - Βιόλα
+    - 5
+    - 90
+    - 91
+    - 1
+    - 0
+  - - 154
+    - Τσέλλο
+    - 5
+    - 92
+    - 93
+    - 1
+    - 0
+  - - 155
+    - Τρομπέτα
+    - 5
+    - 94
+    - 95
+    - 1
+    - 0
+  - - 156
+    - Σαξόφωνο
+    - 5
+    - 96
+    - 97
+    - 1
+    - 0
+  - - 157
+    - Τούμπα
+    - 5
+    - 98
+    - 99
+    - 1
+    - 0
+  - - 158
+    - Φλάουτο
+    - 5
+    - 100
+    - 101
+    - 1
+    - 0
+  - - 159
+    - Κλαρινέτο
+    - 5
+    - 102
+    - 103
+    - 1
+    - 0
+  - - 160
+    - Όμποε
+    - 5
+    - 104
+    - 105
+    - 1
+    - 0
+  - - 161
+    - Τρομπόνι
+    - 5
+    - 106
+    - 107
+    - 1
+    - 0
+  - - 162
+    - Κόντρα Μπάσο
+    - 5
+    - 108
+    - 109
+    - 1
+    - 0
+  - - 163
+    - Μείκτης
+    - 7
+    - 124
+    - 125
+    - 1
+    - 0
+  - - 164
+    - Εφέ
+    - 7
+    - 126
+    - 127
+    - 1
+    - 0
+  - - 165
+    - Πικάπ
+    - 7
+    - 128
+    - 129
+    - 1
+    - 0
+  - - 166
+    - Controllers
+    - 7
+    - 130
+    - 131
+    - 1
+    - 0
+  - - 167
+    - Ολόκληρα Set
+    - 7
+    - 132
+    - 133
+    - 1
+    - 0
+  - - 168
+    - Ακουστικά
+    - 7
+    - 134
+    - 135
+    - 1
+    - 0
+  - - 169
+    - CD Players
+    - 7
+    - 136
+    - 137
+    - 1
+    - 0
+  - - 170
+    - Ολόκληρα συστήματα
+    - 8
+    - 140
+    - 141
+    - 1
+    - 0
+  - - 171
+    - Ηχεία
+    - 8
+    - 142
+    - 143
+    - 1
+    - 0
+  - - 172
+    - Μείκτες – Κονσόλες
+    - 8
+    - 144
+    - 145
+    - 1
+    - 0
+  - - 173
+    - Τελικοί Ενισχυτές
+    - 8
+    - 146
+    - 147
+    - 1
+    - 0
+  - - 174
+    - Crossovers
+    - 8
+    - 148
+    - 149
+    - 1
+    - 0
+  - - 175
+    - Μικρόφωνα
+    - 8
+    - 150
+    - 151
+    - 1
+    - 0
+  - - 176
+    - Ασύρματος εξοπλισμός
+    - 8
+    - 152
+    - 153
+    - 1
+    - 0
+  - - 177
+    - In-Ear Monitors
+    - 8
+    - 154
+    - 155
+    - 1
+    - 0
+  - - 178
+    - Stands
+    - 8
+    - 156
+    - 157
+    - 1
+    - 0
+  - - 179
+    - Καλώδια
+    - 8
+    - 158
+    - 159
+    - 1
+    - 0
+  - - 180
+    - Βύσματα
+    - 8
+    - 160
+    - 161
+    - 1
+    - 0
+  - - 181
+    - Εγκαταστάσεις
+    - 8
+    - 162
+    - 163
+    - 1
+    - 0
+  - - 182
+    - DI Boxes
+    - 8
+    - 164
+    - 165
+    - 1
+    - 0
+  - - 183
+    - Φώτα
+    - 8
+    - 166
+    - 185
+    - 1
+    - 0
+  - - 184
+    - Εξοπλισμός φωτισμού
+    - 183
+    - 167
+    - 168
+    - 2
+    - 0
+  - - 185
+    - Προβολείς
+    - 183
+    - 169
+    - 170
+    - 2
+    - 0
+  - - 186
+    - Κινούμενα φώτα
+    - 183
+    - 171
+    - 172
+    - 2
+    - 0
+  - - 187
+    - LED
+    - 183
+    - 173
+    - 174
+    - 2
+    - 0
+  - - 188
+    - Strobo
+    - 183
+    - 175
+    - 176
+    - 2
+    - 0
+  - - 189
+    - Laser
+    - 183
+    - 177
+    - 178
+    - 2
+    - 0
+  - - 190
+    - Μηχανήματα καπνού
+    - 183
+    - 179
+    - 180
+    - 2
+    - 0
+  - - 191
+    - Κονσόλες φωτισμού
+    - 183
+    - 181
+    - 182
+    - 2
+    - 0
+  - - 192
+    - Σκελετοί
+    - 183
+    - 183
+    - 184
+    - 2
+    - 0
+  - - 193
+    - Eurorack
+    - 13
+    - 304
+    - 305
+    - 1
+    - 0
+  - - 194
+    - Midi Controllers
+    - 13
+    - 306
+    - 307
+    - 1
+    - 0
+  - - 195
+    - Ψηφιακά Synths
+    - 13
+    - 308
+    - 309
+    - 1
+    - 0
+  - - 196
+    - Ψηφιακά πιάνο
+    - 13
+    - 310
+    - 311
+    - 1
+    - 0
+  - - 197
+    - Αναλογικά Synths
+    - 13
+    - 312
+    - 313
+    - 1
+    - 0
+  - - 198
+    - Workstations
+    - 13
+    - 314
+    - 315
+    - 1
+    - 0
+  - - 199
+    - Modular Synths
+    - 13
+    - 316
+    - 317
+    - 1
+    - 0
+  - - 200
+    - Cases
+    - 13
+    - 318
+    - 319
+    - 1
+    - 0
+  - - 201
+    - Ηλεκτρικά πιάνο
+    - 13
+    - 320
+    - 321
+    - 1
+    - 0
+  - - 202
+    - Organs
+    - 13
+    - 322
+    - 323
+    - 1
+    - 0
+  - - 203
+    - Stands
+    - 13
+    - 324
+    - 325
+    - 1
+    - 0
+  - - 204
+    - Rackmount Synths
+    - 13
+    - 326
+    - 327
+    - 1
+    - 0
+  - - 205
+    - Pedals
+    - 13
+    - 328
+    - 329
+    - 1
+    - 0
+  - - 206
+    - Γκραν πιάνο
+    - 13
+    - 330
+    - 331
+    - 1
+    - 0
+  - - 207
+    - Καθίσματα
+    - 13
+    - 332
+    - 333
+    - 1
+    - 0
+  - - 208
+    - Όρθια πιάνο
+    - 13
+    - 334
+    - 335
+    - 1
+    - 0
+  - - 209
+    - Μικρόφωνα
+    - 15
+    - 366
+    - 367
+    - 1
+    - 0
+  - - 210
+    - Κάρτες ήχου
+    - 15
+    - 368
+    - 369
+    - 1
+    - 0
+  - - 211
+    - Κονβέρτορες (AD/DA)
+    - 15
+    - 370
+    - 371
+    - 1
+    - 0
+  - - 212
+    - Monitors
+    - 15
+    - 372
+    - 373
+    - 1
+    - 0
+  - - 213
+    - DI Boxes
+    - 15
+    - 374
+    - 375
+    - 1
+    - 0
+  - - 214
+    - Έπιπλα & Racks
+    - 15
+    - 376
+    - 377
+    - 1
+    - 0
+  - - 215
+    - Κονσόλες
+    - 15
+    - 378
+    - 379
+    - 1
+    - 0
+  - - 216
+    - Προενισχυτές
+    - 15
+    - 380
+    - 381
+    - 1
+    - 0
+  - - 217
+    - Summing Box
+    - 15
+    - 382
+    - 383
+    - 1
+    - 0
+  - - 218
+    - 500 Series
+    - 15
+    - 384
+    - 385
+    - 1
+    - 0
+  - - 219
+    - Κομπρέσσορες
+    - 15
+    - 386
+    - 387
+    - 1
+    - 0
+  - - 220
+    - EQ
+    - 15
+    - 388
+    - 389
+    - 1
+    - 0
+  - - 221
+    - Reverb & Delay
+    - 15
+    - 390
+    - 391
+    - 1
+    - 0
+  - - 222
+    - Ηχομόνωση
+    - 15
+    - 392
+    - 393
+    - 1
+    - 0
+  - - 223
+    - PatchBay
+    - 15
+    - 394
+    - 395
+    - 1
+    - 0
+  - - 224
+    - Gates/Expanders
+    - 15
+    - 396
+    - 397
+    - 1
+    - 0
+  - - 225
+    - Ταινίες – Πολυκάναλα
+    - 15
+    - 398
+    - 399
+    - 1
+    - 0
+  - - 226
+    - DAT
+    - 15
+    - 400
+    - 401
     - 1
     - 0
 
@@ -700,165 +1449,6 @@ classifieds:
   - sell
   - askingfor
   records: 
-  - - 2
-    - Fender
-    - Stratocaster
-    - '1998'
-    - 
-    - Πωλείται Fender Stratocaster
-    - Άψογη
-    - 
-    - USA
-    - "<p>&Pi;&omega;&lambda;&epsilon;ί&tau;&alpha;&iota; Fender Stratocaster,&nbsp;
-      &alpha;&gamma;&omicron;&rho;&alpha;&sigma;&mu;έ&nu;&eta; bla bla bla</p>"
-    - 1
-    - '2016-11-25 12:53:15.457745'
-    - '2016-11-25 12:53:15.457745'
-    - 41
-    - false
-    - false
-    - 200000
-    - false
-    - false
-    - true
-    - false
-  - - 4
-    - Neumann
-    - KH 120
-    - '2015'
-    - 
-    - Neumann KH120 AW Studio Monitors Pair
-    - Άψογη
-    - 
-    - USA
-    - "<p>&Pi;&omega;&lambda;&omicron;ύ&nu;&tau;&alpha;&iota; &sigma;&epsilon; ά&psi;&omicron;&gamma;&eta;
-      &kappa;&alpha;&tau;ά&sigma;&tau;&alpha;&sigma;&eta;, &kappa;&alpha;&iota;&nu;&omicron;ύ&rho;&gamma;&iota;&alpha;
-      &kappa;&alpha;&iota; &sigma;&chi;&epsilon;&delta;ό&nu; &alpha;&chi;&rho;&eta;&sigma;&iota;&mu;&omicron;&pi;&omicron;ί&eta;&tau;&alpha;
-      &alpha;&pi;ό project studio &pi;&omicron;&upsilon; &delta;&epsilon;&nu; &lambda;&epsilon;&iota;&tau;&omicron;ύ&rho;&gamma;&eta;&sigma;&epsilon;
-      &pi;&omicron;&tau;έ. &Epsilon;&kappa;&pi;&lambda;&eta;&kappa;&tau;&iota;&kappa;ό
-      studio monitor &mu;&epsilon; &alpha;&pi;ί&sigma;&tau;&epsilon;&upsilon;&tau;&alpha;
-      &sigma;&phi;&iota;&chi;&tau;ά &mu;&pi;ά&sigma;&alpha;, &delta;&epsilon;&nu;
-      &epsilon;ί&nu;&alpha;&iota; &tau;&upsilon;&chi;&alpha;ί&omicron; &pi;&omicron;&upsilon;
-      &epsilon;ί&nu;&alpha;&iota; &nu;&omicron;1 &sigma;&epsilon; &pi;&omega;&lambda;ή&sigma;&epsilon;&iota;&sigmaf;
-      &sigma;&tau;&eta;&nu; &kappa;&alpha;&tau;&eta;&gamma;&omicron;&rho;ί&alpha;
-      &tau;&omicron;&upsilon;! <br /> <br />&Alpha;&pi;&omicron;&sigma;&tau;&omicron;&lambda;ή
-      &sigma;&epsilon; ό&lambda;&eta; &tau;&eta;&nu; &Epsilon;&lambda;&lambda;ά&delta;&alpha;
-      &mu;&epsilon; &delta;&iota;&kappa;ά &mu;&omicron;&upsilon; έ&xi;&omicron;&delta;&alpha;</p>"
-    - 1
-    - '2016-11-25 13:04:16.319663'
-    - '2016-11-27 12:36:43.806004'
-    - 15
-    - false
-    - false
-    - 95000
-    - false
-    - false
-    - true
-    - false
-  - - 5
-    - Universal Audio
-    - 710 Twin-Finity
-    - '2014'
-    - 
-    - Universal Audio 710 Twin - Finity
-    - Πολύ καλή
-    - 
-    - USA
-    - "<p>&Pi;&omicron;&upsilon;&lambda;ά&omega; &tau;&omicron;&nu; &pi;&rho;&omicron;&epsilon;&nu;&iota;&sigma;&chi;&upsilon;&tau;ή
-      Universal Audio 710 Twin-Finity &sigma;&epsilon; ά&rho;&iota;&sigma;&tau;&eta;
-      &kappa;&alpha;&tau;ά&sigma;&tau;&alpha;&sigma;&eta;, &alpha;&chi;&rho;&eta;&sigma;&iota;&mu;&omicron;&pi;&omicron;ί&eta;&tau;&omicron;.
-      &Tau;&omicron; &epsilon;ί&chi;&alpha; &alpha;&gamma;&omicron;&rho;ά&sigma;&epsilon;&iota;
-      &gamma;&iota;&alpha; έ&nu;&alpha; project &kappa;&alpha;&iota; &tau;&epsilon;&lambda;&iota;&kappa;ά
-      &delta;&epsilon;&nu; &tau;&omicron; &chi;&rho;&eta;&sigma;&iota;&mu;&omicron;&pi;&omicron;ί&eta;&sigma;&alpha;
-      &pi;&omicron;&tau;έ. &Sigma;&alpha;&sigmaf; &pi;&alpha;&rho;&alpha;&kappa;&alpha;&lambda;ώ
-      ό&chi;&iota; &pi;&alpha;&zeta;ά&rho;&iota;&alpha; &kappa;&alpha;&iota; &delta;&epsilon;&nu;
-      &epsilon;&nu;&delta;&iota;&alpha;&phi;έ&rho;&omicron;&mu;&alpha;&iota; &gamma;&iota;&alpha;
-      &alpha;&nu;&tau;&alpha;&lambda;&lambda;&alpha;&gamma;έ&sigmaf;. &Tau;&iota;&mu;ή
-      thomann &epsilon;ί&nu;&alpha;&iota; &sigma;&tau;&alpha; 799 &epsilon;&upsilon;&rho;ώ,
-      ό&pi;&omega;&sigmaf; &kappa;&alpha;&tau;&alpha;&lambda;&alpha;&beta;&alpha;ί&nu;&epsilon;&tau;&epsilon;
-      &tau;&alpha; 500 &epsilon;&upsilon;&rho;ώ &epsilon;ί&nu;&alpha;&iota; &mu;&iota;&alpha;
-      &pi;ά&rho;&alpha; &pi;&omicron;&lambda;ύ &kappa;&alpha;&lambda;ή &tau;&iota;&mu;ή
-      &gamma;&iota;&alpha; έ&nu;&alpha; &alpha;&chi;&rho;&eta;&sigma;&iota;&mu;&omicron;&pi;&omicron;ί&eta;&tau;&omicron;
-      &pi;&rho;&omicron;&iota;ό&nu;. &Omicron; &pi;&rho;&omicron;&epsilon;&nu;&iota;&sigma;&chi;&upsilon;&tau;ή&sigmaf;
-      &sigma;&upsilon;&nu;&omicron;&delta;&epsilon;ύ&epsilon;&tau;&alpha;&iota; &alpha;&pi;ό
-      &tau;&omicron; &kappa;&omicron;&upsilon;&tau;ί &tau;&omicron;&upsilon; &kappa;&alpha;&iota;
-      ό&lambda;&alpha; &tau;&alpha; &alpha;&pi;&alpha;&rho;&alpha;ί&tau;&eta;&tau;&alpha;
-      &chi;&alpha;&rho;&tau;&iota;ά &tau;&omicron;&upsilon;. <br /> <br />&Epsilon;&upsilon;&chi;&alpha;&rho;&iota;&sigma;&tau;ώ</p>"
-    - 2
-    - '2016-11-25 13:09:06.524136'
-    - '2016-11-25 13:09:06.524136'
-    - 15
-    - false
-    - false
-    - 50000
-    - false
-    - false
-    - true
-    - false
-  - - 6
-    - Tech 21
-    - SansAmp Character
-    - '2010'
-    - 
-    - Tech 21 SansAmp Character Blonde
-    - Πολύ καλή
-    - 
-    - USA
-    - "<p>&Pi;&omega;&lambda;&epsilon;ί&tau;&alpha;&iota; &tau;&omicron; &gamma;&nu;&omega;&sigma;&tau;ό
-      &pi;&epsilon;&tau;ά&lambda;&iota; &tau;&eta;&sigmaf; Tech 21... <br />&Pi;&lambda;&eta;&rho;&omicron;&phi;&omicron;&rho;ί&epsilon;&sigmaf;
-      &theta;&alpha; &beta;&rho;&epsilon;ί&tau;&epsilon; ά&phi;&theta;&omicron;&nu;&epsilon;&sigmaf;
-      &sigma;&tau;&omicron; Net... <br />&Mu;&epsilon; &tau;&omicron; &kappa;&omicron;&upsilon;&tau;&iota;
-      &tau;&omicron;&upsilon;, &epsilon;&iota;&nu;&alpha;&iota; &eta; &pi;&rho;&omega;&tau;&eta;
-      version (&eta; &delta;&iota;&alpha;&phi;&omicron;&rho;ά &epsilon;&iota;&nu;&alpha;&iota;
-      &omicron;&tau;&iota; &sigma;&tau;&eta;&nu; &delta;&epsilon;ύ&tau;&epsilon;&rho;&eta;
-      version &tau;&omicron; cab sim &alpha;&pi;&epsilon;&nu;&epsilon;&rho;&gamma;&omicron;&pi;&omicron;&iota;&epsilon;ί&tau;&alpha;&iota;
-      &alpha;&nu; &theta;έ&lambda;&epsilon;&iota;&sigmaf;) <br />&Sigma;&tau;&omicron;&nu;
-      &Theta;&omega;&mu;&alpha; &eta; &nu;&epsilon;&alpha; &beta;&epsilon;&rho;&sigma;&iota;&omicron;&nu;
-      &epsilon;&chi;&epsilon;&iota; 231 (&alpha;&nu; &kappa;&alpha;&pi;&omicron;&iota;&omicron;&sigmaf;
-      &theta;έ&lambda;&epsilon;&iota; &nu;&alpha; &pi;&alpha;&epsilon;&iota; &kappa;&alpha;&tau;&epsilon;&upsilon;&theta;&epsilon;ί&alpha;&nu;
-      &sigma;&epsilon; &kappa;&omicron;&nu;&sigma;ό&lambda;&alpha; &gamma;&iota;&alpha;
-      live-&eta;&chi;&omicron;&gamma;&rho;&alpha;&phi;&eta;&sigma;&eta; &eta; &nu;έ&alpha;
-      &beta;&epsilon;&rho;&sigma;&iota;&omicron;&nu; &delta;&epsilon;&nu; &tau;&omicron;&upsilon;
-      &epsilon;ί&nu;&alpha;&iota; &chi;&rho;&eta;&sigma;&iota;&mu;&eta;) <br />&Epsilon;&upsilon;&chi;&alpha;&rho;&iota;&sigma;&tau;&omega;
-      &pi;&omicron;&lambda;ύ</p>"
-    - 2
-    - '2016-11-25 14:03:06.144278'
-    - '2016-11-25 14:03:06.144278'
-    - 10
-    - false
-    - false
-    - 10000
-    - false
-    - false
-    - true
-    - false
-  - - 7
-    - Violino
-    - Βιολί
-    - '1990'
-    - 
-    - ΒΙΟΛΙ Παραδοσιακό
-    - Καλή
-    - 
-    - Greece
-    - "<p>&Beta;&Iota;&Omicron;&Lambda;&Iota; &Pi;&alpha;&rho;&alpha;&delta;&omicron;&sigma;&iota;&alpha;&kappa;ό,
-      &pi;&alpha;&lambda;&alpha;&iota;ό, &chi;&epsilon;&iota;&rho;&omicron;&pi;&omicron;ί&eta;&tau;&omicron;,
-      ά&gamma;&nu;&omega;&sigma;&tau;&omicron;&upsilon; &kappa;&alpha;&tau;&alpha;&sigma;&kappa;&epsilon;&upsilon;&alpha;&sigma;&tau;ή
-      , &pi;&omega;&lambda;&epsilon;ί&tau;&alpha;&iota; &sigma;&tau;&eta; &sigma;&kappa;&lambda;&eta;&rho;ή
-      &theta;ή&kappa;&eta; &tau;&omicron;&upsilon; &mu;&alpha;&zeta;ί &mu;&epsilon;
-      &delta;ύ&omicron; ( 2 ) &kappa;&alpha;&lambda;ά &delta;&omicron;&xi;ά&rho;&iota;&alpha;.
-      NEA TIMH 800,&omicron;&omicron; &epsilon;&upsilon;&rho;ώ</p>"
-    - 2
-    - '2016-11-25 14:05:52.900356'
-    - '2016-11-25 14:05:52.900356'
-    - 11
-    - false
-    - false
-    - 80000
-    - false
-    - false
-    - true
-    - false
   - - 8
     - Gibson
     - Les Paul
@@ -912,18 +1502,665 @@ classifieds:
       &pi;ά&rho;&alpha; &pi;&omicron;&lambda;ύ &kappa;&alpha;&lambda;ή &kappa;&alpha;&tau;ά&sigma;&tau;&alpha;&sigma;&eta;
       &gamma;&iota;&alpha; &alpha;&nu;&tau;&alpha;&lambda;&lambda;&alpha;&gamma;ή
       &pi;&omicron;&upsilon; &mu;&pi;&omicron;&rho;&epsilon;ί &nu;&alpha; &sigma;&upsilon;&nu;&delta;&upsilon;&alpha;&sigma;&tau;&epsilon;ί
-      &mu;&epsilon; &tau;&eta;&nu; &pi;&alpha;&rho;&alpha;&pi;ά&nu;&omega; Gibson.</p>"
+      &mu;&epsilon; &tau;&eta;&nu; &pi;&alpha;&rho;&alpha;&pi;ά&nu;&omega; Gibson</p>"
     - 2
     - '2016-11-25 14:08:53.557504'
-    - '2016-11-25 14:08:53.557504'
+    - '2017-01-10 17:01:50.683333'
     - 41
     - false
     - false
-    - 130000
+    - 110000
     - false
     - false
     - true
     - false
+  - - 10
+    - Stairville
+    - LED
+    - ''
+    - 
+    - Stairville LED Flood Panel 150 40° RGB
+    - Καινούριο
+    - 
+    - China
+    - "<p>&nbsp;</p>\r\n<div id=\"cnp\">\r\n<ul>\r\n<li>Floodlight: 150 LEDs, &Oslash;
+      10 mm</li>\r\n<li>With display to set the functions</li>\r\n<li>DMX Controller,
+      additionally operates in Stand-Alone mode</li>\r\n<li>Very versatile due to
+      thomann its compact size</li>\r\n<li>Through the multi-function bracket can
+      be mounted both on the ground or hanged up</li>\r\n<li>Power supply: AC 240V,
+      50 Hz</li>\r\n<li>Max Power consumption: 18 W</li>\r\n<li>Dispersion: 40&deg;</li>\r\n<li>DMX
+      In/Output: 3 pol. XLR</li>\r\n<li>Power-Out function during power outage</li>\r\n<li>Control:
+      Display, DMX Address, DMX Mode, Master/Slave Mode, Auto Run Mode, Sound-to-Light
+      Mode</li>\r\n<li>Dimensions: 260 x thomann 68 x 210 mm</li>\r\n<li>Weight: 1,8
+      kg</li>\r\n</ul>\r\n</div>"
+    - 2
+    - '2016-12-09 13:28:05.333734'
+    - '2016-12-09 13:28:05.333734'
+    - 187
+    - false
+    - false
+    - 16000
+    - false
+    - false
+    - true
+    - false
+  - - 11
+    - Korg
+    - Volca fm
+    - ''
+    - 
+    - Volca fm
+    - Άψογη
+    - 
+    - Japan
+    - "<p>Polite volca fm</p>"
+    - 2
+    - '2016-12-09 14:10:35.634849'
+    - '2016-12-09 14:10:35.634849'
+    - 195
+    - false
+    - false
+    - 10000
+    - false
+    - false
+    - true
+    - false
+  - - 19
+    - Acoustic Image
+    - case
+    - '1256'
+    - 
+    - case
+    - Καλή
+    - 
+    - England
+    - "<p>case</p>"
+    - 1
+    - '2017-02-07 21:33:41.360346'
+    - '2017-02-18 12:26:08.342444'
+    - 63
+    - false
+    - false
+    - 12500
+    - false
+    - false
+    - true
+    - false
+  - - 32
+    - 2nd Sense Audio
+    - '24'
+    - '423'
+    - 
+    - '326'
+    - Άψογη
+    - 
+    - USA
+    - "<p>326</p>"
+    - 1
+    - '2017-02-18 13:32:18.32778'
+    - '2017-02-18 13:32:18.32778'
+    - 42
+    - false
+    - false
+    - 23600
+    - false
+    - false
+    - true
+    - false
+  - - 33
+    - Advance Music
+    - saf
+    - '2156'
+    - 
+    - awfawf
+    - Καινούριο
+    - 
+    - Canada
+    - "<p>awfgagawgag</p>"
+    - 1
+    - '2017-02-20 02:14:18.167837'
+    - '2017-02-20 02:14:18.167837'
+    - 2
+    - false
+    - false
+    - 125600
+    - false
+    - false
+    - true
+    - false
+  - - 34
+    - Fender
+    - Twin Reverb Silverface
+    - '1784'
+    - 
+    - Πωλείται Fender Twin Reverb
+    - Άψογη
+    - 
+    - USA
+    - "<p>ags</p>"
+    - 1
+    - '2017-02-20 02:24:17.770899'
+    - '2017-02-20 02:24:17.770899'
+    - 80
+    - false
+    - false
+    - 126600
+    - false
+    - false
+    - true
+    - false
+  - - 35
+    - 3D Verlag
+    - '125'
+    - wag
+    - 
+    - wga
+    - Καλή
+    - 
+    - France
+    - "<p>awgawg</p>"
+    - 1
+    - '2017-02-20 02:27:53.728768'
+    - '2017-02-20 02:27:53.728768'
+    - 43
+    - false
+    - false
+    - 21500
+    - false
+    - false
+    - true
+    - false
+  - - 37
+    - Gibson
+    - sg
+    - '1262'
+    - 
+    - aswdfaw
+    - Άψογη
+    - 
+    - USA
+    - "<p>wagawg</p>"
+    - 1
+    - '2017-02-20 02:33:37.48521'
+    - '2017-02-20 02:33:37.48521'
+    - 41
+    - false
+    - false
+    - 2161200
+    - false
+    - false
+    - true
+    - false
+  - - 38
+    - Roland
+    - TB-303
+    - '1980'
+    - 
+    - TB-303
+    - Πολύ καλή
+    - 
+    - Japan
+    - "<p>TB-303TB-303</p>"
+    - 1
+    - '2017-02-20 12:04:38.085649'
+    - '2017-02-20 12:04:38.085649'
+    - 197
+    - false
+    - false
+    - 300000
+    - false
+    - false
+    - true
+    - false
+  - - 39
+    - Korg
+    - Volca FM
+    - '2016'
+    - 
+    - Volca FM
+    - Καινούριο
+    - 
+    - Japan
+    - "<p>Volca FM</p>"
+    - 1
+    - '2017-02-20 12:06:53.143159'
+    - '2017-02-20 12:06:53.143159'
+    - 195
+    - false
+    - false
+    - 12000
+    - false
+    - false
+    - true
+    - false
+
+---
+favorite_classifieds:
+  columns:
+  - id
+  - user_id
+  - classified_id
+  - created_at
+  - updated_at
+  records: 
+  - - 192
+    - 1
+    - 19
+    - '2017-02-09 21:03:20.125192'
+    - '2017-02-09 21:03:20.125192'
+  - - 196
+    - 1
+    - 35
+    - '2017-02-20 02:49:14.75584'
+    - '2017-02-20 02:49:14.75584'
+
+---
+flags:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - user_id
+  - classified_id
+  records: 
+  - - 98
+    - '2017-02-06 23:43:02.708753'
+    - '2017-02-06 23:43:02.708753'
+    - 5
+    - 11
+  - - 131
+    - '2017-02-07 13:27:13.985583'
+    - '2017-02-07 13:27:13.985583'
+    - 1
+    - 11
+  - - 132
+    - '2017-02-07 13:27:14.983659'
+    - '2017-02-07 13:27:14.983659'
+    - 1
+    - 10
+  - - 137
+    - '2017-02-20 02:49:06.122456'
+    - '2017-02-20 02:49:06.122456'
+    - 1
+    - 37
+
+---
+mailboxer_conversations:
+  columns:
+  - id
+  - subject
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Volca fm
+    - '2016-12-17 13:12:18.376859'
+    - '2016-12-17 13:12:18.376859'
+  - - 2
+    - Αναλυτική περιγραφή Buffet
+    - '2017-01-09 12:01:51.717212'
+    - '2017-01-09 12:01:51.717212'
+  - - 3
+    - Πωλείται καμπίνα κιθάρας Marshall...
+    - '2017-01-09 12:07:20.868745'
+    - '2017-01-09 12:07:20.868745'
+  - - 4
+    - Πωλείται καμπίνα κιθάρας Marshall...
+    - '2017-01-09 12:08:07.232796'
+    - '2017-01-09 12:08:07.232796'
+  - - 5
+    - Αναλυτική περιγραφή Buffet
+    - '2017-01-09 12:10:23.428013'
+    - '2017-01-09 12:13:28.643749'
+  - - 6
+    - Volca fm
+    - '2017-02-07 01:48:04.140924'
+    - '2017-02-07 01:48:04.140924'
+
+---
+mailboxer_notifications:
+  columns:
+  - id
+  - type
+  - body
+  - subject
+  - sender_type
+  - sender_id
+  - conversation_id
+  - draft
+  - notification_code
+  - notified_object_type
+  - notified_object_id
+  - attachment
+  - updated_at
+  - created_at
+  - global
+  - expires
+  records: 
+  - - 1
+    - Mailboxer::Message
+    - "<p>Χαίρεται mpdev , Ενδιαφέρομαι για την αγγελία : Volca fm</p>"
+    - Volca fm
+    - User
+    - 1
+    - 1
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2016-12-17 13:12:18.376859'
+    - '2016-12-17 13:12:18.376859'
+    - false
+    - 
+  - - 2
+    - Mailboxer::Message
+    - "<p>Χαίρεται Michael , Ενδιαφέρομαι για την αγγελία : Αναλυτική περιγραφή Buffet</p>\r\n<p> </p>\r\n<p>POSO
+      RE</p>"
+    - Αναλυτική περιγραφή Buffet
+    - User
+    - 2
+    - 2
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-01-09 12:01:51.717212'
+    - '2017-01-09 12:01:51.717212'
+    - false
+    - 
+  - - 3
+    - Mailboxer::Message
+    - "<p>Χαίρεται Michael , Ενδιαφέρομαι για την αγγελία : Πωλείται καμπίνα κιθάρας
+      Marshall...</p>\r\n<p>asgasgas</p>\r\n<p>gasg</p>\r\n<p>asg</p>\r\n<p>asg</p>\r\n<p>asg</p>\r\n<p>as</p>\r\n<p>gas</p>\r\n<p>gas</p>\r\n<p>g</p>"
+    - Πωλείται καμπίνα κιθάρας Marshall...
+    - User
+    - 2
+    - 3
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-01-09 12:07:20.868745'
+    - '2017-01-09 12:07:20.868745'
+    - false
+    - 
+  - - 4
+    - Mailboxer::Message
+    - "<p>Χαίρεται Michael , Ενδιαφέρομαι για την αγγελία : Πωλείται καμπίνα κιθάρας
+      Marshall...</p>\r\n<p>test</p>\r\n<p>test</p>"
+    - Πωλείται καμπίνα κιθάρας Marshall...
+    - User
+    - 2
+    - 4
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-01-09 12:08:07.232796'
+    - '2017-01-09 12:08:07.232796'
+    - false
+    - 
+  - - 5
+    - Mailboxer::Message
+    - "<p>Χαίρεται Michael , Ενδιαφέρομαι για την αγγελία : Αναλυτική περιγραφή Buffet</p>\r\n<p> </p>\r\n<p><strong>Lorem
+      Ipsum</strong> is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.</p>"
+    - Αναλυτική περιγραφή Buffet
+    - User
+    - 2
+    - 5
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-01-09 12:10:23.428013'
+    - '2017-01-09 12:10:23.428013'
+    - false
+    - 
+  - - 6
+    - Mailboxer::Message
+    - "<p>Ok</p>"
+    - Αναλυτική περιγραφή Buffet
+    - User
+    - 1
+    - 5
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-01-09 12:13:26.920337'
+    - '2017-01-09 12:13:26.920337'
+    - false
+    - 
+  - - 7
+    - Mailboxer::Message
+    - "<p>Χαίρετε mpdev , Ενδιαφέρομαι για την αγγελία : Volca fm</p>\r\n<p>poso re
+      mouni</p>"
+    - Volca fm
+    - User
+    - 1
+    - 6
+    - false
+    - 
+    - 
+    - 
+    - 
+    - '2017-02-07 01:48:04.140924'
+    - '2017-02-07 01:48:04.140924'
+    - false
+    - 
+
+---
+mailboxer_receipts:
+  columns:
+  - id
+  - receiver_type
+  - receiver_id
+  - notification_id
+  - is_read
+  - trashed
+  - deleted
+  - mailbox_type
+  - created_at
+  - updated_at
+  - is_delivered
+  - delivery_method
+  - message_id
+  records: 
+  - - 1
+    - User
+    - 2
+    - 1
+    - false
+    - false
+    - false
+    - inbox
+    - '2016-12-17 13:12:18.481426'
+    - '2016-12-17 13:12:18.481426'
+    - false
+    - 
+    - 
+  - - 2
+    - User
+    - 1
+    - 1
+    - true
+    - true
+    - true
+    - sentbox
+    - '2016-12-17 13:12:18.483993'
+    - '2016-12-17 13:12:18.483993'
+    - false
+    - 
+    - 
+  - - 3
+    - User
+    - 1
+    - 2
+    - false
+    - false
+    - false
+    - inbox
+    - '2017-01-09 12:01:51.812787'
+    - '2017-01-09 12:01:51.812787'
+    - false
+    - 
+    - 
+  - - 4
+    - User
+    - 2
+    - 2
+    - true
+    - true
+    - false
+    - sentbox
+    - '2017-01-09 12:01:51.815603'
+    - '2017-01-09 12:01:51.815603'
+    - false
+    - 
+    - 
+  - - 5
+    - User
+    - 1
+    - 3
+    - false
+    - false
+    - false
+    - inbox
+    - '2017-01-09 12:07:20.88012'
+    - '2017-01-09 12:07:20.88012'
+    - false
+    - 
+    - 
+  - - 6
+    - User
+    - 2
+    - 3
+    - true
+    - false
+    - false
+    - sentbox
+    - '2017-01-09 12:07:20.881417'
+    - '2017-01-09 12:07:20.881417'
+    - false
+    - 
+    - 
+  - - 7
+    - User
+    - 1
+    - 4
+    - true
+    - true
+    - true
+    - inbox
+    - '2017-01-09 12:08:07.243442'
+    - '2017-01-09 12:08:07.243442'
+    - false
+    - 
+    - 
+  - - 8
+    - User
+    - 2
+    - 4
+    - true
+    - false
+    - false
+    - sentbox
+    - '2017-01-09 12:08:07.244971'
+    - '2017-01-09 12:08:07.244971'
+    - false
+    - 
+    - 
+  - - 9
+    - User
+    - 1
+    - 5
+    - false
+    - true
+    - true
+    - inbox
+    - '2017-01-09 12:10:23.441316'
+    - '2017-01-09 12:10:23.441316'
+    - false
+    - 
+    - 
+  - - 10
+    - User
+    - 2
+    - 5
+    - true
+    - false
+    - false
+    - sentbox
+    - '2017-01-09 12:10:23.443518'
+    - '2017-01-09 12:10:23.443518'
+    - false
+    - 
+    - 
+  - - 11
+    - User
+    - 2
+    - 6
+    - false
+    - false
+    - false
+    - inbox
+    - '2017-01-09 12:13:26.922914'
+    - '2017-01-09 12:13:26.922914'
+    - false
+    - 
+    - 
+  - - 12
+    - User
+    - 1
+    - 6
+    - true
+    - true
+    - true
+    - sentbox
+    - '2017-01-09 12:13:26.924875'
+    - '2017-01-09 12:13:26.924875'
+    - false
+    - 
+    - 
+  - - 13
+    - User
+    - 2
+    - 7
+    - false
+    - false
+    - false
+    - inbox
+    - '2017-02-07 01:48:04.170155'
+    - '2017-02-07 01:48:04.170155'
+    - false
+    - 
+    - 
+  - - 14
+    - User
+    - 1
+    - 7
+    - true
+    - true
+    - true
+    - sentbox
+    - '2017-02-07 01:48:04.173144'
+    - '2017-02-07 01:48:04.173144'
+    - false
+    - 
+    - 
 
 ---
 photos:
@@ -936,111 +2173,354 @@ photos:
   - image_content_type
   - image_file_size
   - image_updated_at
+  - service_id
   records: 
-  - - 2
-    - 2
-    - '2016-11-25 12:55:01.487264'
-    - '2016-11-25 12:55:01.487264'
+  - - 25
+    - 10
+    - '2016-12-09 13:28:05.400379'
+    - '2016-12-09 13:28:05.400379'
+    - 11588319_800.jpg
+    - image/jpeg
+    - 109757
+    - '2016-12-09 13:28:05.389174'
+    - 
+  - - 26
+    - 11
+    - '2016-12-09 14:10:35.67585'
+    - '2016-12-09 14:10:35.67585'
+    - 1481292614665847916676.jpg
+    - image/jpeg
+    - 3509675
+    - '2016-12-09 14:10:35.659367'
+    - 
+  - - 35
+    - 19
+    - '2017-02-07 21:33:41.398282'
+    - '2017-02-07 21:33:41.398282'
+    - USE_CASE.jpg
+    - image/jpeg
+    - 65070
+    - '2017-02-07 21:33:41.384108'
+    - 
+  - - 36
+    - 8
+    - '2017-02-10 14:27:14.527313'
+    - '2017-02-18 13:11:45.289985'
+    - 
+    - 
+    - 
+    - '2017-02-10 14:27:14.517049'
+    - 
+  - - 41
+    - 19
+    - '2017-02-18 17:55:27.125328'
+    - '2017-02-18 17:55:27.125328'
+    - cabin.jpg
+    - image/jpeg
+    - 22830
+    - '2017-02-18 17:55:27.11374'
+    - 
+  - - 42
+    - 19
+    - '2017-02-18 17:55:27.139961'
+    - '2017-02-18 17:55:27.139961'
+    - li6.jpg
+    - image/jpeg
+    - 17951
+    - '2017-02-18 17:55:27.132893'
+    - 
+  - - 43
+    - 19
+    - '2017-02-18 17:55:27.156925'
+    - '2017-02-18 17:55:27.156925'
+    - li6crop.jpg
+    - image/jpeg
+    - 6632
+    - '2017-02-18 17:55:27.148983'
+    - 
+  - - 94
+    - 32
+    - '2017-02-20 01:22:39.4483'
+    - '2017-02-20 01:22:39.4483'
     - Fender-American-Standard-Stratocaster-in-oiled-ash-finish-978x400.jpg
     - image/jpeg
     - 72921
-    - '2016-11-25 12:55:01.478272'
-  - - 3
-    - 4
-    - '2016-11-25 13:04:16.347276'
-    - '2016-11-25 13:04:16.347276'
-    - neumann_kh120_aw_studio_monitors_pair-1473623598-558-e.jpg
+    - '2017-02-20 01:22:39.435659'
+    - 
+  - - 95
+    - 32
+    - '2017-02-20 01:22:39.463115'
+    - '2017-02-20 01:22:39.463115'
+    - images.jpeg
     - image/jpeg
-    - 13790
-    - '2016-11-25 13:04:16.339041'
-  - - 4
-    - 4
-    - '2016-11-25 13:04:16.362115'
-    - '2016-11-25 13:04:16.362115'
-    - neumann_kh120_aw_studio_monitors_pair-1473623600-558-e.jpg
-    - image/jpeg
-    - 55494
-    - '2016-11-25 13:04:16.353967'
-  - - 5
-    - 5
-    - '2016-11-25 13:09:06.553031'
-    - '2016-11-25 13:09:06.553031'
+    - 4512
+    - '2017-02-20 01:22:39.455901'
+    - 
+  - - 96
+    - 33
+    - '2017-02-20 02:14:18.200322'
+    - '2017-02-20 02:14:18.200322'
     - universal_audio_710_twin_finity-1469704390-407-e.jpg
     - image/jpeg
     - 37972
-    - '2016-11-25 13:09:06.54551'
-  - - 6
-    - 5
-    - '2016-11-25 13:09:06.565912'
-    - '2016-11-25 13:09:06.565912'
+    - '2017-02-20 02:14:18.189787'
+    - 
+  - - 97
+    - 33
+    - '2017-02-20 02:14:18.226752'
+    - '2017-02-20 02:14:18.226752'
     - universal_audio_710_twin_finity-1469704391-198-e.jpg
     - image/jpeg
     - 58526
-    - '2016-11-25 13:09:06.558788'
-  - - 7
-    - 5
-    - '2016-11-25 13:09:06.588169'
-    - '2016-11-25 13:09:06.588169'
+    - '2017-02-20 02:14:18.217265'
+    - 
+  - - 98
+    - 33
+    - '2017-02-20 02:14:18.241671'
+    - '2017-02-20 02:14:18.241671'
     - universal_audio_710_twin_finity-1469704392-106-e.jpg
     - image/jpeg
     - 69333
-    - '2016-11-25 13:09:06.577242'
+    - '2017-02-20 02:14:18.233068'
+    - 
+  - - 99
+    - 34
+    - '2017-02-20 02:24:17.818132'
+    - '2017-02-20 02:24:17.818132'
+    - neumann_kh120_aw_studio_monitors_pair-1473623598-558-e.jpg
+    - image/jpeg
+    - 13790
+    - '2017-02-20 02:24:17.808067'
+    - 
+  - - 100
+    - 34
+    - '2017-02-20 02:24:17.834517'
+    - '2017-02-20 02:24:17.834517'
+    - neumann_kh120_aw_studio_monitors_pair-1473623600-558-e.jpg
+    - image/jpeg
+    - 55494
+    - '2017-02-20 02:24:17.825766'
+    - 
+  - - 105
+    - 35
+    - '2017-02-20 02:31:37.817165'
+    - '2017-02-20 02:31:37.817165'
+    - prs_se_24_7__CE_9A_CE_91_CE_99_CE_9D_CE_-1477405945-996-e.jpg
+    - image/jpeg
+    - 10908
+    - '2017-02-20 02:31:37.806296'
+    - 
+  - - 106
+    - 37
+    - '2017-02-20 02:33:37.519441'
+    - '2017-02-20 02:33:37.519441'
+    - ac7c2722af4e0d57f1ed744029bcc2dd.jpg
+    - image/jpeg
+    - 171335
+    - '2017-02-20 02:33:37.508649'
+    - 
+  - - 107
+    - 38
+    - '2017-02-20 12:04:38.125508'
+    - '2017-02-20 12:04:38.125508'
+    - li6.jpg
+    - image/jpeg
+    - 17951
+    - '2017-02-20 12:04:38.117626'
+    - 
+  - - 108
+    - 39
+    - '2017-02-20 12:06:53.17701'
+    - '2017-02-20 12:06:53.17701'
+    - li6.jpg
+    - image/jpeg
+    - 25709
+    - '2017-02-20 12:06:53.167296'
+    - 
+
+---
+posts:
+  columns:
+  - id
+  - title
+  - body
+  - created_at
+  - updated_at
+  records: 
+  - - 5
+    - Lorem Ipsum
+    - "<div>\r\n<h2>What is Lorem Ipsum?</h2>\r\n<p><strong>Lorem Ipsum</strong> is
+      simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s, when an unknown
+      printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release
+      of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n</div>\r\n<div>\r\n<h2>Why
+      do we use it?</h2>\r\n<p>It is a long established fact that a reader will be
+      distracted by the readable content of a page when looking at its layout. The
+      point of using Lorem Ipsum is that it has a more-or-less normal distribution
+      of letters, as opposed to using 'Content here, content here', making it look
+      like readable English. Many desktop publishing packages and web page editors
+      now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+      will uncover many web sites still in their infancy. Various versions have evolved
+      over the years, sometimes by accident, sometimes on purpose (injected humour
+      and the like).</p>\r\n</div>\r\n<p>&nbsp;</p>\r\n<div>\r\n<h2>Where does it
+      come from?</h2>\r\n<p>Contrary to popular belief, Lorem Ipsum is not simply
+      random text. It has roots in a piece of classical Latin literature from 45 BC,
+      making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure Latin words, consectetur,
+      from a Lorem Ipsum passage, and going through the cites of the word in classical
+      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+      1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good
+      and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+      of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+      \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The
+      standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+      interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\"
+      by Cicero are also reproduced in their exact original form, accompanied by English
+      versions from the 1914 translation by H. Rackham.</p>\r\n</div>\r\n<h2>Where
+      can I get some?</h2>\r\n<p>There are many variations of passages of Lorem Ipsum
+      available, but the majority have suffered alteration in some form, by injected
+      humour, or randomised words which don't look even slightly believable. If you
+      are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+      embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
+      the Internet tend to repeat predefined chunks as necessary, making this the
+      first true generator on the Internet. It uses a dictionary of over 200 Latin
+      words, combined with a handful of model sentence structures, to generate Lorem
+      Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always
+      free from repetition, injected humour, or non-characteristic words etc.</p>"
+    - '2017-02-05 19:01:35.588722'
+    - '2017-02-05 19:01:35.588722'
+  - - 6
+    - hsdhsd
+    - "<p>hsdhsdh</p>"
+    - '2017-02-06 23:52:46.433961'
+    - '2017-02-06 23:52:46.433961'
+
+---
+rates:
+  columns:
+  - id
+  - rater_id
+  - rateable_type
+  - rateable_id
+  - stars
+  - dimension
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - User
+    - 2
+    - 5.0
+    - rating
+    - '2017-01-09 12:00:23.939211'
+    - '2017-01-09 12:00:23.939211'
+  - - 2
+    - 5
+    - User
+    - 2
+    - 2.0
+    - rating
+    - '2017-02-06 23:59:34.441774'
+    - '2017-02-06 23:59:34.441774'
+
+---
+rating_caches:
+  columns:
+  - id
+  - cacheable_type
+  - cacheable_id
+  - avg
+  - qty
+  - dimension
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - User
+    - 2
+    - 3.5
+    - 2
+    - rating
+    - '2017-01-09 12:00:23.962549'
+    - '2017-02-06 23:59:34.456287'
+
+---
+tags:
+  columns:
+  - id
+  - name
+  - taggings_count
+  records: 
+  - - 1
+    - κιθάρα
+    - 0
+  - - 2
+    - μάθημα
+    - 0
+  - - 3
+    - καθηγητής
+    - 0
+  - - 4
+    - καθηγητής μάθημα κιθάρα
+    - 0
+  - - 5
+    - kathigitis
+    - 0
+  - - 6
+    - mathima
+    - 0
+  - - 7
+    - kithara
+    - 0
   - - 8
-    - 6
-    - '2016-11-25 14:03:06.174516'
-    - '2016-11-25 14:03:06.174516'
-    - 71-TTnp18dL._SL1500_.jpg
-    - image/jpeg
-    - 52068
-    - '2016-11-25 14:03:06.164625'
+    - one
+    - 0
   - - 9
-    - 7
-    - '2016-11-25 14:05:52.9346'
-    - '2016-11-25 14:05:52.9346'
-    - _CE_92_CE_99_CE_9F_CE_9B_CE_99__CE_A0_CE-1471585267-208-e.jpg
-    - image/jpeg
-    - 81372
-    - '2016-11-25 14:05:52.927023'
+    - two
+    - 0
   - - 10
-    - 7
-    - '2016-11-25 14:05:52.952061'
-    - '2016-11-25 14:05:52.952061'
-    - _CE_92_CE_99_CE_9F_CE_9B_CE_99__CE_A0_CE-1471585277-810-e.jpg
-    - image/jpeg
-    - 39793
-    - '2016-11-25 14:05:52.943496'
+    - three
+    - 0
   - - 11
-    - 8
-    - '2016-11-25 14:08:53.58919'
-    - '2016-11-25 14:08:53.58919'
-    - gibson_les_paul_trad_fender_usa_standard-1478549741-708-e.jpg
-    - image/jpeg
-    - 90115
-    - '2016-11-25 14:08:53.579155'
+    - three two one
+    - 0
   - - 12
-    - 8
-    - '2016-11-25 14:08:53.615069'
-    - '2016-11-25 14:08:53.615069'
-    - gibson_les_paul_trad_fender_usa_standard-1478549774-137-e.jpg
-    - image/jpeg
-    - 78074
-    - '2016-11-25 14:08:53.603019'
+    - μπάσο
+    - 0
   - - 13
-    - 8
-    - '2016-11-25 14:08:53.64088'
-    - '2016-11-25 14:08:53.64088'
-    - gibson_les_paul_trad_fender_usa_standard-1478550280-895-e.jpg
-    - image/jpeg
-    - 58623
-    - '2016-11-25 14:08:53.630819'
+    - μαθήματα
+    - 0
   - - 14
-    - 8
-    - '2016-11-25 14:08:53.667668'
-    - '2016-11-25 14:08:53.667668'
-    - undefined-1479415612-65-e.jpg
-    - image/jpeg
-    - 89402
-    - '2016-11-25 14:08:53.656175'
+    - Τύμπανα
+    - 0
+  - - 15
+    - κιθάρας
+    - 0
+  - - 16
+    - μπάσου
+    - 0
+  - - 17
+    - mixing
+    - 0
+  - - 18
+    - mastering
+    - 0
+  - - 19
+    - recording
+    - 0
+  - - 20
+    - Φλάουτο
+    - 0
+  - - 21
+    - Φωνητικής
+    - 0
+  - - 22
+    - asg
+    - 0
 
 ---
 users:
@@ -1070,16 +2550,16 @@ users:
     - '2102805082'
     - 
     - '2016-11-22 19:40:10.170956'
-    - '2016-11-28 14:34:31.081885'
-    - "$2a$11$soOPgmxSF4t/Z.L8YMGKSeqzxcbD.4TZCVGnlKBr7KcCseSlwI7aO"
+    - '2017-02-20 02:11:18.331832'
+    - "$2a$11$/8Z7Io1eSnKMV/INK.YZkO8VeWLyxbYNTbl/nFRvyxlQ8yN.izhZK"
     - 
     - 
     - 
-    - 5
-    - '2016-11-28 14:34:31.080979'
-    - '2016-11-27 12:30:25.8266'
-    - 2.86.71.197
-    - 213.16.207.78
+    - 47
+    - '2017-02-20 02:11:18.330071'
+    - '2017-02-19 16:38:43.12206'
+    - 127.0.0.1
+    - 127.0.0.1
   - - 2
     - mpdev
     - mpdevcake@gmail.com
@@ -1087,16 +2567,16 @@ users:
     - '2108080800'
     - 
     - '2016-11-25 13:07:58.318342'
-    - '2016-11-25 14:10:49.191753'
+    - '2017-02-18 17:26:28.298976'
     - "$2a$11$dAsXpkTs/cHYidEaxWkq8.zFn13zUGeQpAtzyk2vtqlfcILAtn9ay"
     - 
     - 
     - 
-    - 3
-    - '2016-11-25 14:10:49.190747'
-    - '2016-11-25 13:55:56.029183'
-    - 192.168.1.6
-    - 192.168.1.9
+    - 13
+    - '2017-02-18 17:26:28.297488'
+    - '2017-02-10 14:26:07.819439'
+    - 192.168.1.2
+    - 127.0.0.1
   - - 3
     - teo
     - theofilosst@hotmail.com
@@ -1114,3 +2594,54 @@ users:
     - '2016-11-25 20:56:31.271058'
     - 94.65.240.66
     - 94.65.240.66
+  - - 4
+    - Τζόνυς Βεντούζας
+    - kon_gia@yahoo.gr
+    - 
+    - 
+    - 
+    - '2016-12-09 13:26:44.238533'
+    - '2016-12-09 13:26:44.246947'
+    - "$2a$11$SLuWj/iCKSWDBK3eJYBlge4UIE608tICrG/dblYXXX6pQc2ecKwTy"
+    - 
+    - 
+    - 
+    - 1
+    - '2016-12-09 13:26:44.245152'
+    - '2016-12-09 13:26:44.245152'
+    - 192.168.1.3
+    - 192.168.1.3
+  - - 5
+    - jojo
+    - mayer@mail.com
+    - 
+    - 
+    - 
+    - '2017-02-06 23:16:24.197351'
+    - '2017-02-06 23:16:24.204954'
+    - "$2a$11$ZqV0rZI2iuDmhhTY4ZB3huwhqCB33AoYfmN2lEltAj5Xkhjof6CYu"
+    - 
+    - 
+    - 
+    - 1
+    - '2017-02-06 23:16:24.203951'
+    - '2017-02-06 23:16:24.203951'
+    - 127.0.0.1
+    - 127.0.0.1
+  - - 6
+    - tsoko
+    - tsoko@tsoko.com
+    - 
+    - 
+    - 
+    - '2017-02-18 16:37:27.41665'
+    - '2017-02-18 16:37:27.421907'
+    - "$2a$11$rzlgDMGAwkiGbANig2Fb6.hRUPUqG8c7xG1v8hQy16Zo27hga5W.y"
+    - 
+    - 
+    - 
+    - 1
+    - '2017-02-18 16:37:27.421328'
+    - '2017-02-18 16:37:27.421328'
+    - 127.0.0.1
+    - 127.0.0.1

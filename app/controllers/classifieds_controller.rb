@@ -198,7 +198,7 @@ class ClassifiedsController < ApplicationController
       else
         @classified.photos.create
       end
-      # redirect_to @classified
+      redirect_to @classified
 
     else
       respond_to do |format|

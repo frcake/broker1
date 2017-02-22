@@ -286,7 +286,8 @@ ol {
 .breadcrumb ul {
   padding-top: 10px !important;
   /* background-color: #fff !important;*/
-  border-bottom: 1px dashed #e1e1e1;
+  border-bottom: 1px dotted #e1e1e1;
+  /*border-top: 1px dotted #e1e1e1;*/
   margin-right: 35px;
 }
 
@@ -417,13 +418,18 @@ border-color: transparent !important;
 
 #sortfilters li {
   display: inline-block;
-  padding: 10px;
-  border: 1px dotted #e9e9e9;
 }
 
-#sortfilters li:hover {
+#sortfilters li a {
+  display: inline-block;
+  padding: 10px;
   border: 1px solid #e9e9e9;
-  background-color: #f2f2f2;
+}
+
+#sortfilters li:hover a {
+  border: 1px solid #e9e9e9;
+  background-color: #696969;
+  color: #fff;
 }
 
 #sortfilters a {
