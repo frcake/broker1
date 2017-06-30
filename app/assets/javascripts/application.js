@@ -13,9 +13,9 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require jquery-ui/widgets/tooltip
+//= require bootstrap
 //= require jquery.turbolinks
 //= require select2
-//= require bootstrap
 //= require pictures
 //= require jquery.raty
 //= require ratyrate
