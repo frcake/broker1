@@ -10,30 +10,23 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
+ *= require select2
+ *= require select2-bootstrap
  *= require_self
  *= require jquery-ui
  *= require jquery-ui/core
  *= require jquery-ui/theme
  *= require jquery-ui/tooltip
- *= require select2
- *= require select2-bootstrap
  *= require font-awesome
- *= require bootstrap-sprockets
- *= require bootstrap
  *= require_tree .
  */
 
 
 /* body */
 
-
-/*@import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
-*/
-
 * {
   margin: 0;
 }
