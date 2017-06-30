@@ -1480,11 +1480,11 @@ body.mce-content-body {
 }
 
 
-}
-
 /*HOME PAGE*/
 
+
 /* Transitions */
+
 .transition-050 {
   -moz-transition: 0.50s;
   -webkit-transition: 0.50s;
@@ -1492,20 +1492,24 @@ body.mce-content-body {
   -o-transition: 0.50s;
   transition: 0.50s;
 }
+
 .opacity85 {
   opacity: 1;
   filter: alpha(opacity=55);
 }
+
 body {
   background-color: #333;
   color: #eee
 }
+
 .module {
   padding-top: 40px;
   max-width: auto;
   max-height: 100%;
   margin: auto;
 }
+
 .module figure {
   border-radius: 5px;
   position: relative;
@@ -1515,57 +1519,68 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .module .small {
   float: left;
   width: 50%;
 }
+
 .module figure img {
   display: block;
   width: 100%;
   max-height: 250px;
 }
+
 .cover {
   object-fit: cover;
   width: auto;
   height: 250px;
 }
+
 .module figcaption {
   position: absolute;
   bottom: 0px;
   width: 100%;
   /*max-height: 100%;*/
-
   max-height: 27px;
 }
+
 .module .text {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 13px;
   font-weight: 400;
 }
+
 .module figure:hover figcaption {
   max-height: 100%;
 }
+
 .module figure:hover figcaption .text {
   background-color: rgba(122, 139, 139, 0.5);
   color: #fff;
 }
+
 .module figcaption a {
   display: block;
   text-decoration: none;
 }
+
 .module .title {
   display: inline-block;
   padding: 5px;
   text-transform: uppercase;
 }
+
 .module .desc {
   display: block;
   padding: 15px;
 }
+
 .bgcolor {
   background-color: #fff;
 }
+
 
 /*.figurehome {
   margin: 10px;
