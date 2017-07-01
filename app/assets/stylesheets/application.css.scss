@@ -18,15 +18,12 @@
  *= require jquery-ui/theme
  *= require jquery-ui/tooltip
  *= require font-awesome
-
- *= require_tree .
  */
 
 
 /* body */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,500,300,700&subset=greek,latin);
 * {
   margin: 0;
@@ -1586,3 +1583,5 @@ body {
 /*.figurehome {
   margin: 10px;
 }*/
+@import "bootstrap-sprockets";
+@import "bootstrap";

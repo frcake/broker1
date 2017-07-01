@@ -15,5 +15,6 @@ module Brokr
       "<span class='field_with_errors'>#{html_tag}<span class='glyphicon glyphicon-exclamation-sign'></span></span>".html_safe
     }
     config.assets.precompile += %w[tinymce/tiny_mce.js tinymce/langs/en.js tinymce/themes/advanced/editor_template.js]
+    config.assets.initialize_on_precompile = false
   end
 end
