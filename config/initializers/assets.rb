@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( new.css )
 Rails.application.config.assets.precompile += %w( ratyrate.js )
 Rails.application.config.assets.precompile += %w( autocomplete-rails.js )
+Rails.application.config.assets.precompile += %w( select2-rails.js )
